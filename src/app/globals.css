@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 165 29% 31%; /* Match to Orgatek's dark green */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 348 30% 48%; /* Match to Orgatek's maroon */
+    --secondary-foreground: 0 0% 100%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 42 29% 46%; /* Match to Orgatek's tan color */
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 165 29% 31%;
+    --radius: 0rem; /* Fasera design has mostly non-rounded corners */
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+  }
+
+  .dark {
+    --background: 20 14.3% 4.1%;
+    --foreground: 0 0% 95%;
+    --card: 24 9.8% 10%;
+    --card-foreground: 0 0% 95%;
+    --popover: 0 0% 9%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 165 29% 31%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 348 30% 48%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 42 29% 46%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 85.7% 97.3%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 165 29% 31%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+
+  /* prevent any horizontal overflow on mobile */
+  html {
+    @apply overflow-x-hidden;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply overflow-x-hidden bg-[#eff1f1] text-foreground font-[var(--font-poppins)];
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-[var(--font-poppins)] font-semibold;
+  }
+  p {
+    @apply font-[var(--font-poppins)];
+  }
+}
+
+@layer components {
+  .orgatek-container {
+    @apply max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .orgatek-button {
+    @apply inline-flex items-center justify-center px-4 py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50;
+  }
+
+  .orgatek-button-primary {
+    @apply orgatek-button bg-[#38625c] text-white hover:bg-[#2e4a3d];
+  }
+
+  .orgatek-button-secondary {
+    @apply orgatek-button bg-[#915662] text-white hover:bg-[#905c61];
+  }
+
+  .orgatek-button-outline {
+    @apply orgatek-button border border-[#38625c] text-[#38625c] hover:bg-[#38625c] hover:text-white;
+  }
+}
