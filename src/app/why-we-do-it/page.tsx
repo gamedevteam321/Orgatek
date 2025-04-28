@@ -3,6 +3,7 @@ import { Footer } from '@/components/layout/footer';
 import { Hero } from '@/components/ui/hero';
 import { ContentSection } from '@/components/ui/content-section';
 import { ContactFormSection } from '@/components/sections/contact-form-section';
+import ShareDegradedLandChart from '@/components/charts/ShareDegradedLandChart';
 
 export default function WhyWeDoIt() {
   return (
@@ -35,13 +36,14 @@ export default function WhyWeDoIt() {
         title="The world has lost one-third of its forest, but an end of deforestation is possible"
         description="Over the last 10,000 years the world has lost one-third of its forests. An area twice the size of the United States. Half occurred in the last century."
         image={
-          <iframe 
-            src="https://ourworldindata.org/grapher/share-degraded-land?tab=chart" 
-            loading="lazy" 
-            style={{ width: '100%', height: '350px', border: '0px none' }} 
-            allow="web-share; clipboard-write"
-            disable
-          />
+          // <iframe 
+          //   src="https://ourworldindata.org/grapher/share-degraded-land?tab=chart" 
+          //   loading="lazy" 
+          //   style={{ width: '100%', height: '350px', border: '0px none' }} 
+          //   allow="web-share; clipboard-write"
+          //   disable
+          // />
+          <ShareDegradedLandChart />
         }
         imageLeft={true}
         bgColor="white"
@@ -150,7 +152,7 @@ export default function WhyWeDoIt() {
 
       {/* Contact Form Section */}
       <ContactFormSection title="Want to learn more about why we do what we do? Subscribe to our newsletter for updates on our mission and impact." />
-
+     
       <Footer />
     </main>
   );
