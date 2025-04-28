@@ -5,7 +5,7 @@ import Image from 'next/image';
 interface ContentSectionProps {
   title: string;
   description: string;
-  image?: string;
+  image?: string | React.ReactNode;
   imageAlt?: string;
   buttonText?: string;
   buttonLink?: string;
@@ -45,18 +45,29 @@ export function ContentSection({
     return 'orgatek-button-primary';
   };
 
+  const renderImage = () => {
+    if (typeof image === 'string') {
+      return (
+        <div className="relative w-full h-64 md:h-80 lg:h-full">
+          <Image
+            src={image}
+            alt={imageAlt}
+            fill
+            className="object-cover"
+          />
+        </div>
+      );
+    }
+    return image;
+  };
+
   return (
     <section className={`py-16 md:py-24 ${getBgColor()}`}>
       <div className="orgatek-container">
         <div className={`grid grid-cols-1 gap-8 md:gap-12 ${image ? 'lg:grid-cols-2' : ''}`}>
           {image && imageLeft && (
-            <div className="relative w-full h-64 md:h-80 lg:h-full">
-              <Image
-                src={image}
-                alt={imageAlt}
-                fill
-                className="object-cover"
-              />
+            <div className="w-full">
+              {renderImage()}
             </div>
           )}
 
@@ -76,13 +87,8 @@ export function ContentSection({
           </div>
 
           {image && !imageLeft && (
-            <div className="relative w-full h-64 md:h-80 lg:h-full">
-              <Image
-                src={image}
-                alt={imageAlt}
-                fill
-                className="object-cover"
-              />
+            <div className="w-full">
+              {renderImage()}
             </div>
           )}
         </div>

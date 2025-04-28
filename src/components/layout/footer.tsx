@@ -38,6 +38,7 @@ export function Footer() {
           {/* Explore Column */}
           <div>
             <ul className="text-[#38625c] font-semibold mb-4">
+            <li><Link href="/why-we-do-it" className="text-[#38625c] hover:text-[#915662]">Why We Do It</Link></li>
               <li><Link href="/what-we-do" className="text-[#38625c] hover:text-[#915662]">What We Do</Link></li>
               <li><Link href="/our-process" className="text-[#38625c] hover:text-[#915662]">Our Process</Link></li>
               <li><Link href="/our-solutions" className="text-[#38625c] hover:text-[#915662]">Our Solutions</Link></li>
