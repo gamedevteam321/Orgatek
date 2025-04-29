@@ -7,10 +7,7 @@ export function Footer() {
       <div className="border-y border-[#38625c]/20">
         <div className="orgatek-container grid grid-cols-1 md:grid-cols-3 py-4">
           <div className="text-center md:text-left">
-            <p className="text-[#38625c]">Email: hello@orgatek.com</p>
-          </div>
-          <div className="text-center">
-            <p className="text-[#38625c]">Phone: +61 (08) 9481 2033</p>
+            <p className="text-[#38625c]">Email: info@orgatek.net</p>
           </div>
           <div className="text-center md:text-right">
             <p className="text-[#38625c]">

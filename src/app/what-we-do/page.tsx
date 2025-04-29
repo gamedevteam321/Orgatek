@@ -12,9 +12,21 @@ export default function WhatWeDo() {
       {/* Hero Section */}
       <Hero
         backgroundImage="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"
-        title="What We Do"
-        subtitle="At Orgatek, we are revolutionizing the sustainable agricultural carbon landscape."
-        small={true}
+        title={[
+          {
+            title: "What We Do",
+            subtitle: "At orgatek, we've successfully managed the sustainable agricultural sequestration of carbon through our estates since 2005"
+          },
+          {
+            title: "Our Solutions",
+            subtitle: "Our product range provides diverse global and sustainable solutions for the gardener, farmer or for carbon offset. For a better tomorrow."
+          },
+          {
+            title: "Our Process",
+            subtitle: "Our production process starts with the planting of an oil mallee seedling. It's the beginning of something really good. For the world."
+          },
+        ]}
+        small={false}
       />
 
       {/* Intro Section */}
@@ -22,25 +34,37 @@ export default function WhatWeDo() {
         <div className="orgatek-container">
           <div className="max-w-3xl mx-auto">
             <p className="text-lg text-gray-700 mb-6">
-              Our plantation management includes planting new seedlings to expand our plantations, harvesting (development) and processing the harvested plant biomass.
-            </p>
-            <p className="text-lg text-gray-700">
-              Biomass processing for clean definitions, pyrolysis and carbonization (generally our over-arching term within the organisation) is the core of our business. We transform surplus biomass into high-value carbon products. The use of pyrolysis, creates speciality carbon products that include biochar, wood vinegar (liquid), wood gas, and carbon materials for industrial use and other co-products. This enables the commercial by-products to add to the overall value proposition of our activities, in establishing nature-based carbon sequestration, and reducing waste levels and pollution.
+            The oil mallee seedling becomes a tree and, upon reaching maturity, is harvested and then coppices so that it continues to regenerate in an ongoing harvest cycle, increasing its biomass and capturing increasing amounts of atmospheric carbon within the root trunk and leaf structure that through our processes will be sequestered for centuries to come.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Planting Section */}
-      <ContentSection
-        title="Planting"
-        description="We plant mallee trees and other eucalyptus which are suited to Australian farming practices, making them an ideal and highly adaptive to extreme weather irregularities and regional environmental adaptations of the region."
-        image="https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"
-        imageLeft={true}
-        buttonText="Find out more"
-        buttonLink="#"
-        bgColor="white"
-      />
+      <section className="py-5 bg-white">
+        <div className="orgatek-container">
+          <h2 className="text-4xl font-semibold text-[#27543a] mb-12">The Production Cycle</h2>
+          <div className="flex flex-col md:flex-row items-center gap-10">
+            <div className="w-30 md:w-1/3">
+              <div className="rounded-full overflow-hidden">
+                <img 
+                  src="/images/test.jpeg" 
+                  alt="Coppicing process showing trees along a path" 
+                  className="w-30 h-60 object-fill"
+                />
+              </div>
+            </div>
+            <div className="w-full">
+              <div className="border-l-2 border-[#27543a] pl-8">
+                <p className="text-[#27543a] text-lg leading-relaxed">
+                  Coppicing is a sustainable forestry technique that utilises nature's regeneration properties, encouraging multiple trunk development and increased biomass growth, resulting in improved and increasing yields over time for our entire product range.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      
 
       {/* Harvesting Section */}
       <ContentSection

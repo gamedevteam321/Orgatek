@@ -121,7 +121,7 @@ export default function GetInvolved() {
                 <div className="flex items-center">
                   <div className="w-12 h-12 mr-4">
                     <Image
-                      src="https://ext.same-assets.com/371274525/3783633550.svg"
+                      src="/images/test.jpeg"
                       alt="Certification Icon"
                       width={48}
                       height={48}
@@ -136,7 +136,7 @@ export default function GetInvolved() {
                 <div className="flex items-center">
                   <div className="w-12 h-12 mr-4">
                     <Image
-                      src="https://ext.same-assets.com/371274525/2563901416.svg"
+                      src="/images/test.jpeg"
                       alt="Certification Icon"
                       width={48}
                       height={48}
@@ -151,7 +151,7 @@ export default function GetInvolved() {
                 <div className="flex items-center">
                   <div className="w-12 h-12 mr-4">
                     <Image
-                      src="https://ext.same-assets.com/371274525/548389142.svg"
+                      src="/images/test.jpeg"
                       alt="Certification Icon"
                       width={48}
                       height={48}
@@ -168,7 +168,7 @@ export default function GetInvolved() {
             <div className="grid grid-cols-2 gap-4">
               <div className="p-4 bg-[#eff1f1] flex items-center justify-center">
                 <Image
-                  src="https://ext.same-assets.com/371274525/4061061103.svg"
+                  src="/images/test.jpeg"
                   alt="Partner Logo"
                   width={120}
                   height={60}
@@ -176,7 +176,7 @@ export default function GetInvolved() {
               </div>
               <div className="p-4 bg-[#eff1f1] flex items-center justify-center">
                 <Image
-                  src="https://ext.same-assets.com/371274525/260646423.svg"
+                  src="/images/test.jpeg"
                   alt="Partner Logo"
                   width={120}
                   height={60}
@@ -184,7 +184,7 @@ export default function GetInvolved() {
               </div>
               <div className="p-4 bg-[#eff1f1] flex items-center justify-center">
                 <Image
-                  src="https://ext.same-assets.com/371274525/2563901416.svg"
+                  src="/images/test.jpeg"
                   alt="Partner Logo"
                   width={120}
                   height={60}
@@ -192,7 +192,7 @@ export default function GetInvolved() {
               </div>
               <div className="p-4 bg-[#eff1f1] flex items-center justify-center">
                 <Image
-                  src="https://ext.same-assets.com/371274525/3783633550.svg"
+                  src="/images/test.jpeg"
                   alt="Partner Logo"
                   width={120}
                   height={60}

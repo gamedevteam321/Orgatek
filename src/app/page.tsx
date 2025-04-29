@@ -8,15 +8,16 @@ import { ContactFormSection } from '@/components/sections/contact-form-section';
 import Image from 'next/image';
 import { ExpandableText } from '@/components/ui/ExpandableText';
 import { ProcessCard } from '@/components/ui/ProcessCard';
+import SupplyChainSection from '@/components/ui/SupplyChainSection';
 
 export default function Home() {
   // Mock data for the partners section
   const partners = [
-    { name: 'Johnson & Johnson', logo: 'https://ext.same-assets.com/371274525/3783633550.svg' },
-    { name: 'Qantas', logo: 'https://ext.same-assets.com/371274525/2563901416.svg' },
-    { name: 'Citizens Difference', logo: 'https://ext.same-assets.com/371274525/548389142.svg' },
-    { name: 'Givaudan', logo: 'https://ext.same-assets.com/371274525/260646423.svg' },
-    { name: 'doTERRA', logo: 'https://ext.same-assets.com/371274525/4061061103.svg' },
+    { name: 'Orgatek', logo: '/logo/logo1.png', width: 100, height: 100 },
+    { name: 'Orgatek', logo: '/logo/logo1.png', width: 100, height: 100 },
+    { name: 'Orgatek', logo: '/logo/logo1.png', width: 100, height: 100 },
+    { name: 'Orgatek', logo: '/logo/logo1.png', width: 100, height: 100 },
+    { name: 'Orgatek', logo: '/logo/logo1.png', width: 100, height: 100 },
   ];
 
   return (
@@ -87,43 +88,43 @@ export default function Home() {
             <ProcessCard
               title="Nursery"
               description="Orgatek's specialized and modern forestry nursery is where restoration begins. By cultivating resilient seedlings through organic and sustainable practices, we ensure thriving forests that sequester carbon, enrich soils, and restore biodiversity for long-term environmental sustainability."
-              image="/whatwedo/nursery.jpg"
+              image="/images/test.jpeg"
             />
             
             <ProcessCard
               title="Planting"
               description="We plant fast-growing, high-yielding trees such as Eucalyptus, Poplar, Acacia, Bamboo, Casuarina, and Gmelina Arborea to restore degraded lands and create thriving ecosystems. These species are carefully selected for their ability to replace forest timber, sequester carbon, enhance soil health, and regenerate biodiversit."
-              image="/whatwedo/planting.jpg"
+              image="/images/test.jpeg"
             />
             
             <ProcessCard
               title="Proprietary Organic Inputs"
               description="Our proprietary and in-house manufactured range of organic fertilizers, growth promoters, and natural pesticides, developed through years of R&D, enhance soil health, strengthen trees, and support biodiversity without compromising long-term sustainability."
-              image="/whatwedo/organic-inputs.jpg"
+              image="/images/test.jpeg"
             />
             
             <ProcessCard
               title="Harvesting"
               description="Details about our harvesting methods..."
-              image="/whatwedo/harvesting.jpg"
+              image="/images/test.jpeg"
             />
             
             <ProcessCard
               title="Pyrolysis"
               description="Details about our pyrolysis process..."
-              image="/whatwedo/pyrolysis.jpg"
+              image="/images/test.jpeg"
             />
             
             <ProcessCard
               title="Biochar Implementation"
               description="Details about our biochar implementation..."
-              image="/whatwedo/biochar.jpg"
+              image="/images/test.jpeg"
             />
             
             <ProcessCard
               title="Digital & Satellite Monitoring"
               description="Details about our digital & satellite monitoring..."
-              image="/whatwedo/monitoring.jpg"
+              image="/images/test.jpeg"
             />
           </div>
         </div>
@@ -200,7 +201,7 @@ export default function Home() {
           <h2 className="text-3xl md:text-4xl font-bold text-white py-12 pl-12">OUR IMPACT</h2>
           
           {/* Banner image */}
-          <div className="w-full h-[400px] bg-cover bg-center" style={{backgroundImage: `url('https://placeholder.com/1200x400')`}}>
+          <div className="w-full h-[400px] bg-cover bg-center" style={{backgroundImage: `url('/images/test.jpeg')`}}>
             {/* Placeholder for banner image of person working with plants */}
           </div>
           
@@ -248,7 +249,7 @@ export default function Home() {
             {/* Carbon Credits Column */}
             <div>
               <div className="mb-4 h-64 md:h-80 bg-gray-300 overflow-hidden">
-                <img src="https://placeholder.com/800x600" alt="Forest certification" className="w-full h-full object-cover" />
+                <img src="/images/test.jpeg" alt="Orgatek" className="w-full h-full object-cover" />
               </div>
               <h3 className="text-2xl font-semibold mb-4">Carbon Credits</h3>
               <p className="mb-6">Orgatek has established more new forest area, on previously degraded land, than any other company on the African continent.</p>
@@ -258,7 +259,7 @@ export default function Home() {
             {/* Certification Column */}
             <div>
               <div className="mb-4 h-64 md:h-80 bg-gray-300 overflow-hidden">
-                <img src="https://placeholder.com/800x600" alt="Aerial forest view" className="w-full h-full object-cover" />
+                <img src="/images/test.jpeg" alt="Orgatek" className="w-full h-full object-cover" />
               </div>
               <h3 className="text-2xl font-semibold mb-4">Certification</h3>
               <p className="mb-6">Orgatek Forestry & Products are certified to the required industry standards.</p>
@@ -267,6 +268,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Supply Chain Section */}
+      <SupplyChainSection />
 
       {/* Partners Section */}
       <PartnersSection partners={partners} />

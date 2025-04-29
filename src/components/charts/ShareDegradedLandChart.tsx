@@ -183,7 +183,7 @@ export default function ShareDegradedLandChart() {
 
       {/* Chart View */}
       {activeTab === 'chart' && (
-        <div className="h-[400px]">
+        <div className="h-[300px]">
           <Bar
             data={chartData}
             options={{

@@ -16,7 +16,7 @@ interface PartnersSectionProps {
 export function PartnersSection({
   title = 'Our Partners',
   description = 'We are proud to partner with a range of exceptional and transformative brands, pushing carbon markets and carbon innovation to the next level.',
-  partners,
+  partners = [{ name: 'Orgatek', logo: '/images/test.jpeg' }],
 }: PartnersSectionProps) {
   return (
     <section className="bg-[#2c7090] text-white py-16 md:py-24">

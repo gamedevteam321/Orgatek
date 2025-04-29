@@ -3,8 +3,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 interface ContentSectionProps {
-  title: string;
-  description: string;
+  title?: string;
+  description?: string;
   image?: string | React.ReactNode;
   imageAlt?: string;
   buttonText?: string;
@@ -12,6 +12,7 @@ interface ContentSectionProps {
   imageLeft?: boolean;
   bgColor?: 'white' | 'cream' | 'green' | 'maroon';
   children?: React.ReactNode;
+  imageSize?: 'default' | 'full';
 }
 
 export function ContentSection({
@@ -24,6 +25,7 @@ export function ContentSection({
   imageLeft = false,
   bgColor = 'white',
   children,
+  imageSize = 'default',
 }: ContentSectionProps) {
   const getBgColor = () => {
     switch (bgColor) {
@@ -48,7 +50,7 @@ export function ContentSection({
   const renderImage = () => {
     if (typeof image === 'string') {
       return (
-        <div className="relative w-full h-64 md:h-80 lg:h-full">
+        <div className={`relative ${imageSize === 'full' ? 'w-full h-screen' : 'w-full h-64 md:h-80 lg:h-full'}`}>
           <Image
             src={image}
             alt={imageAlt}
@@ -61,6 +63,21 @@ export function ContentSection({
     return image;
   };
 
+  if (imageSize === 'full') {
+    return (
+      <section className={`py-[50px] ${getBgColor()}`}>
+        <div className="relative w-full h-[calc(100vh-100px)]">
+          <Image
+            src={image as string}
+            alt={imageAlt}
+            fill
+            className="object-contain"
+          />
+        </div>
+      </section>
+    );
+  }
+
   return (
     <section className={`py-16 md:py-24 ${getBgColor()}`}>
       <div className="orgatek-container">
@@ -72,8 +89,8 @@ export function ContentSection({
           )}
 
           <div className="flex flex-col justify-center">
-            <h2 className="text-2xl md:text-3xl font-semibold mb-4">{title}</h2>
-            <p className="text-base md:text-lg opacity-90 mb-6">{description}</p>
+            {title && <h2 className="text-2xl md:text-3xl font-semibold mb-4">{title}</h2>}
+            {description && <p className="text-base md:text-lg opacity-90 mb-6">{description}</p>}
 
             {children}
 

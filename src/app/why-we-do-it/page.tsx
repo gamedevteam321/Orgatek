@@ -36,75 +36,63 @@ export default function WhyWeDoIt() {
         title="The world has lost one-third of its forest, but an end of deforestation is possible"
         description="Over the last 10,000 years the world has lost one-third of its forests. An area twice the size of the United States. Half occurred in the last century."
         image={
-          // <iframe 
-          //   src="https://ourworldindata.org/grapher/share-degraded-land?tab=chart" 
-          //   loading="lazy" 
-          //   style={{ width: '100%', height: '350px', border: '0px none' }} 
-          //   allow="web-share; clipboard-write"
-          //   disable
-          // />
           <ShareDegradedLandChart />
         }
         imageLeft={true}
         bgColor="white"
       />
 
-        {/* Community Benefits Section */}
+       {/* Global Forest Loss Impact */}
       <ContentSection
-        title="Community Benefits"
-        description="Our work extends beyond environmental impact. We create jobs, support local economies, and provide sustainable income streams for farmers and communities engaged in our carbon sequestration projects."
-        image="https://images.unsplash.com/photo-1531750026848-8ada78f641c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1674&q=80"
-        imageLeft={true}
-        buttonText="Learn more"
-        buttonLink="#"
-        bgColor="white"
+        image="/images/Forest-loss-by-driver-and-region.png"
+        imageSize="full"
       />
 
-      {/* Climate Impact Section */}
       <ContentSection
-        title="Climate Impact"
-        description="With rising global temperatures and increasing carbon emissions, our work in carbon sequestration provides a meaningful pathway to mitigate climate change effects while creating sustainable solutions."
-        image="https://images.unsplash.com/photo-1536697246787-1f7ae568d89a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1742&q=80"
+        image="/images/Global-forest-loss-since-ice-age.png"
+        imageSize="full"
+      />
+
+      {/* Healthy forests Section */}
+      <ContentSection
+        title="Healthy forests enable humanity to thrive"
+        description={<div>
+          <p className="font-semibold mb-4">Forests: A natural solution for climate change</p> <br />
+          <p>Climate change is a defining challenge of our time. One of the most effective ways to combat climate change is with healthy, resilient forests.</p> <br />
+          <p>Forests help regulate our climate by absorbing and retaining carbon dioxide from the atmosphere. The healthier the forest, the more carbon it can capture and store. </p> <br />
+          <p>But today, the destruction of forests accounts for at least 10 per cent of annual carbon emissions. When forests are responsibly managed so biodiversity is maintained, the plants and trees within them can extract more carbon dioxide from the atmosphere and slow climate change.</p> 
+        </div>}
+        image="/images/test.jpeg"
         imageLeft={false}
-        buttonText="Our impact"
-        buttonLink="#"
         bgColor="cream"
       />
 
-      {/* Innovation Section */}
+      {/* Forests support earth’s biodiversity Section */}
       <ContentSection
-        title="Innovation"
-        description="We're constantly pushing the boundaries of what's possible in carbon sequestration technology. Our research and development efforts focus on maximizing efficiency and impact while reducing costs."
-        image="https://images.unsplash.com/photo-1581093458791-9ea52e4516b1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1742&q=80"
+        title="Forests support earth’s biodiversity"
+        description={<div>
+          <p>Forests are incredibly diverse ecosystems, hosting the majority of terrestrial plant and animal species. They represent a beautifully balanced system where soil, plants, and animals all depend on each other to thrive.</p> <br />
+          <p>But why does this matter for us? First, biodiverse ecosystems provide the vital materials we need for food, shelter, clothing, and more. Biodiversity also fosters resilience. Healthy, rich ecosystems make earth habitable for humans. When forests disappear, these life-supporting systems begin to fail, putting humans at significant risk.</p> <br />
+          <p>According to the Intergovernmental Science-Policy Platform on Biodiversity and Ecosystem Services (IPBES), biodiversity is now declining faster than ever before. FSC’s responsible forestry initiatives protect biodiversity in forests around the world.</p>
+        </div>}
+        image="/images/test.jpeg"
+        imageLeft={true}
+        bgColor="white"
+      />
+
+      {/*Forests are essential Section */}
+      <ContentSection
+        title="Forests are essential for people and communities"
+        description={<div>
+          <p>Forests support human life all over the world. They provide us with clean air, drinking water, and countless products we rely on every day. And for 300 million people, forests also provide a home. The communities living in and around forests depend on them for food, fuel, medicine, and their livelihoods. In turn, they make stewardship a part of everything they do.</p> <br />
+          <p>Indigenous groups and local communities manage one-quarter of the world’s land. Globally, indigenous land experiences up to 26 per cent less deforestation than non-protected areas. And with support from FSC, Indigenous and local communities can achieve even better outcomes.</p> <br />
+        </div>}
+        image="/images/test.jpeg"
         imageLeft={false}
-        buttonText="Our innovations"
-        buttonLink="#"
         bgColor="cream"
       />
 
-      {/* Sustainable Future Section */}
-      <ContentSection
-        title="Building a Sustainable Future"
-        description="We believe that businesses have a responsibility to lead the transition to a sustainable future. Through our work, we're demonstrating that environmental stewardship and economic prosperity can go hand in hand."
-        image="https://images.unsplash.com/photo-1470115636492-6d2b56f9146d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1740&q=80"
-        imageLeft={true}
-        buttonText="Join our mission"
-        buttonLink="#"
-        bgColor="white"
-      />
-
-      {/* Global Forest Loss Impact */}
-      <ContentSection
-        title="Global Forest Loss Impact"
-        description="Forest loss is a critical environmental challenge, with 20.93 Mha of annual tree loss globally. This includes both deforestation (27% permanent loss) and forest degradation through wildfires (23%), forestry products (26%), and shifting agriculture (24%). Our efforts focus on combating these losses through sustainable practices and community engagement."
-        image="/images/global-forest-loss.png"
-        imageLeft={true}
-        buttonText="Learn More About Our Impact"
-        buttonLink="#"
-        bgColor="white"
-      />
-
-      {/* Our Values Section */}
+      {/* Our Values Section
       <section className="py-16 bg-[#eff1f1]">
         <div className="orgatek-container">
           <h2 className="text-2xl font-semibold text-[#38625c] mb-6">Our Core Values</h2>
@@ -132,7 +120,7 @@ export default function WhyWeDoIt() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Join Our Mission Section */}
       <section className="py-16 bg-[#27543a] text-white">

@@ -38,7 +38,7 @@ export default function OurProcess() {
             <div className="mb-8 md:mb-0 relative w-20 h-20">
               <div className="rounded-full overflow-hidden">
                 <Image
-                  src="https://images.unsplash.com/photo-1631815588090-d4bfec5d8351?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1560&q=80"
+                  src="/images/test.jpeg"
                   alt="Planting"
                   width={80}
                   height={80}
@@ -50,7 +50,7 @@ export default function OurProcess() {
             <div className="mb-8 md:mb-0 relative w-20 h-20">
               <div className="rounded-full overflow-hidden">
                 <Image
-                  src="https://images.unsplash.com/photo-1504297050568-910d24c426d3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1738&q=80"
+                  src="/images/test.jpeg"
                   alt="Harvesting"
                   width={80}
                   height={80}
@@ -62,7 +62,7 @@ export default function OurProcess() {
             <div className="relative w-20 h-20">
               <div className="rounded-full overflow-hidden">
                 <Image
-                  src="https://images.unsplash.com/photo-1621451537084-482c73073a0f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80"
+                  src="/images/test.jpeg"
                   alt="Processing"
                   width={80}
                   height={80}
@@ -198,7 +198,7 @@ export default function OurProcess() {
 
             <div className="relative w-full h-64 md:h-full">
               <Image
-                src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80"
+                src="/images/test.jpeg"
                 alt="Australian farm landscape"
                 fill
                 className="object-cover"
@@ -217,7 +217,7 @@ export default function OurProcess() {
             <div className="flex space-x-4 items-start">
               <div className="h-8 w-8 flex-shrink-0">
                 <Image
-                  src="https://ext.same-assets.com/371274525/3783633550.svg"
+                  src="/images/test.jpeg"
                   alt="Icon"
                   width={32}
                   height={32}
@@ -234,7 +234,7 @@ export default function OurProcess() {
             <div className="flex space-x-4 items-start">
               <div className="h-8 w-8 flex-shrink-0">
                 <Image
-                  src="https://ext.same-assets.com/371274525/2563901416.svg"
+                  src="/images/test.jpeg"
                   alt="Icon"
                   width={32}
                   height={32}
@@ -251,7 +251,7 @@ export default function OurProcess() {
             <div className="flex space-x-4 items-start">
               <div className="h-8 w-8 flex-shrink-0">
                 <Image
-                  src="https://ext.same-assets.com/371274525/548389142.svg"
+                  src="/images/test.jpeg"
                   alt="Icon"
                   width={32}
                   height={32}
