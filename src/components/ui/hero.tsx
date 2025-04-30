@@ -1,12 +1,15 @@
 import React from 'react';
 import Image from 'next/image';
 import { TextSlider } from './text-slider';
+import Link from 'next/link';
 
 interface HeroProps {
   backgroundImage: string;
-  title: string | { title: string; subtitle: string }[];
+  title: React.ReactNode | { title: string; subtitle: string }[];
   subtitle?: string;
   small?: boolean;
+  buttonText?: string;
+  buttonLink?: string;
 }
 
 export function Hero({
@@ -14,6 +17,8 @@ export function Hero({
   title,
   subtitle,
   small = false,
+  buttonText,
+  buttonLink,
 }: HeroProps) {
   return (
     <div
@@ -35,13 +40,21 @@ export function Hero({
               <TextSlider items={title} />
             ) : (
               <>
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-white leading-tight mb-6">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-white/90 leading-tight mb-6">
                   {title}
                 </h1>
                 {subtitle && (
-                  <p className="text-xl md:text-2xl text-white/90 font-light mb-12 max-w-[700px]">
+                  <p className="text-xl md:text-2xl text-white/70 font-light mb-8 max-w-full ">
                     {subtitle}
                   </p>
+                )}
+                {buttonText && buttonLink && (
+                  <Link 
+                    href={buttonLink}
+                    className="inline-block bg-white text-[#38625c] px-8 py-3 rounded-[7px] font-medium hover:bg-gray-100 transition-colors duration-300"
+                  >
+                    {buttonText}
+                  </Link>
                 )}
               </>
             )}

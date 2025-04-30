@@ -30,13 +30,13 @@ export function Footer() {
       </div>
 
       {/* Main Footer Content */}
-      <div className="orgatek-container py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div className="orgatek-container py-12 justify-center">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 justify-center">
           {/* Explore Column */}
           <div>
-            <ul className="text-[#38625c] font-semibold mb-4">
-            <li><Link href="/why-we-do-it" className="text-[#38625c] hover:text-[#915662]">Why We Do It</Link></li>
-              <li><Link href="/what-we-do" className="text-[#38625c] hover:text-[#915662]">What We Do</Link></li>
+            <ul className="text-[#38625c] font-semibold mb-4" >
+              <li><Link href="/why-we-exist" className="text-[#38625c] hover:text-[#915662]">Why We Exist</Link></li>
+              <li><Link href="/how-we-transform-wastelands" className="text-[#38625c] hover:text-[#915662]">How We Transform Wastelands</Link></li>
               <li><Link href="/our-process" className="text-[#38625c] hover:text-[#915662]">Our Process</Link></li>
               <li><Link href="/our-solutions" className="text-[#38625c] hover:text-[#915662]">Our Solutions</Link></li>
               <li><Link href="/get-involved" className="text-[#38625c] hover:text-[#915662]">Get Involved</Link></li>
@@ -50,7 +50,6 @@ export function Footer() {
               <li><Link href="/about-us" className="text-[#38625c] hover:text-[#915662]">About Us</Link></li>
               <li><Link href="/our-team" className="text-[#38625c] hover:text-[#915662]">Our Team</Link></li>
               <li><Link href="/contact" className="text-[#38625c] hover:text-[#915662]">Contact</Link></li>
-              <li><Link href="/shop" className="text-[#38625c] hover:text-[#915662]">Shop Our Products</Link></li>
             </ul>
           </div>
 
@@ -63,8 +62,7 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Empty Column for spacing */}
-          <div></div>
+          
         </div>
 
         {/* Copyright */}

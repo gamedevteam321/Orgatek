@@ -89,7 +89,7 @@
   }
 
   .orgatek-button-primary {
-    @apply orgatek-button bg-[#38625c] text-white hover:bg-[#2e4a3d];
+    @apply orgatek-button bg-[#38625c] text-white hover:bg-[#2e4a3d] rounded-[7px] px-8 py-3;
   }
 
   .orgatek-button-secondary {

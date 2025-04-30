@@ -31,7 +31,7 @@ export function FeatureCard({
 
   return (
     <>
-      <div className="flex flex-col bg-white/60 backdrop-blur-md h-full rounded-[10px] overflow-hidden">
+      <div className="flex flex-col bg-[#38625c] shadow-lg h-full rounded-[10px] overflow-hidden">
         {image && (
           <div className="relative w-full h-48 overflow-hidden">
             <Image
@@ -45,20 +45,20 @@ export function FeatureCard({
 
         <div className="p-6 flex flex-col flex-grow">
           {icon && (
-            <div className="mb-4 text-[#38625c]">
+            <div className="mb-4 text-white">
               {icon}
             </div>
           )}
 
-          <h3 className="text-xl font-semibold text-[#38625c] mb-3">{title}</h3>
+          <h3 className="text-xl font-semibold text-white mb-3">{title}</h3>
 
-          <p className="text-gray-600 mb-6 flex-grow">{description}</p>
+          <p className="text-white/80 mb-6 flex-grow">{description}</p>
 
           {buttonText && (
             <div className="mt-auto">
               <button
                 onClick={() => setIsPanelOpen(true)}
-                className="flex items-center text-[#38625c] hover:text-[#2e4a3d] group"
+                className="flex items-center text-white hover:text-white/80 group"
               >
                 <span className="text-sm font-medium">{buttonText}</span>
                 <svg
