@@ -28,13 +28,13 @@ export function Hero({
         className="absolute inset-0 opacity-20"
         style={{
           backgroundImage: `url(${backgroundImage})`,
-          backgroundSize: 'cover',
+          backgroundSize: 'contain',
           backgroundPosition: 'center',
         }}
       />
       
-      <div className="absolute inset-0 flex items-end">
-        <div className="w-full max-w-[90%] xl:max-w-[1200px] mx-auto px-4 pb-16">
+      <div className="absolute inset-0 flex items-center ">
+        <div className="w-full max-w-[90%] xl:max-w-[1200px] mx-auto px-4">
           <div className="w-full">
             {Array.isArray(title) ? (
               <TextSlider items={title} />

@@ -56,7 +56,8 @@ export default function Home() {
         Meanwhile, 2 billion hectares of wastelands—barren, unproductive, and ecologically poor—lie abandoned.
         </p></>}
         buttonText="Read More"
-        buttonLink="/why-we-do-it"
+        buttonLink="/why-we-exist"
+        openLink={true}
       >
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
           <div className="relative w-20 h-20 mx-auto mb-2">
@@ -89,54 +90,78 @@ export default function Home() {
 
       {/* How We Transform Wastelands Section */}
     <ContentSection
-        title="How We Transform Wastelands"
+        title="How we Regenerate Land"
         description="We transform wastelands into thriving ecosystems through a symbiotic process of planting short-rotation high-yield trees and enriching the soil with Biochar made from their waste biomass. This combination enhances soil fertility, improves water retention, accelerates healthy tree growth, and creates high-quality, traceable, and verifiable carbon sinks."
         bgColor="cream"
       >
-        <div className="orgatek-container">
+        <div className="">
           {/* Horizontal scrollable slider */}
-          <div className="flex overflow-x-auto pb-6 space-x-6 scrollbar-hide">
-            <ProcessCard
-              title="Nursery"
-              description="Orgatek's specialized and modern forestry nursery is where restoration begins. By cultivating resilient seedlings through organic and sustainable practices, we ensure thriving forests that sequester carbon, enrich soils, and restore biodiversity for long-term environmental sustainability."
-              image="/images/test.jpeg"
-            />
-            
-            <ProcessCard
-              title="Planting"
-              description="We plant fast-growing, high-yielding trees such as Eucalyptus, Poplar, Acacia, Bamboo, Casuarina, and Gmelina Arborea to restore degraded lands and create thriving ecosystems. These species are carefully selected for their ability to replace forest timber, sequester carbon, enhance soil health, and regenerate biodiversit."
-              image="/images/test.jpeg"
-            />
-            
-            <ProcessCard
-              title="Proprietary Organic Inputs"
-              description="Our proprietary and in-house manufactured range of organic fertilizers, growth promoters, and natural pesticides, developed through years of R&D, enhance soil health, strengthen trees, and support biodiversity without compromising long-term sustainability."
-              image="/images/test.jpeg"
-            />
-            
-            <ProcessCard
-              title="Harvesting"
-              description="Details about our harvesting methods..."
-              image="/images/test.jpeg"
-            />
-            
-            <ProcessCard
-              title="Pyrolysis"
-              description="Details about our pyrolysis process..."
-              image="/images/test.jpeg"
-            />
-            
-            <ProcessCard
-              title="Biochar Implementation"
-              description="Details about our biochar implementation..."
-              image="/images/test.jpeg"
-            />
-            
-            <ProcessCard
-              title="Digital & Satellite Monitoring"
-              description="Details about our digital & satellite monitoring..."
-              image="/images/test.jpeg"
-            />
+          <div className="flex overflow-x-auto pb-6 space-x-16 scrollbar-hide">
+            <div className="flex-shrink-0 min-w-[280px] max-w-[280px]">
+              <ProcessCard
+                title="Forest Establishment"
+                description="India has over 55 million hectares classified as wastelands, with nearly 24 million hectares identified as having viable forestry potential. At Orgatek, every project begins with rigorous site and connected short-rotation, high yield tree species selection, based on detailed soil analysis, climatic assessment, water resource evaluation and market proximity. We plant high-yielding, short-rotation species such as Eucalyptus, Poplar, Acacia, Bamboo, Casuarina, and Gmelina Arborea, selected for their adaptability to local conditions and ability to deliver maximum environmental impact."
+                image="/images/test.jpeg"
+                pagePath="/forest-establishment"
+                useSidePanel={true}
+                hideTextExpander={true}
+              />
+            </div>
+
+            <div className="flex-shrink-0 min-w-[280px] max-w-[280px]">
+              <ProcessCard
+                title="Forest Management"
+                description="Efficient, professional forest management is at the heart of building high-performing regenerative ecosystems. Once planted, our forests are carefully managed through continuous field scouting, advanced digital monitoring, and skilled forestry operations and proactive interventions to ensure that our estates grow vigorously, remain healthy, and maximize carbon sequestration."
+                image="/images/test.jpeg"
+                pagePath="/forest-management"
+                useSidePanel={true}
+                hideTextExpander={true}
+              />
+            </div>
+
+            <div className="flex-shrink-0 min-w-[280px] max-w-[280px]">
+              <ProcessCard
+                title="Sustainable Harvesting"
+                description="We practice strategic rotational cycles by planting and harvesting in carefully managed phases — establishing new areas each year while earlier phases mature. This ensures our forests remain vibrant and continuously productive, keeping large sections of the landscape actively growing at all times, sustaining carbon sequestration, preserving soil health, and maintaining lush, living ecosystems, while avoiding periods of barrenness or ecological disruption."
+                image="/images/test.jpeg"
+                pagePath="/sustainable-harvesting"
+                useSidePanel={true}
+                hideTextExpander={true}
+              />
+            </div>
+
+            <div className="flex-shrink-0 min-w-[280px] max-w-[280px]">
+              <ProcessCard
+                title="Proprietary Organic Inputs"
+                description="Restoring wastelands demands a soil-first approach that transcends traditional tree planting. Our in-house manufactured proprietary organic inputs, developed through years of research and crafted with precise quality control, offer unmatched flexibility to customize solutions for specific conditions to support robust tree growth and long term soil fertility."
+                image="/images/test.jpeg"
+                pagePath="/unique-organic-inputs"
+                useSidePanel={true}
+                hideTextExpander={true}
+              />
+            </div>
+
+            <div className="flex-shrink-0 min-w-[280px] max-w-[280px]">
+              <ProcessCard
+                title="Biochar Enrichment"
+                description="Building Soil Health. Locking Away Carbon. At Orgatek, we convert forestry biomass into high-quality biochar through on-site, high-temperature pyrolysis — permanently removing carbon while enriching degraded soils. Our biochar practices close the carbon loop locally, rebuild ecosystem resilience, and deliver durable, verifiable climate impact at scale."
+                image="/images/test.jpeg"
+                pagePath="/biochar-enrichment"
+                useSidePanel={true}
+                hideTextExpander={true}
+              />
+            </div>
+
+            <div className="flex-shrink-0 min-w-[280px] max-w-[280px]">
+              <ProcessCard
+                title="Digital Monitoring & Verification"
+                description="We integrate the best digital technologies including IoT sensors, computer vision and satellite imagery, to monitor and verify every aspect of forest establishment, management, harvesting and carbon sequestration. Our digital platform ensures real-time visibility, transparent reporting, and third-party validated impact across all our projects."
+                image="/images/test.jpeg"
+                pagePath="/digital-monitoring"
+                useSidePanel={true}
+                hideTextExpander={true}
+              />
+            </div>
           </div>
         </div>
 
@@ -149,13 +174,13 @@ export default function Home() {
       {/* Our Solutions Section */}
       <section className="py-16 md:py-24 bg-white">
         <div className="orgatek-container">
-          <h2 className="text-2xl md:text-3xl font-semibold text-[#38625c] mb-4">Our Solutions</h2>
+          <h2 className="text-2xl md:text-3xl font-semibold text-[#38625c] mb-4">What we Create</h2>
           <p className="text-gray-600 mb-12 max-w-full" >
             Orgatek cultivates its carbon production processes with the planting of oil mallee plantations on WA farms, optimizing soil carbon sequestration and creating biochar as a byproduct. These high-carbon products provide various commercial applications, from agriculture to filtration, which our research team is continuously expanding for use in many industries.
           </p>
 
-          <div className="flex overflow-x-auto pb-6 space-x-6 scrollbar-hide">
-            <div className="flex-shrink-0 min-w-[280px] max-w-[280px]">
+          <div className="flex flex-wrap md:flex-nowrap md:justify-center gap-8 md:gap-12 overflow-x-auto pb-6 scrollbar-hide">
+            <div className="flex-shrink-0 w-full md:w-[400px] min-w-[280px]">
               <FeatureCard
                 title="Timber"
                 description="Sustainable timber production from our managed oil mallee plantations."
@@ -165,7 +190,7 @@ export default function Home() {
               />
             </div>
 
-            <div className="flex-shrink-0 min-w-[280px] max-w-[280px]">
+            <div className="flex-shrink-0 w-full md:w-[400px] min-w-[280px]">
               <FeatureCard
                 title="Carbon Credits"
                 description="Verified carbon credits from our sustainable forestry practices."
@@ -175,17 +200,7 @@ export default function Home() {
               />
             </div>
 
-            <div className="flex-shrink-0 min-w-[280px] max-w-[280px]">
-              <FeatureCard
-                title="CORCS"
-                description="Carbon Offset Reduction Credits for international markets."
-                fullDescription="Carbon Offset Reduction Credits (CORCs) are internationally recognized carbon credits generated through our biochar production process. These credits are traded in international carbon markets and provide businesses with a verified way to offset their carbon emissions. Our CORCs meet strict international standards and are backed by our transparent carbon accounting practices."
-                image="https://images.unsplash.com/photo-1543286386-713bdd548da4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"
-                buttonText="Learn More"
-              />
-            </div>
-
-            <div className="flex-shrink-0 min-w-[280px] max-w-[280px]">
+            <div className="flex-shrink-0 w-full md:w-[400px] min-w-[280px]">
               <FeatureCard
                 title="Biochar"
                 description="High-quality biochar for agricultural and industrial applications."
@@ -194,48 +209,41 @@ export default function Home() {
                 buttonText="Learn More"
               />
             </div>
-
-            <div className="flex-shrink-0 min-w-[280px] max-w-[280px]">
-              <FeatureCard
-                title="Wood Vinegar"
-                description="Natural wood vinegar from our pyrolysis process."
-                fullDescription="Wood vinegar, also known as pyroligneous acid, is a valuable byproduct of our pyrolysis process. This natural liquid contains over 200 organic compounds and has multiple applications in agriculture and industry. It serves as a natural pesticide, plant growth enhancer, and soil conditioner. Our wood vinegar is carefully collected and processed to ensure the highest quality and effectiveness."
-                image="https://images.unsplash.com/photo-1543286386-713bdd548da4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"
-                buttonText="Learn More"
-              />
-            </div>
-
-            <div className="flex-shrink-0 min-w-[280px] max-w-[280px]">
-              <FeatureCard
-                title="Eucalyptus Oil"
-                description="Premium eucalyptus oil extracted from our mallee plantations."
-                fullDescription="Our premium eucalyptus oil is extracted from carefully selected oil mallee trees using sustainable steam distillation processes. The oil is known for its high cineole content and superior quality, making it ideal for pharmaceutical, aromatherapy, and industrial applications. Our extraction process maintains the oil's natural properties while ensuring environmental sustainability."
-                image="https://images.unsplash.com/photo-1543286386-713bdd548da4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"
-                buttonText="Learn More"
-              />
-            </div>
           </div>
 
           {/* Optional scroll indicator */}
           <div className="flex justify-center mt-6">
-            <span className="text-sm text-gray-400">← Scroll to see more →</span>
+            {/* <span className="text-sm text-gray-400">← Scroll to see more →</span> */}
           </div>
         </div>
       </section>
 
 
       {/* Our Impact Section */}
-      <section className="bg-[#2c7090] overflow-hidden text-white">
-        <div className="relative">
-          <h2 className="text-3xl md:text-4xl font-bold text-white py-12 pl-12">OUR IMPACT</h2>
+      <section className=" overflow-hidden text-white  ">
+        <div className="relative ">
+          <h2 className="text-3xl md:text-4xl font-bold text-white py-12 pl-12 relative z-10">OUR IMPACT</h2>
+          
+          <div className="relative z-10 pl-12 pr-12 md:pr-24 max-w-8xl">
+            <p className="text-lg mb-6">
+              At Orgatek, impact means delivering measurable change — for the climate, for ecosystems, and for communities.
+            </p>
+            <p className="text-lg mb-6">
+              Through regenerative forestry, soil carbon innovation, and rural development initiatives, we transform degraded lands into high-performing natural assets.
+            </p>
+            <p className="text-lg">
+              Our integrated model generates verifiable carbon removal, restores biodiversity, strengthens local economies, and builds sustainable futures — creating lasting environmental and social value at scale.
+            </p>
+          </div>
           
           {/* Banner image */}
-          <div className="w-full h-[400px] bg-cover bg-center" style={{backgroundImage: `url('/images/test.jpeg')`}}>
-            {/* Placeholder for banner image of person working with plants */}
+          <div className="absolute inset-0 w-full h-[650px] bg-cover bg-center" style={{backgroundImage: `url('/images/test.jpeg')`}}>
+            {/* Black overlay */}
+            <div className="absolute inset-0 bg-black opacity-50"></div>
           </div>
           
           {/* Two column section */}
-          <div className="grid grid-cols-1 md:grid-cols-2">
+          <div className="grid grid-cols-1 md:grid-cols-2 relative z-10 absolute bottom-[-90px] w-full py-16">
             {/* Environment column */}
             <div className="bg-[#2c7090] p-12" >
               <h3 className="text-2xl font-bold mb-6">ENVIRONMENT</h3>
@@ -270,9 +278,9 @@ export default function Home() {
       </section>
 
             {/* Carbon Credits & Certification Section */}
-            <section className="py-12 md:py-16 bg-[#38625c] text-white">
+            <section className="py-12 md:py-16 bg-white text-white">
         <div className="orgatek-container">
-          <h2 className="text-3xl md:text-4xl font-semibold  mb-12">Like to know more about Carbon Credits & Certification</h2>
+          <h2 className="text-3xl md:text-4xl font-semibold text-black mb-12">Like to know more about Carbon Credits & Certification</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Carbon Credits Column */}
@@ -280,9 +288,9 @@ export default function Home() {
               <div className="mb-4 h-64 md:h-80 bg-gray-300 overflow-hidden">
                 <img src="/images/test.jpeg" alt="Orgatek" className="w-full h-full object-cover" />
               </div>
-              <h3 className="text-2xl font-semibold mb-4">Carbon Credits</h3>
-              <p className="mb-6">Orgatek has established more new forest area, on previously degraded land, than any other company on the African continent.</p>
-              <a href="/carbon-credits" className="inline-block border border-white px-6 py-2 hover:bg-white hover:text-[#3c6e31] transition duration-300">Find Out More</a>
+              <h3 className="text-2xl font-semibold mb-4 text-black">Carbon Credits</h3>
+              <p className="mb-6 text-black">Orgatek has established more new forest area, on previously degraded land, than any other company on the African continent.</p>
+              <a href="/carbon-credits" className="text-black inline-block border border-black px-6 py-2 hover:bg-white hover:text-[#3c6e31] transition duration-300">Find Out More</a>
             </div>
             
             {/* Certification Column */}
@@ -290,9 +298,9 @@ export default function Home() {
               <div className="mb-4 h-64 md:h-80 bg-gray-300 overflow-hidden">
                 <img src="/images/test.jpeg" alt="Orgatek" className="w-full h-full object-cover" />
               </div>
-              <h3 className="text-2xl font-semibold mb-4">Certification</h3>
-              <p className="mb-6">Orgatek Forestry & Products are certified to the required industry standards.</p>
-              <a href="/certification" className="inline-block border border-white px-6 py-2 hover:bg-white hover:text-[#3c6e31] transition duration-300">Find Out More</a>
+              <h3 className="text-2xl font-semibold mb-4 text-black">Certification</h3>
+              <p className="mb-6 text-black">Orgatek Forestry & Products are certified to the required industry standards.</p>
+              <a href="/certification" className="text-black inline-block border border-black px-6 py-2 hover:bg-white hover:text-[#3c6e31] transition duration-300">Find Out More</a>
             </div>
           </div>
         </div>

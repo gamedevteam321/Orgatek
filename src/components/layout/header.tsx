@@ -9,7 +9,7 @@ const navItems = {
   explore: [
     { name: 'Why We Exist', href: '/why-we-exist' },
     { name: 'How We Transform Wastelands', href: '/how-we-transform-wastelands' },
-    { name: 'Our Process', href: '/our-process' },
+    { name: 'What we Create', href: '/what-we-create' }, 
     { name: 'Our Solutions', href: '/our-solutions' },
     { name: 'Get Involved', href: '/get-involved' },
   ],

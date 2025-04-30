@@ -1,10 +1,14 @@
+"use client";
+
 import type React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useState } from 'react';
+import { SolutionPanel } from './solution-panel';
 
 interface ContentSectionProps {
   title?: string;
-  description?: string;
+  description?: string | React.ReactNode;
   image?: string | React.ReactNode;
   imageAlt?: string;
   buttonText?: string;
@@ -13,6 +17,7 @@ interface ContentSectionProps {
   bgColor?: 'white' | 'cream' | 'green' | 'maroon';
   children?: React.ReactNode;
   imageSize?: 'default' | 'full';
+  openLink?: boolean;
 }
 
 export function ContentSection({
@@ -26,7 +31,10 @@ export function ContentSection({
   bgColor = 'white',
   children,
   imageSize = 'default',
+  openLink = false,
 }: ContentSectionProps) {
+  const [isPanelOpen, setIsPanelOpen] = useState(false);
+
   const getBgColor = () => {
     switch (bgColor) {
       case 'cream':
@@ -79,37 +87,56 @@ export function ContentSection({
   }
 
   return (
-    <section className={`py-16 md:py-24 ${getBgColor()}`}>
-      <div className="orgatek-container">
-        <div className={`grid grid-cols-1 gap-8 md:gap-12 ${image ? 'lg:grid-cols-2' : ''}`}>
-          {image && imageLeft && (
-            <div className="w-full">
-              {renderImage()}
+    <>
+      <section className={`py-16 md:py-24 ${getBgColor()}`}>
+        <div className="orgatek-container">
+          <div className={`grid grid-cols-1 gap-8 md:gap-12 ${image ? 'lg:grid-cols-2' : ''}`}>
+            {image && imageLeft && (
+              <div className="w-full">
+                {renderImage()}
+              </div>
+            )}
+
+            <div className="flex flex-col justify-center">
+              {title && <h2 className="text-2xl md:text-3xl font-semibold mb-4">{title}</h2>}
+              {description && <p className="text-base md:text-lg opacity-90 mb-6">{description}</p>}
+
+              {children}
+
+              {buttonText && (
+                <div className="mt-6">
+                  {openLink && buttonLink ? (
+                    <Link href={buttonLink} className={`orgatek-button ${getButtonClass()}`}>
+                      {buttonText}
+                    </Link>
+                  ) : (
+                    <button
+                      onClick={() => setIsPanelOpen(true)}
+                      className={`orgatek-button ${getButtonClass()}`}
+                    >
+                      {buttonText}
+                    </button>
+                  )}
+                </div>
+              )}
             </div>
-          )}
 
-          <div className="flex flex-col justify-center">
-            {title && <h2 className="text-2xl md:text-3xl font-semibold mb-4">{title}</h2>}
-            {description && <p className="text-base md:text-lg opacity-90 mb-6">{description}</p>}
-
-            {children}
-
-            {buttonText && buttonLink && (
-              <div className="mt-6">
-                <Link href={buttonLink} className={`orgatek-button ${getButtonClass()}`}>
-                  {buttonText}
-                </Link>
+            {image && !imageLeft && (
+              <div className="w-full">
+                {renderImage()}
               </div>
             )}
           </div>
-
-          {image && !imageLeft && (
-            <div className="w-full">
-              {renderImage()}
-            </div>
-          )}
         </div>
-      </div>
-    </section>
+      </section>
+
+      <SolutionPanel
+        isOpen={isPanelOpen}
+        onClose={() => setIsPanelOpen(false)}
+        title={title || ''}
+        description={typeof description === 'string' ? description : ''}
+        image={typeof image === 'string' ? image : ''}
+      />
+    </>
   );
 }

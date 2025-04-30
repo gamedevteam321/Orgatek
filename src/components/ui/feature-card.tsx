@@ -14,7 +14,8 @@ interface FeatureCardProps {
   buttonText?: string;
   buttonLink?: string;
   icon?: React.ReactNode;
-  fullDescription?: string;
+  fullDescription?: string | React.ReactNode;
+  pagePath?: string;
 }
 
 export function FeatureCard({
@@ -26,6 +27,7 @@ export function FeatureCard({
   buttonLink = '#',
   icon,
   fullDescription,
+  pagePath,
 }: FeatureCardProps) {
   const [isPanelOpen, setIsPanelOpen] = useState(false);
 
@@ -86,6 +88,7 @@ export function FeatureCard({
         title={title}
         description={fullDescription || description}
         image={image || ''}
+        pagePath={pagePath}
       />
     </>
   );

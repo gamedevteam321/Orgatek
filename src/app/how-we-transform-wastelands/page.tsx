@@ -32,7 +32,7 @@ export default function WhatWeDo() {
       {/* Intro Section */}
       <section className="py-12 bg-[#eff1f1]">
         <div className="orgatek-container">
-          <div className="max-w-3xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <p className="text-lg text-gray-700 mb-6">
             The oil mallee seedling becomes a tree and, upon reaching maturity, is harvested and then coppices so that it continues to regenerate in an ongoing harvest cycle, increasing its biomass and capturing increasing amounts of atmospheric carbon within the root trunk and leaf structure that through our processes will be sequestered for centuries to come.
             </p>
@@ -40,16 +40,16 @@ export default function WhatWeDo() {
         </div>
       </section>
 
-      <section className="py-5 bg-white">
+      <section className="py-10 bg-white">
         <div className="orgatek-container">
           <h2 className="text-4xl font-semibold text-[#27543a] mb-12">The Production Cycle</h2>
           <div className="flex flex-col md:flex-row items-center gap-10">
             <div className="w-30 md:w-1/3">
-              <div className="rounded-full overflow-hidden">
+              <div className="rounded-full overflow-hidden aspect-square">
                 <img 
                   src="/images/test.jpeg" 
                   alt="Coppicing process showing trees along a path" 
-                  className="w-30 h-60 object-fill"
+                  className="w-full h-full object-cover"
                 />
               </div>
             </div>
@@ -81,7 +81,7 @@ export default function WhatWeDo() {
       <ContentSection
         title="Oil Production"
         description="We use traditional steam distillation to extract oil from mallee biomass to produce extract oils at a higher yield than conventional oil distillation equipment. Our oil is then ready packaged for sale."
-        image="https://images.unsplash.com/photo-1627467959547-215e15205eb1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80"
+        image="/images/test.jpeg"
         imageLeft={true}
         buttonText="Find out more"
         buttonLink="#"

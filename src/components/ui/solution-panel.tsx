@@ -1,14 +1,17 @@
 "use client";
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
+import dynamic from 'next/dynamic';
 
 interface SolutionPanelProps {
   isOpen: boolean;
   onClose: () => void;
   title: string;
-  description: string;
+  description: string | React.ReactNode;
   image: string;
+  pagePath?: string;
 }
 
 export function SolutionPanel({
@@ -17,7 +20,34 @@ export function SolutionPanel({
   title,
   description,
   image,
+  pagePath,
 }: SolutionPanelProps) {
+  const [pageContent, setPageContent] = useState<React.ReactNode>(null);
+  const [isLoading, setIsLoading] = useState(false);
+
+  useEffect(() => {
+    if (isOpen && pagePath) {
+      setIsLoading(true);
+      // Dynamically import the page component
+      const loadPageContent = async () => {
+        try {
+          // Remove leading slash and convert to module path
+          const modulePath = pagePath.replace(/^\//, '');
+          const PageComponent = dynamic(() => import(`@/app/${modulePath}/page`), {
+            loading: () => <div>Loading...</div>,
+          });
+          setPageContent(<PageComponent />);
+        } catch (error) {
+          console.error('Error loading page content:', error);
+          setPageContent(null);
+        } finally {
+          setIsLoading(false);
+        }
+      };
+      loadPageContent();
+    }
+  }, [isOpen, pagePath]);
+
   return (
     <>
       {/* Overlay */}
@@ -56,18 +86,32 @@ export function SolutionPanel({
 
         {/* Content */}
         <div className="h-full overflow-y-auto">
-          <div className="relative w-full h-[40vh]">
-            <Image
-              src={image}
-              alt={title}
-              fill
-              className="object-cover"
-            />
-          </div>
-          <div className="p-8">
-            <h2 className="text-3xl font-semibold text-[#38625c] mb-6">{title}</h2>
-            <p className="text-gray-600 text-lg leading-relaxed">{description}</p>
-          </div>
+          {isLoading ? (
+            <div className="flex items-center justify-center h-full">
+              <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-[#38625c]"></div>
+            </div>
+          ) : pageContent ? (
+            <div className="">
+              {pageContent}
+            </div>
+          ) : (
+            <div className="flex flex-col gap-6 p-8">
+              {image && (
+                <div className="relative w-full h-64 rounded-lg overflow-hidden">
+                  <Image
+                    src={image}
+                    alt={title}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              )}
+              <h2 className="text-2xl font-semibold text-gray-900">{title}</h2>
+              <div className="text-gray-600 text-lg leading-relaxed">
+                {description}
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </>
