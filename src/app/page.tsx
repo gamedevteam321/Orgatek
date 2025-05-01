@@ -1,14 +1,20 @@
+"use client";
+
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
+import { useState } from 'react';
+
 import { Hero } from '@/components/ui/hero';
 import { ContentSection } from '@/components/ui/content-section';
 import { FeatureCard } from '@/components/ui/feature-card';
 import { PartnersSection } from '@/components/sections/partners-section';
 import { ContactFormSection } from '@/components/sections/contact-form-section';
 import Image from 'next/image';
+
 import { ExpandableText } from '@/components/ui/ExpandableText';
 import { ProcessCard } from '@/components/ui/ProcessCard';
 import SupplyChainSection from '@/components/ui/SupplyChainSection';
+import { SolutionPanel } from '@/components/ui/solution-panel';
 
 export default function Home() {
   // Mock data for the partners section
@@ -20,13 +26,15 @@ export default function Home() {
     { name: 'Orgatek', logo: '/logo/logo1.png', width: 100, height: 100 },
   ];
 
+  const [isImpactPanelOpen, setIsImpactPanelOpen] = useState(false);
+
   return (
     <main>
       <Header />
 
       {/* Hero Section */}
       <Hero
-        backgroundImage="/hero-bg.jpg"
+        backgroundImage="/images/hero-main.png"
         title={
           <div className="space-y-4">
             <p className="block">Transforming Wastelands.</p>
@@ -101,7 +109,7 @@ export default function Home() {
               <ProcessCard
                 title="Forest Establishment"
                 description="India has over 55 million hectares classified as wastelands, with nearly 24 million hectares identified as having viable forestry potential. At Orgatek, every project begins with rigorous site and connected short-rotation, high yield tree species selection, based on detailed soil analysis, climatic assessment, water resource evaluation and market proximity. We plant high-yielding, short-rotation species such as Eucalyptus, Poplar, Acacia, Bamboo, Casuarina, and Gmelina Arborea, selected for their adaptability to local conditions and ability to deliver maximum environmental impact."
-                image="/images/test.jpeg"
+                image="/images/forest-establishment.png"
                 pagePath="/forest-establishment"
                 useSidePanel={true}
                 hideTextExpander={true}
@@ -112,7 +120,7 @@ export default function Home() {
               <ProcessCard
                 title="Forest Management"
                 description="Efficient, professional forest management is at the heart of building high-performing regenerative ecosystems. Once planted, our forests are carefully managed through continuous field scouting, advanced digital monitoring, and skilled forestry operations and proactive interventions to ensure that our estates grow vigorously, remain healthy, and maximize carbon sequestration."
-                image="/images/test.jpeg"
+                image="/images/forest-management.png"
                 pagePath="/forest-management"
                 useSidePanel={true}
                 hideTextExpander={true}
@@ -123,7 +131,7 @@ export default function Home() {
               <ProcessCard
                 title="Sustainable Harvesting"
                 description="We practice strategic rotational cycles by planting and harvesting in carefully managed phases — establishing new areas each year while earlier phases mature. This ensures our forests remain vibrant and continuously productive, keeping large sections of the landscape actively growing at all times, sustaining carbon sequestration, preserving soil health, and maintaining lush, living ecosystems, while avoiding periods of barrenness or ecological disruption."
-                image="/images/test.jpeg"
+                image="/images/sustainable-harvesting.png"
                 pagePath="/sustainable-harvesting"
                 useSidePanel={true}
                 hideTextExpander={true}
@@ -134,7 +142,7 @@ export default function Home() {
               <ProcessCard
                 title="Proprietary Organic Inputs"
                 description="Restoring wastelands demands a soil-first approach that transcends traditional tree planting. Our in-house manufactured proprietary organic inputs, developed through years of research and crafted with precise quality control, offer unmatched flexibility to customize solutions for specific conditions to support robust tree growth and long term soil fertility."
-                image="/images/test.jpeg"
+                image="/images/proprietary-organic-inputs.png"
                 pagePath="/unique-organic-inputs"
                 useSidePanel={true}
                 hideTextExpander={true}
@@ -145,7 +153,7 @@ export default function Home() {
               <ProcessCard
                 title="Biochar Enrichment"
                 description="Building Soil Health. Locking Away Carbon. At Orgatek, we convert forestry biomass into high-quality biochar through on-site, high-temperature pyrolysis — permanently removing carbon while enriching degraded soils. Our biochar practices close the carbon loop locally, rebuild ecosystem resilience, and deliver durable, verifiable climate impact at scale."
-                image="/images/test.jpeg"
+                image="/images/biochar-enrichment.png"
                 pagePath="/biochar-enrichment"
                 useSidePanel={true}
                 hideTextExpander={true}
@@ -156,7 +164,7 @@ export default function Home() {
               <ProcessCard
                 title="Digital Monitoring & Verification"
                 description="We integrate the best digital technologies including IoT sensors, computer vision and satellite imagery, to monitor and verify every aspect of forest establishment, management, harvesting and carbon sequestration. Our digital platform ensures real-time visibility, transparent reporting, and third-party validated impact across all our projects."
-                image="/images/test.jpeg"
+                image="/images/digital-monitoring.png"
                 pagePath="/digital-monitoring"
                 useSidePanel={true}
                 hideTextExpander={true}
@@ -220,32 +228,38 @@ export default function Home() {
 
 
       {/* Our Impact Section */}
-      <section className=" overflow-hidden text-white  ">
+      <section className=" overflow-hidden text-white bg-white ">
         <div className="relative ">
-          <h2 className="text-3xl md:text-4xl font-bold text-white py-12 pl-12 relative z-10">OUR IMPACT</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-white py-12 pl-16 relative z-10">OUR IMPACT</h2>
           
-          <div className="relative z-10 pl-12 pr-12 md:pr-24 max-w-8xl">
+          <div className="relative z-10 pl-16 pr-12 md:pr-24 max-w-8xl">
             <p className="text-lg mb-6">
               At Orgatek, impact means delivering measurable change — for the climate, for ecosystems, and for communities.
             </p>
             <p className="text-lg mb-6">
               Through regenerative forestry, soil carbon innovation, and rural development initiatives, we transform degraded lands into high-performing natural assets.
             </p>
-            <p className="text-lg">
+            <p className="text-lg mb-8">
               Our integrated model generates verifiable carbon removal, restores biodiversity, strengthens local economies, and builds sustainable futures — creating lasting environmental and social value at scale.
             </p>
+            <button
+              onClick={() => setIsImpactPanelOpen(true)}
+              className="text-white border border-white px-6 py-2 hover:bg-white hover:text-[#38625c] transition duration-300"
+            >
+              Learn More
+            </button>
           </div>
           
           {/* Banner image */}
-          <div className="absolute inset-0 w-full h-[650px] bg-cover bg-center" style={{backgroundImage: `url('/images/test.jpeg')`}}>
+          <div className="absolute inset-0 w-full h-[400px] bg-cover bg-center" style={{backgroundImage: `url('/images/test.jpeg')`}}>
             {/* Black overlay */}
             <div className="absolute inset-0 bg-black opacity-50"></div>
           </div>
           
           {/* Two column section */}
-          <div className="grid grid-cols-1 md:grid-cols-2 relative z-10 absolute bottom-[-90px] w-full py-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 relative  absolute bottom-[35px] w-full pt-16">
             {/* Environment column */}
-            <div className="bg-[#2c7090] p-12" >
+            {/* <div className="bg-[#2c7090] p-12" >
               <h3 className="text-2xl font-bold mb-6">ENVIRONMENT</h3>
               <p className="mb-4">
                 One pongamia tree removes one tonne of carbon in its first 20 
@@ -257,10 +271,10 @@ export default function Home() {
                 can sink both carbon and nitrogen into the ground and replenish 
                 soil health.
               </p>
-            </div>
+            </div> */}
             
             {/* Community column */}
-            <div className="bg-[#38625c] p-12">
+            {/* <div className="bg-[#38625c] p-12">
               <h3 className="text-2xl font-bold mb-6">COMMUNITY</h3>
               <p className="mb-4">
                 In India, over 290 women community leaders manage wild 
@@ -272,13 +286,23 @@ export default function Home() {
                 wild harvest pongamia beans across India, improving bean 
                 collectors livelihoods by almost 50%
               </p>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
 
-            {/* Carbon Credits & Certification Section */}
-            <section className="py-12 md:py-16 bg-white text-white">
+      {/* Impact Panel */}
+      <SolutionPanel
+        isOpen={isImpactPanelOpen}
+        onClose={() => setIsImpactPanelOpen(false)}
+        title="Our Impact"
+        description=""
+        image="/images/test.jpeg"
+        pagePath="/our-impact"
+      />
+
+      {/* Carbon Credits & Certification Section */}
+      <section className="py-12 md:py-12 bg-white text-white">
         <div className="orgatek-container">
           <h2 className="text-3xl md:text-4xl font-semibold text-black mb-12">Like to know more about Carbon Credits & Certification</h2>
           

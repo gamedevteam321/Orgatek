@@ -10,12 +10,12 @@ const navItems = {
     { name: 'Why We Exist', href: '/why-we-exist' },
     { name: 'How We Transform Wastelands', href: '/how-we-transform-wastelands' },
     { name: 'What we Create', href: '/what-we-create' }, 
-    { name: 'Our Solutions', href: '/our-solutions' },
+    { name: 'Our Trees', href: '/our-trees' },
     { name: 'Get Involved', href: '/get-involved' },
   ],
   connect: [
     { name: 'About Us', href: '/about-us' },
-    { name: 'Our Team', href: '/our-team' },
+    { name: 'Our Team', href: '/about-us' },
     { name: 'Contact', href: '/contact' },
   ],
   legal: [

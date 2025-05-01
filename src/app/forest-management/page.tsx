@@ -15,7 +15,7 @@ export default function ForestManagement() {
         <section className="relative h-[95vh] flex items-end justify-center text-white">
           <div className="absolute inset-0">
             <Image
-              src="/images/test.jpeg"
+              src="/images/forest-management.png"
               alt="Forest management hero"
               fill
               className="object-cover"
@@ -56,7 +56,7 @@ export default function ForestManagement() {
             <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
               <div className="relative h-[400px]">
                 <Image
-                  src="/images/test.jpeg"
+                  src="/images/field-scouting.png"
                   alt="Field scouting"
                   fill
                   className="object-cover rounded-lg"
@@ -83,10 +83,10 @@ export default function ForestManagement() {
               </div>
               <div className="relative h-[400px]">
                 <Image
-                  src="/images/test.jpeg"
+                  src="/images/digital-monitoring-1.png"
                   alt="Digital monitoring"
                   fill
-                  className="object-cover rounded-lg"
+                  className="object-contain rounded-lg"
                 />
               </div>
             </div>
@@ -99,7 +99,7 @@ export default function ForestManagement() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="relative h-[500px]">
                 <Image
-                  src="/images/test.jpeg"
+                  src="/images/forestry-operations.png"
                   alt="Forestry operations"
                   fill
                   className="object-cover rounded-lg"
@@ -148,7 +148,7 @@ export default function ForestManagement() {
               </div>
               <div className="relative h-[600px]">
                 <Image
-                  src="/images/test.jpeg"
+                  src="/images/coppicing-management.png"
                   alt="Coppicing management"
                   fill
                   className="object-cover rounded-lg"
@@ -164,7 +164,7 @@ export default function ForestManagement() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="relative h-[400px]">
                 <Image
-                  src="/images/test.jpeg"
+                  src="/images/digital-platform.png"
                   alt="Digital platform and data integration"
                   fill
                   className="object-cover rounded-lg"

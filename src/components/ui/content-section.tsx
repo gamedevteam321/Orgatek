@@ -18,6 +18,7 @@ interface ContentSectionProps {
   children?: React.ReactNode;
   imageSize?: 'default' | 'full';
   openLink?: boolean;
+  pagePath?: string;
 }
 
 export function ContentSection({
@@ -32,6 +33,7 @@ export function ContentSection({
   children,
   imageSize = 'default',
   openLink = false,
+  pagePath,
 }: ContentSectionProps) {
   const [isPanelOpen, setIsPanelOpen] = useState(false);
 
@@ -58,7 +60,7 @@ export function ContentSection({
   const renderImage = () => {
     if (typeof image === 'string') {
       return (
-        <div className={`relative ${imageSize === 'full' ? 'w-full h-screen' : 'w-full h-64 md:h-80 lg:h-full'}`}>
+        <div className={`relative ${imageSize === 'full' ? 'w-full h-screen' : 'w-full h-96 md:h-[300px] lg:h-[400px]'}`}>
           <Image
             src={image}
             alt={imageAlt}
@@ -136,6 +138,7 @@ export function ContentSection({
         title={title || ''}
         description={typeof description === 'string' ? description : ''}
         image={typeof image === 'string' ? image : ''}
+        pagePath={pagePath}
       />
     </>
   );

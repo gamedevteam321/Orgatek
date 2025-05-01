@@ -22,19 +22,22 @@ export function Hero({
 }: HeroProps) {
   return (
     <div
-      className={`relative w-full ${small ? 'h-[40vh]' : 'min-h-screen'} overflow-hidden bg-[#38625c]`}
+      className={`relative w-full ${small ? 'h-[40vh]' : 'min-h-screen'} overflow-hidden`}
     >
-      <div 
-        className="absolute inset-0 opacity-20"
-        style={{
-          backgroundImage: `url(${backgroundImage})`,
-          backgroundSize: 'contain',
-          backgroundPosition: 'center',
-        }}
-      />
+      <div className="absolute inset-0">
+        <Image
+          src={backgroundImage}
+          alt="Hero background"
+          fill
+          priority
+          className="object-cover"
+          quality={100}
+        />
+        <div className="absolute inset-0 bg-[#38625c] opacity-60" />
+      </div>
       
-      <div className="absolute inset-0 flex items-center ">
-        <div className="w-full max-w-[90%] xl:max-w-[1200px] mx-auto px-4">
+      <div className="absolute inset-0 flex items-end pb-20">
+        <div className="w-full max-w-[100%] xl:max-w-[1400px] mx-auto px-4">
           <div className="w-full">
             {Array.isArray(title) ? (
               <TextSlider items={title} />
@@ -44,7 +47,7 @@ export function Hero({
                   {title}
                 </h1>
                 {subtitle && (
-                  <p className="text-xl md:text-2xl text-white/70 font-light mb-8 max-w-full ">
+                  <p className="text-xl md:text-2xl text-white/70 font-light mb-8 max-w-full">
                     {subtitle}
                   </p>
                 )}

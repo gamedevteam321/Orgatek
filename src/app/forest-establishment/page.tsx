@@ -15,7 +15,7 @@ export default function ForestEstablishment() {
         <section className="relative h-[95vh] flex items-end justify-center text-white">
           <div className="absolute inset-0">
             <Image
-              src="/images/test.jpeg"
+              src="/images/forest-establishment.png"
               alt="Forest establishment hero"
               fill
               className="object-cover"
@@ -45,7 +45,7 @@ export default function ForestEstablishment() {
               </div>
               <div className="relative h-[400px]">
                 <Image
-                  src="/images/test.jpeg"
+                  src="/images/leasing.png"
                   alt="Forest establishment process"
                   fill
                   className="object-cover rounded-lg"
@@ -61,10 +61,10 @@ export default function ForestEstablishment() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="relative h-[400px]">
                 <Image
-                  src="/images/test.jpeg"
+                  src="/images/species-selection.png"
                   alt="Species selection"
                   fill
-                  className="object-cover rounded-lg"
+                  className="object-contain rounded-lg"
                 />
               </div>
               <div>
@@ -92,7 +92,7 @@ export default function ForestEstablishment() {
               </div>
               <div className="relative h-[400px]">
                 <Image
-                  src="/images/test.jpeg"
+                  src="/images/nursery-management.png"
                   alt="Nursery management"
                   fill
                   className="object-cover rounded-lg"
@@ -108,7 +108,7 @@ export default function ForestEstablishment() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="relative h-[400px]">
                 <Image
-                  src="/images/test.jpeg"
+                  src="/images/land-preparation.png"
                   alt="Land preparation"
                   fill
                   className="object-cover rounded-lg"
@@ -142,7 +142,7 @@ export default function ForestEstablishment() {
               </div>
               <div className="relative h-[400px]">
                 <Image
-                  src="/images/test.jpeg"
+                  src="/images/planting-plan.png"
                   alt="Planting plan"
                   fill
                   className="object-cover rounded-lg"

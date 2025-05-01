@@ -11,104 +11,79 @@ export default function GetInvolved() {
 
       {/* Hero Section */}
       <Hero
-        backgroundImage="https://images.unsplash.com/photo-1532667449560-72a95c8d381b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-        title="Get Involved"
-        subtitle="Join us in our mission to create a more sustainable future through carbon sequestration."
-        small={true}
+        backgroundImage="/images/test.jpeg"
+        title="Nature-based investments for a sustainable future"
+        subtitle="We provide investors exposure to regional investment opportunities in real assets and natural capital."
+        small={false}
       />
 
-      {/* Partnership Options Section */}
+      {/* Investment Strategy Section */}
+      <section className="py-12 bg-white">
+        <div className="orgatek-container">
+          <div className="max-w-7xl mx-auto">
+            <p className="text-gray-700 text-lg leading-relaxed text-center">
+              Our investment strategies support the role of forests as nature-based solutions, provide sustainable wood fibre for the growing circular bioeconomy, and contribute to the sustainable development of regional economies and rural communities.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Video Section */}
       <section className="py-16 bg-[#eff1f1]">
         <div className="orgatek-container">
-          <h2 className="text-2xl md:text-3xl font-semibold text-[#38625c] mb-8 text-center">Partner With Us</h2>
+          <h2 className="text-2xl md:text-3xl font-semibold text-[#38625c] mb-8 text-center">Our Impact in Action</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            <div className="bg-white p-6 shadow-sm">
-              <h3 className="text-xl font-semibold text-[#38625c] mb-4">For Businesses</h3>
-              <p className="text-gray-700 mb-6">
-                Partner with Orgatek to offset your carbon footprint, enhance your ESG credentials, and source sustainable materials for your products.
-              </p>
-              <ul className="space-y-2 mb-6">
-                <li className="flex items-start">
-                  <svg className="w-5 h-5 text-[#38625c] mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span className="text-gray-700">Carbon credit purchasing</span>
-                </li>
-                <li className="flex items-start">
-                  <svg className="w-5 h-5 text-[#38625c] mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span className="text-gray-700">Sustainable materials sourcing</span>
-                </li>
-                <li className="flex items-start">
-                  <svg className="w-5 h-5 text-[#38625c] mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span className="text-gray-700">ESG reporting support</span>
-                </li>
-              </ul>
+            {/* Video 1 */}
+            <div className="bg-white p-4 shadow-sm rounded-lg">
+              <div className="aspect-video w-full mb-4 relative">
+                <iframe
+                  className="w-full h-full absolute inset-0"
+                  src="https://www.youtube.com/embed/your-video-id-1"
+                  title="Carbon Farming Initiatives"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
+              <h3 className="text-xl font-semibold text-[#38625c] mb-2">Carbon Farming Projects</h3>
+              <p className="text-gray-700">Discover how our carbon farming initiatives are transforming landscapes and communities.</p>
             </div>
 
-            <div className="bg-white p-6 shadow-sm">
-              <h3 className="text-xl font-semibold text-[#38625c] mb-4">For Landowners</h3>
-              <p className="text-gray-700 mb-6">
-                Turn your land into a carbon asset by partnering with Orgatek to establish oil mallee plantations that generate ongoing revenue.
-              </p>
-              <ul className="space-y-2 mb-6">
-                <li className="flex items-start">
-                  <svg className="w-5 h-5 text-[#38625c] mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span className="text-gray-700">Carbon farming opportunities</span>
-                </li>
-                <li className="flex items-start">
-                  <svg className="w-5 h-5 text-[#38625c] mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span className="text-gray-700">Land management expertise</span>
-                </li>
-                <li className="flex items-start">
-                  <svg className="w-5 h-5 text-[#38625c] mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span className="text-gray-700">Long-term revenue streams</span>
-                </li>
-              </ul>
+            {/* Video 2 */}
+            <div className="bg-white p-4 shadow-sm rounded-lg">
+              <div className="aspect-video w-full mb-4 relative">
+                <iframe
+                  className="w-full h-full absolute inset-0"
+                  src="https://www.youtube.com/embed/your-video-id-2"
+                  title="Sustainable Forestry"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
+              <h3 className="text-xl font-semibold text-[#38625c] mb-2">Sustainable Forestry</h3>
+              <p className="text-gray-700">See how we're managing forests for both environmental and economic benefits.</p>
             </div>
 
-            <div className="bg-white p-6 shadow-sm">
-              <h3 className="text-xl font-semibold text-[#38625c] mb-4">For Investors</h3>
-              <p className="text-gray-700 mb-6">
-                Invest in a sustainable future with competitive returns through Orgatek's carbon farming, biochar production, and carbon credit projects.
-              </p>
-              <ul className="space-y-2 mb-6">
-                <li className="flex items-start">
-                  <svg className="w-5 h-5 text-[#38625c] mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span className="text-gray-700">Impact investment opportunities</span>
-                </li>
-                <li className="flex items-start">
-                  <svg className="w-5 h-5 text-[#38625c] mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span className="text-gray-700">Carbon credit market exposure</span>
-                </li>
-                <li className="flex items-start">
-                  <svg className="w-5 h-5 text-[#38625c] mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span className="text-gray-700">Environmental and financial returns</span>
-                </li>
-              </ul>
+            {/* Video 3 */}
+            <div className="bg-white p-4 shadow-sm rounded-lg">
+              <div className="aspect-video w-full mb-4 relative">
+                <iframe
+                  className="w-full h-full absolute inset-0"
+                  src="https://www.youtube.com/embed/your-video-id-3"
+                  title="Community Impact"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
+              <h3 className="text-xl font-semibold text-[#38625c] mb-2">Community Impact</h3>
+              <p className="text-gray-700">Learn about the positive impact our projects have on rural communities.</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Certification Section */}
-      <section className="py-16 bg-white">
+      {/* <section className="py-16 bg-white">
         <div className="orgatek-container">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
@@ -201,31 +176,31 @@ export default function GetInvolved() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Acknowledgement Section */}
-      <section className="py-16 bg-[#27543a] text-white">
+      {/* <section className="py-16 bg-[#27543a] text-white  text-center">
         <div className="orgatek-container">
           <h2 className="text-2xl font-semibold mb-6">Acknowledgement of Country</h2>
-          <div className="max-w-3xl">
-            <p className="mb-6">
+          <div className="max-w-7xl">
+            <p className="mb-6 text-center">
               We respect the traditional and enduring connections of First Australian peoples to Country and acknowledge the expertise of our Aboriginal partners.
             </p>
-            <p className="mb-6">
+            <p className="mb-6 text-center">
               We acknowledge that Australia's First Nations peoples occupied and cared for this continent for millennia. We recognise the ongoing intellectual property of Aboriginal peoples in Australia in continuing to develop new ways of managing our iconic Australian flora.
             </p>
-            <p>
+            <p className="mb-6 text-center">
               Our work takes place on the traditional lands of many Aboriginal nations, and we pay our respects to Elders past, present and emerging.
             </p>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Contact Form Section */}
       <ContactFormSection
         title="Let's discuss how we can work together"
         subtitle="Whether you're a business looking to offset carbon, a landowner interested in carbon farming, or an investor seeking sustainable returns, we'd love to hear from you."
-        backgroundColor="cream"
+        backgroundColor="white"
       />
 
       <Footer />

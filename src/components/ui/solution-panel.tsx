@@ -14,6 +14,20 @@ interface SolutionPanelProps {
   pagePath?: string;
 }
 
+// Pre-define all possible page imports
+const pageComponents = {
+  'forest-establishment': dynamic(() => import('@/app/forest-establishment/page')),
+  'forest-management': dynamic(() => import('@/app/forest-management/page')),
+  'sustainable-harvesting': dynamic(() => import('@/app/sustainable-harvesting/page')),
+  'unique-organic-inputs': dynamic(() => import('@/app/unique-organic-inputs/page')),
+  'biochar-enrichment': dynamic(() => import('@/app/biochar-enrichment/page')),
+  'digital-monitoring': dynamic(() => import('@/app/digital-monitoring/page')),
+  'sustainable-timber': dynamic(() => import('@/app/sustainable-timber/page')),
+  'biochar': dynamic(() => import('@/app/biochar/page')),
+  'carbon-credits': dynamic(() => import('@/app/carbon-credits/page')),
+  'our-impact': dynamic(() => import('@/app/our-impact/page')),
+};
+
 export function SolutionPanel({
   isOpen,
   onClose,
@@ -33,10 +47,13 @@ export function SolutionPanel({
         try {
           // Remove leading slash and convert to module path
           const modulePath = pagePath.replace(/^\//, '');
-          const PageComponent = dynamic(() => import(`@/app/${modulePath}/page`), {
-            loading: () => <div>Loading...</div>,
-          });
-          setPageContent(<PageComponent />);
+          const PageComponent = pageComponents[modulePath as keyof typeof pageComponents];
+          if (PageComponent) {
+            setPageContent(<PageComponent />);
+          } else {
+            console.error('Page component not found for path:', modulePath);
+            setPageContent(null);
+          }
         } catch (error) {
           console.error('Error loading page content:', error);
           setPageContent(null);

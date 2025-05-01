@@ -1,0 +1,7 @@
+{
+  "/get-involved/page": "app/get-involved/page.js",
+  "/how-we-transform-wastelands/page": "app/how-we-transform-wastelands/page.js",
+  "/our-trees/page": "app/our-trees/page.js",
+  "/what-we-create/page": "app/what-we-create/page.js",
+  "/page": "app/page.js"
+}

@@ -38,7 +38,7 @@ export function Footer() {
               <li><Link href="/why-we-exist" className="text-[#38625c] hover:text-[#915662]">Why We Exist</Link></li>
               <li><Link href="/how-we-transform-wastelands" className="text-[#38625c] hover:text-[#915662]">How We Transform Wastelands</Link></li>
               <li><Link href="/what-we-create" className="text-[#38625c] hover:text-[#915662]">What We Create</Link></li>
-              <li><Link href="/our-solutions" className="text-[#38625c] hover:text-[#915662]">Our Solutions</Link></li>
+              <li><Link href="/our-trees" className="text-[#38625c] hover:text-[#915662]">Our Trees</Link></li>
               <li><Link href="/get-involved" className="text-[#38625c] hover:text-[#915662]">Get Involved</Link></li>
             </ul>
           </div>
@@ -48,7 +48,7 @@ export function Footer() {
             <h3 className="text-[#38625c] font-semibold mb-4">Connect</h3>
             <ul className="space-y-2">
               <li><Link href="/about-us" className="text-[#38625c] hover:text-[#915662]">About Us</Link></li>
-              <li><Link href="/our-team" className="text-[#38625c] hover:text-[#915662]">Our Team</Link></li>
+              <li><Link href="/about-us" className="text-[#38625c] hover:text-[#915662]">Our Team</Link></li>
               <li><Link href="/contact" className="text-[#38625c] hover:text-[#915662]">Contact</Link></li>
             </ul>
           </div>
@@ -67,7 +67,7 @@ export function Footer() {
 
         {/* Copyright */}
         <div className="mt-8 pt-4 text-sm text-[#38625c]">
-          © 2024 Orgatek • Website by Lateral Aspect
+          © 2024 Orgatek 
         </div>
       </div>
     </footer>

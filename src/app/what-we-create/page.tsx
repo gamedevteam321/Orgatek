@@ -3,7 +3,7 @@ import { Footer } from '@/components/layout/footer';
 import { Hero } from '@/components/ui/hero';
 import { ContentSection } from '@/components/ui/content-section';
 import { ContactFormSection } from '@/components/sections/contact-form-section';
-import { FeatureCard } from '@/components/ui/feature-card';
+import { AlternatingSection } from '@/components/ui/alternating-section';
 
 export default function WhatWeCreate() {
   return (
@@ -27,35 +27,42 @@ export default function WhatWeCreate() {
         </div>
       </div>
 
-      {/* Solutions Cards Section */}
-      <ContentSection
-        title="What We Create"
-        description="We transform wastelands into valuable resources through sustainable practices, creating products that benefit both the environment and society."
-        bgColor="cream"
-      >
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pt-8">
-          <FeatureCard
+      {/* Solutions Section */}
+      <div className="bg-cream">
+        <div className="container mx-auto px-4 py-16">
+          <h2 className="text-4xl font-bold text-[#2B5741] text-center mb-4">What We Create</h2>
+          <p className="text-gray-600 text-center mb-16 max-w-3xl mx-auto">
+            We transform wastelands into valuable resources through sustainable practices, creating products that benefit both the environment and society.
+          </p>
+
+          <AlternatingSection
             title="Timber"
             description="Sustainable timber harvested from our carefully managed forests. Our timber products are certified organic and sourced from short-rotation, high-yield tree species that are specifically selected for their environmental benefits and commercial viability."
             image="/images/test.jpeg"
             buttonText="Learn More"
+            imagePosition="left"
+            pagePath="/sustainable-timber"
           />
-          
-          <FeatureCard
+
+          <AlternatingSection
             title="Biochar"
             description="High-quality biochar produced through our proprietary pyrolysis process. This carbon-rich material enhances soil fertility, improves water retention, and sequesters carbon for centuries, making it an essential tool for sustainable agriculture and carbon offset initiatives."
             image="/images/test.jpeg"
             buttonText="Learn More"
+            imagePosition="right"
+            pagePath="/biochar"
           />
-          
-          <FeatureCard
+
+          <AlternatingSection
             title="Carbon Credits"
             description="Verifiable carbon credits generated through our sustainable forestry and biochar production processes. These credits help organizations meet their emission reduction targets while supporting environmental restoration and sustainable development."
             image="/images/test.jpeg"
             buttonText="Learn More"
+            imagePosition="left"
+            pagePath="/carbon-credits"
           />
         </div>
-      </ContentSection>
+      </div>
 
       <Footer />
     </main>
