@@ -1,8 +1,0 @@
-{
-  "/get-involved/page": "app/get-involved/page.js",
-  "/page": "app/page.js",
-  "/what-we-create/page": "app/what-we-create/page.js",
-  "/why-we-exist/page": "app/why-we-exist/page.js",
-  "/our-trees/page": "app/our-trees/page.js",
-  "/our-impact/page": "app/our-impact/page.js"
-}
