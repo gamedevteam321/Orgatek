@@ -25,6 +25,7 @@ const pageComponents = {
   'sustainable-timber': dynamic(() => import('@/app/sustainable-timber/page')),
   'biochar': dynamic(() => import('@/app/biochar/page')),
   'carbon-credits': dynamic(() => import('@/app/carbon-credits/page')),
+  'timber': dynamic(() => import('@/app/timber/page')),
   'our-impact': dynamic(() => import('@/app/our-impact/page')),
 };
 

@@ -1,14 +1,32 @@
-import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 import { Hero } from '@/components/ui/hero';
 import { ContactFormSection } from '@/components/sections/contact-form-section';
 import Image from 'next/image';
+import dynamic from 'next/dynamic';
+
+// Dynamically import video section to reduce initial bundle size
+const VideoSection = dynamic(() => import('@/components/sections/video-section'), {
+  loading: () => (
+    <div className="py-16 bg-[#eff1f1] animate-pulse">
+      <div className="orgatek-container">
+        <div className="h-8 w-64 bg-gray-200 rounded mb-8 mx-auto"></div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          {[1, 2, 3].map((i) => (
+            <div key={i} className="bg-white p-4 shadow-sm rounded-lg">
+              <div className="aspect-video w-full mb-4 bg-gray-200"></div>
+              <div className="h-6 w-48 bg-gray-200 rounded mb-2"></div>
+              <div className="h-4 w-full bg-gray-200 rounded"></div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  )
+});
 
 export default function GetInvolved() {
   return (
     <main>
-      <Header />
-
       {/* Hero Section */}
       <Hero
         backgroundImage="/images/test.jpeg"
@@ -28,59 +46,8 @@ export default function GetInvolved() {
         </div>
       </section>
 
-      {/* Video Section */}
-      <section className="py-16 bg-[#eff1f1]">
-        <div className="orgatek-container">
-          <h2 className="text-2xl md:text-3xl font-semibold text-[#38625c] mb-8 text-center">Our Impact in Action</h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            {/* Video 1 */}
-            <div className="bg-white p-4 shadow-sm rounded-lg">
-              <div className="aspect-video w-full mb-4 relative">
-                <iframe
-                  className="w-full h-full absolute inset-0"
-                  src="https://www.youtube.com/embed/your-video-id-1"
-                  title="Carbon Farming Initiatives"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
-              </div>
-              <h3 className="text-xl font-semibold text-[#38625c] mb-2">Carbon Farming Projects</h3>
-              <p className="text-gray-700">Discover how our carbon farming initiatives are transforming landscapes and communities.</p>
-            </div>
-
-            {/* Video 2 */}
-            <div className="bg-white p-4 shadow-sm rounded-lg">
-              <div className="aspect-video w-full mb-4 relative">
-                <iframe
-                  className="w-full h-full absolute inset-0"
-                  src="https://www.youtube.com/embed/your-video-id-2"
-                  title="Sustainable Forestry"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
-              </div>
-              <h3 className="text-xl font-semibold text-[#38625c] mb-2">Sustainable Forestry</h3>
-              <p className="text-gray-700">See how we're managing forests for both environmental and economic benefits.</p>
-            </div>
-
-            {/* Video 3 */}
-            <div className="bg-white p-4 shadow-sm rounded-lg">
-              <div className="aspect-video w-full mb-4 relative">
-                <iframe
-                  className="w-full h-full absolute inset-0"
-                  src="https://www.youtube.com/embed/your-video-id-3"
-                  title="Community Impact"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
-              </div>
-              <h3 className="text-xl font-semibold text-[#38625c] mb-2">Community Impact</h3>
-              <p className="text-gray-700">Learn about the positive impact our projects have on rural communities.</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Video Section - Dynamically loaded */}
+      <VideoSection />
 
       {/* Certification Section */}
       {/* <section className="py-16 bg-white">

@@ -35,9 +35,9 @@ export function Footer() {
           {/* Explore Column */}
           <div>
             <ul className="text-[#38625c] font-semibold mb-4" >
-              <li><Link href="/why-we-exist" className="text-[#38625c] hover:text-[#915662]">Why We Exist</Link></li>
-              <li><Link href="/how-we-transform-wastelands" className="text-[#38625c] hover:text-[#915662]">How We Transform Wastelands</Link></li>
-              <li><Link href="/what-we-create" className="text-[#38625c] hover:text-[#915662]">What We Create</Link></li>
+              <li><Link href="/why-we-exist" className="text-[#38625c] hover:text-[#915662]">Why we Exist</Link></li>
+              <li><Link href="/how-we-transform-wastelands" className="text-[#38625c] hover:text-[#915662]">What we do</Link></li>
+              <li><Link href="/what-we-create" className="text-[#38625c] hover:text-[#915662]">What we create</Link></li>
               <li><Link href="/our-trees" className="text-[#38625c] hover:text-[#915662]">Our Trees</Link></li>
               <li><Link href="/get-involved" className="text-[#38625c] hover:text-[#915662]">Get Involved</Link></li>
             </ul>

@@ -12,20 +12,26 @@ export default function WhyWeDoIt() {
 
       {/* Hero Section */}
       <Hero
-        backgroundImage="https://images.unsplash.com/photo-1500829243541-74b677fecc30?ixlib=rb-4.0.3&auto=format&fit=crop&w=1740&q=80"
-        title="FOCUS ON"
-         subtitle={<>Degraded Land<br />Availability Deforestation<br />Importance of Forests</>}
+        backgroundImage="/images/hero-why.png"
+        title="Why We Exist"
+         subtitle="A Growing Crisis — and a Missed Opportunity"
+        titleClassName="text-5xl md:text-7xl lg:text-7xl"
+        subtitleClassName="text-lg text-gray-700 mb-6 font-medium"
       />
 
       {/* Intro Section */}
       <section className="py-12 bg-[#eff1f1]">
         <div className="orgatek-container">
-          <div className="max-w-3xl mx-auto">
+          <div className="max-w-7xl mx-auto">
+           
             <p className="text-lg text-gray-700 mb-6">
-            Wastelands represent one of the world's most underutilized and degraded resources, often characterized by barren soil, low productivity, and limited biodiversity. At Orgatek, we see these lands not as liabilities, but as opportunities to create thriving ecosystems. Through the power of agroforestry and biochar integration, we are transforming these neglected areas into fertile, carbon-sequestering landscapes.
+              Each year, over 10 million hectares of natural forest are lost globally due to unsustainable timber harvesting and agricultural expansion, putting immense pressure on ecosystems, accelerating climate change, and destroying vital biodiversity.
+            </p>
+            <p className="text-lg text-gray-700 mb-6">
+              Meanwhile, 2 billion hectares of wastelands—barren, unproductive, and ecologically poor—lie abandoned.
             </p>
             <p className="text-lg text-gray-700">
-            By planting carefully selected tree species and enhancing the soil with biochar, we not only restore ecological balance but also unlock the potential for sustainable agricultural practices. Our mission is to breathe life back into these forgotten lands, turning them into vibrant hubs of environmental and economic resilience for generations to come.
+              We see these lands not as liabilities, but as climate solutions waiting to be unlocked. Through the integration of regenerative forestry and biochar made from our forest residues, our mission is to transform them into thriving ecosystems, growing sustainable timber, restoring soils empowering communities,and capturing carbon at scale.
             </p>
           </div>
         </div>
@@ -62,20 +68,20 @@ export default function WhyWeDoIt() {
           <p>Forests help regulate our climate by absorbing and retaining carbon dioxide from the atmosphere. The healthier the forest, the more carbon it can capture and store. </p> <br />
           <p>But today, the destruction of forests accounts for at least 10 per cent of annual carbon emissions. When forests are responsibly managed so biodiversity is maintained, the plants and trees within them can extract more carbon dioxide from the atmosphere and slow climate change.</p> 
         </div>}
-        image="/images/test.jpeg"
+        image="/images/forest.png"
         imageLeft={false}
         bgColor="cream"
       />
 
-      {/* Forests support earth’s biodiversity Section */}
+      {/* Forests support earth's biodiversity Section */}
       <ContentSection
-        title="Forests support earth’s biodiversity"
+        title="Forests support earth's biodiversity"
         description={<div>
           <p>Forests are incredibly diverse ecosystems, hosting the majority of terrestrial plant and animal species. They represent a beautifully balanced system where soil, plants, and animals all depend on each other to thrive.</p> <br />
           <p>But why does this matter for us? First, biodiverse ecosystems provide the vital materials we need for food, shelter, clothing, and more. Biodiversity also fosters resilience. Healthy, rich ecosystems make earth habitable for humans. When forests disappear, these life-supporting systems begin to fail, putting humans at significant risk.</p> <br />
-          <p>According to the Intergovernmental Science-Policy Platform on Biodiversity and Ecosystem Services (IPBES), biodiversity is now declining faster than ever before. FSC’s responsible forestry initiatives protect biodiversity in forests around the world.</p>
+          <p>According to the Intergovernmental Science-Policy Platform on Biodiversity and Ecosystem Services (IPBES), biodiversity is now declining faster than ever before. FSC's responsible forestry initiatives protect biodiversity in forests around the world.</p>
         </div>}
-        image="/images/test.jpeg"
+        image="/images/biodiversity.png"
         imageLeft={true}
         bgColor="white"
       />
@@ -85,9 +91,9 @@ export default function WhyWeDoIt() {
         title="Forests are essential for people and communities"
         description={<div>
           <p>Forests support human life all over the world. They provide us with clean air, drinking water, and countless products we rely on every day. And for 300 million people, forests also provide a home. The communities living in and around forests depend on them for food, fuel, medicine, and their livelihoods. In turn, they make stewardship a part of everything they do.</p> <br />
-          <p>Indigenous groups and local communities manage one-quarter of the world’s land. Globally, indigenous land experiences up to 26 per cent less deforestation than non-protected areas. And with support from FSC, Indigenous and local communities can achieve even better outcomes.</p> <br />
+          <p>Indigenous groups and local communities manage one-quarter of the world's land. Globally, indigenous land experiences up to 26 per cent less deforestation than non-protected areas. And with support from FSC, Indigenous and local communities can achieve even better outcomes.</p> <br />
         </div>}
-        image="/images/test.jpeg"
+        image="/images/communities.png"
         imageLeft={false}
         bgColor="cream"
       />
@@ -138,8 +144,7 @@ export default function WhyWeDoIt() {
         </div>
       </section>
 
-      {/* Contact Form Section */}
-      <ContactFormSection title="Want to learn more about why we do what we do? Subscribe to our newsletter for updates on our mission and impact." />
+      
      
       <Footer />
     </main>

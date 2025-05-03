@@ -3,13 +3,15 @@ import React from 'react';
 interface ContactFormSectionProps {
   title: string;
   subtitle?: string;
+  subtitle2?: string;
   backgroundColor?: 'white' | 'cream' | 'maroon';
 }
 
 export function ContactFormSection({
-  title = "If you're an investor, purchaser and would like to stay informed about our projects, please subscribe to our newsletter.",
-  subtitle,
-  backgroundColor = 'maroon',
+  title = "INVESTMENT OPPORTUNITIES",
+  subtitle = "We provide investors exposure to regional investment opportunities in real assets and natural capital.",
+  subtitle2 = "Our investment strategies support the role of forests as nature-based solutions, provide sustainable wood fibre for the growing circular bioeconomy, and contribute to the sustainable development of regional economies and rural communities.",
+  backgroundColor = 'white',
 }: ContactFormSectionProps) {
   const getBgColor = () => {
     switch (backgroundColor) {
@@ -36,6 +38,7 @@ export function ContactFormSection({
           <div>
             <h2 className="text-2xl md:text-3xl font-semibold mb-4">{title}</h2>
             {subtitle && <p className="text-base md:text-lg opacity-90 mb-6">{subtitle}</p>}
+            {subtitle2 && <p className="text-base md:text-lg opacity-90 mb-6">{subtitle2}</p>}
           </div>
 
           <div>

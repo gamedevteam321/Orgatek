@@ -13,15 +13,16 @@ export default function OurTrees() {
       <Header />
       <div className="min-h-screen bg-white">
         {/* Header Section */}
-        <div className="relative h-[95vh] w-full">
+        <div className="relative h-[100vh] w-full ">
           <Image
-            src="/images/test.jpeg"
+            src="/images/our-trees.png"
             alt="Forest Landscape"
             fill
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-black/40">
+          <div className="absolute inset-0 bg-[#003714] opacity-70" />
+          <div className="absolute inset-0 ">
             <div className="absolute bottom-10 left-0 p-8 md:p-12 max-w-2xl">
               <h1 className="text-4xl md:text-6xl font-bold mb-4 text-white">Our Trees</h1>
               <p className="text-xl md:text-2xl text-white">
@@ -42,49 +43,61 @@ export default function OurTrees() {
         <ContentSection
           title="Eucalyptus"
           description="A resilient, fast-growing species ideal for carbon sequestration, water conservation, and soil stabilization. Its ability to thrive in arid conditions makes it a cornerstone of land regeneration efforts."
-          image="/images/test.jpeg"
+          image="/images/eucalyptus.png"
           imageLeft={true}
           bgColor="cream"
+          imageObjectFit="contain"
+          imageHeight="h-[500px]"
         />
 
         <ContentSection
           title="Poplar"
           description="With rapid growth and adaptability, poplar enhances biodiversity, prevents soil erosion, and provides valuable biomass for sustainable agroforestry solutions."
-          image="/images/test.jpeg"
+          image="/images/poplar.png"
           imageLeft={false}
           bgColor="white"
+          imageObjectFit="contain"
+          imageHeight="h-[500px]"
         />
 
         <ContentSection
           title="Acacia"
           description="Known for enriching soils with nitrogen fixation, Acacia fosters healthy ecosystems while serving as a natural defense against desertification."
-          image="/images/test.jpeg"
+          image="/images/acacia.png"
           imageLeft={true}
           bgColor="cream"
+          imageObjectFit="contain"
+          imageHeight="h-[500px]"
         />
 
         <ContentSection
           title="Bamboo"
           description="A versatile and renewable resource, bamboo is essential for erosion control, soil enrichment, and carbon absorption, offering a sustainable alternative to traditional timber."
-          image="/images/test.jpeg"
+          image="/images/bamboo.png"
           imageLeft={false}
           bgColor="white"
+          imageObjectFit="contain"
+          imageHeight="h-[600px]"
         />
 
         <ContentSection
           title="Casuarina"
           description="Highly tolerant to saline and degraded soils, Casuarina plays a crucial role in coastal restoration, windbreaks, and carbon storage, reinforcing landscapes against climate challenges."
-          image="/images/test.jpeg"
+          image="/images/Casuarina.png"
           imageLeft={true}
           bgColor="cream"
+          imageObjectFit="contain"
+          imageHeight="h-[500px]"
         />
 
         <ContentSection
           title="Gmelina Arborea"
           description="With its high-yield biomass and rapid regeneration, Gmelina supports sustainable forestry, efficient carbon sequestration, and long-term soil productivity, making it a key species for restoring deforested regions."
-          image="/images/test.jpeg"
+          image="/images/Gmelina Arborea.png"
           imageLeft={false}
           bgColor="white"
+          imageObjectFit="contain"
+          imageHeight="h-[500px]"
         />
 
         {/* Conclusion Section */}

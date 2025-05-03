@@ -13,7 +13,7 @@ export default function WhatWeCreate() {
       {/* Hero Section */}
       <Hero
         backgroundImage="/images/test.jpeg"
-        title="Our Solutions"
+        title="What We Create"
         subtitle="Our product range provides diverse global and sustainable solutions for the gardener, farmer or for carbon offset. For better tomorrow."
         small={false}
       />
@@ -38,7 +38,7 @@ export default function WhatWeCreate() {
           <AlternatingSection
             title="Timber"
             description="Sustainable timber harvested from our carefully managed forests. Our timber products are certified organic and sourced from short-rotation, high-yield tree species that are specifically selected for their environmental benefits and commercial viability."
-            image="/images/test.jpeg"
+            image="/images/timber.png"
             buttonText="Learn More"
             imagePosition="left"
             pagePath="/sustainable-timber"
@@ -47,7 +47,7 @@ export default function WhatWeCreate() {
           <AlternatingSection
             title="Biochar"
             description="High-quality biochar produced through our proprietary pyrolysis process. This carbon-rich material enhances soil fertility, improves water retention, and sequesters carbon for centuries, making it an essential tool for sustainable agriculture and carbon offset initiatives."
-            image="/images/test.jpeg"
+            image="/images/biochar.png"
             buttonText="Learn More"
             imagePosition="right"
             pagePath="/biochar"
@@ -56,7 +56,7 @@ export default function WhatWeCreate() {
           <AlternatingSection
             title="Carbon Credits"
             description="Verifiable carbon credits generated through our sustainable forestry and biochar production processes. These credits help organizations meet their emission reduction targets while supporting environmental restoration and sustainable development."
-            image="/images/test.jpeg"
+            image="/images/carbon-credits.png"
             buttonText="Learn More"
             imagePosition="left"
             pagePath="/carbon-credits"

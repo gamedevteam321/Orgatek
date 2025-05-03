@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import ClientBody from "./ClientBody";
+import { Header } from "@/components/layout/header";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -21,7 +22,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={poppins.variable}>
-      <ClientBody>{children}</ClientBody>
+      <ClientBody>
+        <Header />
+        {children}
+      </ClientBody>
     </html>
   );
 }

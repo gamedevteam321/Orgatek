@@ -6,10 +6,11 @@ import Link from 'next/link';
 interface HeroProps {
   backgroundImage: string;
   title: React.ReactNode | { title: string; subtitle: string }[];
-  subtitle?: string;
+  subtitle?: React.ReactNode;
   small?: boolean;
   buttonText?: string;
   buttonLink?: string;
+  titleClassName?: string;
 }
 
 export function Hero({
@@ -19,6 +20,7 @@ export function Hero({
   small = false,
   buttonText,
   buttonLink,
+  titleClassName = 'text-4xl md:text-5xl lg:text-6xl',
 }: HeroProps) {
   return (
     <div
@@ -33,7 +35,7 @@ export function Hero({
           className="object-cover"
           quality={100}
         />
-        <div className="absolute inset-0 bg-[#38625c] opacity-60" />
+        <div className="absolute inset-0 bg-[#003714] opacity-70" />
       </div>
       
       <div className="absolute inset-0 flex items-end pb-20">
@@ -43,7 +45,7 @@ export function Hero({
               <TextSlider items={title} />
             ) : (
               <>
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-white/90 leading-tight mb-6">
+                <h1 className={`${titleClassName} font-light text-white/90 leading-tight mb-6`}>
                   {title}
                 </h1>
                 {subtitle && (

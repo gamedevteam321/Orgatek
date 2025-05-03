@@ -19,6 +19,9 @@ interface ContentSectionProps {
   imageSize?: 'default' | 'full';
   openLink?: boolean;
   pagePath?: string;
+  bgImage?: string;
+  imageObjectFit?: 'cover' | 'contain';
+  imageHeight?: string;
 }
 
 export function ContentSection({
@@ -34,6 +37,9 @@ export function ContentSection({
   imageSize = 'default',
   openLink = false,
   pagePath,
+  bgImage,
+  imageObjectFit = 'cover',
+  imageHeight = 'h-96 md:h-[300px] lg:h-[400px]',
 }: ContentSectionProps) {
   const [isPanelOpen, setIsPanelOpen] = useState(false);
 
@@ -60,12 +66,12 @@ export function ContentSection({
   const renderImage = () => {
     if (typeof image === 'string') {
       return (
-        <div className={`relative ${imageSize === 'full' ? 'w-full h-screen' : 'w-full h-96 md:h-[300px] lg:h-[400px]'}`}>
+        <div className={`relative ${imageSize === 'full' ? 'w-full h-screen' : `w-full ${imageHeight}`}`}>
           <Image
             src={image}
             alt={imageAlt}
             fill
-            className="object-cover"
+            className={`object-${imageObjectFit}`}
           />
         </div>
       );
@@ -90,18 +96,31 @@ export function ContentSection({
 
   return (
     <>
-      <section className={`py-16 md:py-24 ${getBgColor()}`}>
-        <div className="orgatek-container">
-          <div className={`grid grid-cols-1 gap-8 md:gap-12 ${image ? 'lg:grid-cols-2' : ''}`}>
-            {image && imageLeft && (
+      <section className={`py-16 md:py-24 ${getBgColor()} relative`}>
+        {bgImage && (
+          <>
+            <div className="absolute inset-0 w-full h-full">
+              <Image
+                src={bgImage}
+                alt="Background"
+                fill
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+            </div>
+          </>
+        )}
+        <div className="orgatek-container relative z-10">
+          <div className={`grid grid-cols-1 gap-8 md:gap-12 ${image && !bgImage ? 'lg:grid-cols-2' : ''}`}>
+            {image && !bgImage && imageLeft && (
               <div className="w-full">
                 {renderImage()}
               </div>
             )}
 
             <div className="flex flex-col justify-center">
-              {title && <h2 className="text-2xl md:text-3xl font-semibold mb-4">{title}</h2>}
-              {description && <p className="text-base md:text-lg opacity-90 mb-6">{description}</p>}
+              {title && <h2 className={`text-2xl md:text-3xl font-semibold mb-4 ${bgImage ? 'text-white' : ''}`}>{title}</h2>}
+              {description && <p className={`text-base md:text-lg opacity-90 mb-6 ${bgImage ? 'text-white' : ''}`}>{description}</p>}
 
               {children}
 
@@ -123,7 +142,7 @@ export function ContentSection({
               )}
             </div>
 
-            {image && !imageLeft && (
+            {image && !bgImage && !imageLeft && (
               <div className="w-full">
                 {renderImage()}
               </div>

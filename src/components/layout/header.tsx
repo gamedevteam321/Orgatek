@@ -2,15 +2,15 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 
 const navItems = {
   explore: [
-    { name: 'Why We Exist', href: '/why-we-exist' },
-    { name: 'How We Transform Wastelands', href: '/how-we-transform-wastelands' },
-    { name: 'What we Create', href: '/what-we-create' }, 
-    { name: 'Our Trees', href: '/our-trees' },
+    { name: 'Why we exist', href: '/why-we-exist' },
+    { name: 'What we do', href: '/how-we-transform-wastelands' },
+    { name: 'What we create', href: '/what-we-create' }, 
+    { name: 'Our trees', href: '/our-trees' },
     { name: 'Get Involved', href: '/get-involved' },
   ],
   connect: [
@@ -26,20 +26,32 @@ const navItems = {
 
 export function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-white">
-      <div className="relative">
+    <>
+      <header className={`fixed top-0 left-0 right-0 z-40 w-full transition-all duration-300 border-b border-white/20 ${
+        isScrolled ? 'bg-gradient-to-b from-white/80 to-white/50 backdrop-blur-sm' : 'bg-transparent'
+      }`}>
         {/* Main header content */}
         <div className="flex items-center justify-between px-6 py-4 md:px-8">
           <div className="flex items-center">
             <Link href="/" className="flex items-center">
               <Image 
-                src="/Logo/logo1.png" 
+                src={isScrolled ? "/Logo/logo1.png" : "/Logo/logo-white.png"} 
                 alt="Orgatek Logo" 
-                width={120} 
-                height={40}
-                className="h-8 w-auto"
+                width={160} 
+                height={60}
+                className="h-12 w-auto"
               />
             </Link>
           </div>
@@ -47,113 +59,113 @@ export function Header() {
           {/* Burger menu button for both mobile and desktop */}
           <button
             type="button"
-            className="text-[#38625c]"
+            className={`${isScrolled ? 'text-[#38625c]' : 'text-white'}`}
             onClick={() => setMenuOpen(true)}
           >
             <span className="sr-only">Open main menu</span>
             <Menu className="h-6 w-6" aria-hidden="true" />
           </button>
         </div>
+      </header>
 
-        {/* Slide-out menu for both mobile and desktop */}
-        {menuOpen && (
-          <>
-            {/* Overlay */}
-            <div 
-              className="fixed inset-0 bg-black bg-opacity-50 z-50"
-              onClick={() => setMenuOpen(false)}
-            />
-            
-            {/* Menu panel */}
-            <div className="fixed inset-y-0 right-0 w-[70%] bg-white z-50 shadow-xl transform transition-transform duration-300 ease-in-out">
-              <div className="flex items-center justify-between px-6 py-10">
-                <div className="flex items-center">
-                  <Link 
-                    href="/" 
-                    className="flex items-center"
-                    onClick={() => setMenuOpen(false)}
-                  >
-                    <Image 
-                      src="/Logo/logo1.png" 
-                      alt="Orgatek Logo" 
-                      width={120} 
-                      height={40}
-                      className="h-16 w-auto"
-                    />
-                  </Link>
-                </div>
-                <button
-                  type="button"
-                  className="text-[#38625c]"
+      {/* Slide-out menu for both mobile and desktop */}
+      {menuOpen && (
+        <>
+          {/* Overlay */}
+          <div 
+            className="fixed inset-0 bg-black bg-opacity-50 z-[9999]"
+            onClick={() => setMenuOpen(false)}
+          ></div>
+          
+          {/* Menu panel */}
+          <div className="fixed inset-y-0 right-0 w-[70%] bg-white z-[9999] shadow-xl transform transition-transform duration-300 ease-in-out">
+            <div className="flex items-center justify-between px-6 py-10">
+              <div className="flex items-center">
+                <Link 
+                  href="/" 
+                  className="flex items-center"
                   onClick={() => setMenuOpen(false)}
                 >
-                  <span className="sr-only">Close menu</span>
-                  <X className="h-8 w-8" aria-hidden="true" />
-                </button>
+                  <Image 
+                    src="/Logo/logo1.png" 
+                    alt="Orgatek Logo" 
+                    width={160} 
+                    height={60}
+                    className="h-12 w-auto"
+                  />
+                </Link>
               </div>
-              
-              <nav className="h-[calc(100vh-80px)] flex flex-col justify-center">
-                <div className="px-6">
-                  <div className="grid grid-cols-1 md:grid-cols-[2fr,1fr,1fr] gap-8">
-                    {/* Explore Section */}
-                    <div>
-                      <ul className="text-[#38625c] font-semibold mb-4 text-lg w-full">
-                        {navItems.explore.map((item) => (
-                          <li key={item.name}>
-                            <Link
-                              href={item.href}
-                              className="text-[#38625c] hover:text-[#915662] block text-[1.3em] leading-[1.4]"
-                              onClick={() => setMenuOpen(false)}
-                            >
-                              {item.name}
-                            </Link>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
+              <button
+                type="button"
+                className="text-[#38625c]"
+                onClick={() => setMenuOpen(false)}
+              >
+                <span className="sr-only">Close menu</span>
+                <X className="h-8 w-8" aria-hidden="true" />
+              </button>
+            </div>
+            
+            <nav className="h-[calc(100vh-80px)] flex flex-col justify-center">
+              <div className="px-6">
+                <div className="grid grid-cols-1 md:grid-cols-[2fr,1fr,1fr] gap-8">
+                  {/* Explore Section */}
+                  <div>
+                    <ul className="text-[#38625c] font-semibold mb-4 text-lg w-full">
+                      {navItems.explore.map((item) => (
+                        <li key={item.name}>
+                          <Link
+                            href={item.href}
+                            className="text-[#38625c] hover:text-[#915662] block text-[1.3em] leading-[1.4]"
+                            onClick={() => setMenuOpen(false)}
+                          >
+                            {item.name}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
 
-                    {/* Connect Section */}
-                    <div>
-                      <h3 className="text-[#38625c] font-semibold mb-4 text-md">Connect</h3>
-                      <ul className="space-y-4">
-                        {navItems.connect.map((item) => (
-                          <li key={item.name}>
-                            <Link
-                              href={item.href}
-                              className="text-[#38625c] hover:text-[#915662] block text-[1em] leading-[1]"
-                              onClick={() => setMenuOpen(false)}
-                            >
-                              {item.name}
-                            </Link>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
+                  {/* Connect Section */}
+                  <div>
+                    <h3 className="text-[#38625c] font-semibold mb-4 text-md">Connect</h3>
+                    <ul className="space-y-4">
+                      {navItems.connect.map((item) => (
+                        <li key={item.name}>
+                          <Link
+                            href={item.href}
+                            className="text-[#38625c] hover:text-[#915662] block text-[1em] leading-[1]"
+                            onClick={() => setMenuOpen(false)}
+                          >
+                            {item.name}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
 
-                    {/* Legal Section */}
-                    <div>
-                      <h3 className="text-[#38625c] font-semibold mb-4 text-md">Legal</h3>
-                      <ul className="space-y-4">
-                        {navItems.legal.map((item) => (
-                          <li key={item.name}>
-                            <Link
-                              href={item.href}
-                              className="text-[#38625c] hover:text-[#915662] block text-[1em] leading-[1]"
-                              onClick={() => setMenuOpen(false)}
-                            >
-                              {item.name}
-                            </Link>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
+                  {/* Legal Section */}
+                  <div>
+                    <h3 className="text-[#38625c] font-semibold mb-4 text-md">Legal</h3>
+                    <ul className="space-y-4">
+                      {navItems.legal.map((item) => (
+                        <li key={item.name}>
+                          <Link
+                            href={item.href}
+                            className="text-[#38625c] hover:text-[#915662] block text-[1em] leading-[1]"
+                            onClick={() => setMenuOpen(false)}
+                          >
+                            {item.name}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                 </div>
-              </nav>
-            </div>
-          </>
-        )}
-      </div>
-    </header>
+              </div>
+            </nav>
+          </div>
+        </>
+      )}
+    </>
   );
 }

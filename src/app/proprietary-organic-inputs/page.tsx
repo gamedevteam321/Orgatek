@@ -4,7 +4,7 @@ import { ContentSection } from '@/components/ui/content-section';
 
 export default function ProprietaryOrganicInputs() {
   return (
-    <main>
+    <main className="mb-16 md:mb-24">
       <Header />
 
       <ContentSection

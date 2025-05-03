@@ -35,7 +35,7 @@ export function FeatureCard({
     <>
       <div className="flex flex-col bg-[#38625c] shadow-lg h-full rounded-[10px] overflow-hidden">
         {image && (
-          <div className="relative w-full h-48 overflow-hidden">
+          <div className="relative w-full h-60 overflow-hidden pt-4">
             <Image
               src={image}
               alt={imageAlt}
