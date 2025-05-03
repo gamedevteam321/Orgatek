@@ -14,9 +14,10 @@ export default function WhyWeDoIt() {
       <Hero
         backgroundImage="/images/hero-why.png"
         title="Why We Exist"
-         subtitle="A Growing Crisis — and a Missed Opportunity"
-        titleClassName="text-5xl md:text-7xl lg:text-7xl"
-        subtitleClassName="text-lg text-white mb-6 font-medium"
+        subtitle="A Growing Crisis — and a Missed Opportunity"
+        titleClassName="text-5xl md:text-7xl lg:text-7xl mb-4"
+        subtitleClassName="text-xl text-white/90 mb-6"
+        subtitleBelowImage={false}
       />
 
       {/* Intro Section */}

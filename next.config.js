@@ -1,7 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  distDir: 'dist',
+  assetPrefix: '/',
+  trailingSlash: true,
+  generateStaticParams: true,
   images: {
     unoptimized: true,
     domains: [

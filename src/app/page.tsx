@@ -65,7 +65,8 @@ export default function Home() {
           </div>
         }
         subtitle="We transform degraded landscapes into thriving organic forests — producing sustainable timber, biochar, and certified carbon credits for a regenerative future."
-        
+        subtitleBelowImage={true}
+        subtitleClassName="text-xl md:text-2xl text-gray-700 font-light mb-8 max-w-full text-center mx-auto"
       />
       {/* Why Forests Matter Section */}
       <ContentSection

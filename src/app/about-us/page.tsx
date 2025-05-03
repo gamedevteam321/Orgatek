@@ -52,7 +52,7 @@ export default function AboutPage() {
             <LeadershipCard
               name="Varun Mittal"
               designation="Founder & CEO"
-              image="/images/varun.png"
+              image="/images/Varun.png"
               description="A Chartered Accountant by training, Varun brings over 15 years of deep, hands-on experience in the agri-commodities sector. He has built and managed large-scale farm-to-fork operations, overseeing everything from production to last-mile delivery. His strength lies in understanding both the micro-level intricacies of farming and the macro dynamics of global agri-supply chains. At Orgatek, Varun brings a systems-level approach to forest-based carbon projects — ensuring operational scalability, financial discipline, and long-term value extraction across the entire supply chain."
             />
             

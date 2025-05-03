@@ -14,13 +14,16 @@ export default function WhatWeCreate() {
       <Hero
         backgroundImage="/images/create-hero.png"
         title="What We Create"
-        subtitle="We transform wastelands into valuable resources through sustainable practices, creating products that benefit both the environment and society."
+        subtitle=""
         small={false}
       />
 
       {/* Text Section */}
       <div className="bg-white py-16 px-[50px]">
         <div className="container mx-auto px-4 text-left">
+          <p className="text-[#2B5741] font-semibold text-lg leading-relaxed max-w-auto mx-auto mb-4">
+          We transform wastelands into valuable resources through sustainable practices, creating products that benefit both the environment and society.
+          </p>
           <p className="text-[#2B5741] font-semibold text-lg leading-relaxed max-w-auto mx-auto">
           We grow short rotation, high yield  timber on regenerated lands to replace deforestation-linked wood, convert forestry biomass into high-quality biochar for permanent soil carbon storage, and generate certified carbon credits rooted in measurable, durable climate impact. Our vertically integrated model transforms degraded land into climate assets — producing nature-based solutions that are traceable, verified, and built to scale.
           </p>
