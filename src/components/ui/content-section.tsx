@@ -22,6 +22,8 @@ interface ContentSectionProps {
   bgImage?: string;
   imageObjectFit?: 'cover' | 'contain';
   imageHeight?: string;
+  className?: string;
+  buttonStyle?: 'default' | 'solid-green';
 }
 
 export function ContentSection({
@@ -40,6 +42,8 @@ export function ContentSection({
   bgImage,
   imageObjectFit = 'cover',
   imageHeight = 'h-96 md:h-[300px] lg:h-[400px]',
+  className = '',
+  buttonStyle = 'default',
 }: ContentSectionProps) {
   const [isPanelOpen, setIsPanelOpen] = useState(false);
 
@@ -57,6 +61,9 @@ export function ContentSection({
   };
 
   const getButtonClass = () => {
+    if (buttonStyle === 'solid-green') {
+      return 'bg-[#1B5E20] text-white hover:bg-[#154a19] border border-white px-8 py-2.5 text-base';
+    }
     if (bgColor === 'green' || bgColor === 'maroon') {
       return 'border border-white text-white hover:bg-white hover:text-[#38625c]';
     }
@@ -96,7 +103,7 @@ export function ContentSection({
 
   return (
     <>
-      <section className={`py-16 md:py-24 ${getBgColor()} relative`}>
+      <section className={`py-16 md:py-24 ${getBgColor()} relative ${className}`}>
         {bgImage && (
           <>
             <div className="absolute inset-0 w-full h-full">

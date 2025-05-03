@@ -6,17 +6,17 @@ import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 
 const navItems = {
-  explore: [
-    { name: 'Why we exist', href: '/why-we-exist' },
-    { name: 'What we do', href: '/how-we-transform-wastelands' },
-    { name: 'What we create', href: '/what-we-create' }, 
-    { name: 'Our trees', href: '/our-trees' },
-    { name: 'Get Involved', href: '/get-involved' },
+  main: [
+    { name: 'Why we Exist', href: '/why-we-exist' },
+    { name: 'What we do', href: '/what-we-do' },
+    { name: 'What we create', href: '/what-we-create' },
+    { name: 'Our Trees', href: '/our-trees' },
+    { name: 'Our Impact', href: '/our-impact' },
   ],
   connect: [
     { name: 'About Us', href: '/about-us' },
-    { name: 'Our Team', href: '/about-us' },
-    { name: 'Contact', href: '/contact' },
+    { name: 'Our Team', href: '/our-team' },
+    { name: 'Contact', href: '/get-involved' },
   ],
   legal: [
     { name: 'Privacy Policy', href: '/privacy-policy' },
@@ -107,58 +107,60 @@ export function Header() {
             
             <nav className="h-[calc(100vh-80px)] flex flex-col justify-center">
               <div className="px-6">
-                <div className="grid grid-cols-1 md:grid-cols-[2fr,1fr,1fr] gap-8">
-                  {/* Explore Section */}
+                <div className="grid grid-cols-1 md:grid-cols-[1.5fr,1fr] gap-12 lg:gap-24">
+                  {/* Main Navigation - Left Column */}
                   <div>
-                    <ul className="text-[#38625c] font-semibold mb-4 text-lg w-full">
-                      {navItems.explore.map((item) => (
+                    <ul className="space-y-0">
+                      {navItems.main.map((item, index) => (
                         <li key={item.name}>
                           <Link
                             href={item.href}
-                            className="text-[#38625c] hover:text-[#915662] block text-[1.3em] leading-[1.4]"
+                            className={`text-[#38625c] hover:text-[#915662] block text-4xl font-medium tracking-tight py-4 ${index !== 0 ? 'border-t border-[#38625c]/20' : ''}`}
                             onClick={() => setMenuOpen(false)}
                           >
                             {item.name}
                           </Link>
                         </li>
                       ))}
+                      <li className="border-t border-[#38625c]/20"></li>
                     </ul>
                   </div>
 
-                  {/* Connect Section */}
-                  <div>
-                    <h3 className="text-[#38625c] font-semibold mb-4 text-md">Connect</h3>
-                    <ul className="space-y-4">
-                      {navItems.connect.map((item) => (
-                        <li key={item.name}>
-                          <Link
-                            href={item.href}
-                            className="text-[#38625c] hover:text-[#915662] block text-[1em] leading-[1]"
-                            onClick={() => setMenuOpen(false)}
-                          >
-                            {item.name}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                  {/* Right Column - Connect and Legal */}
+                  <div className="space-y-12 pt-16">
+                    {/* Connect Section */}
+                    <div>
+                      <ul className="space-y-4">
+                        {navItems.connect.map((item) => (
+                          <li key={item.name}>
+                            <Link
+                              href={item.href}
+                              className="text-[#38625c] hover:text-[#915662] block text-xl whitespace-nowrap"
+                              onClick={() => setMenuOpen(false)}
+                            >
+                              {item.name}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
 
-                  {/* Legal Section */}
-                  <div>
-                    <h3 className="text-[#38625c] font-semibold mb-4 text-md">Legal</h3>
-                    <ul className="space-y-4">
-                      {navItems.legal.map((item) => (
-                        <li key={item.name}>
-                          <Link
-                            href={item.href}
-                            className="text-[#38625c] hover:text-[#915662] block text-[1em] leading-[1]"
-                            onClick={() => setMenuOpen(false)}
-                          >
-                            {item.name}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
+                    {/* Legal Section */}
+                    <div>
+                      <ul className="space-y-4">
+                        {navItems.legal.map((item) => (
+                          <li key={item.name}>
+                            <Link
+                              href={item.href}
+                              className="text-[#38625c] hover:text-[#915662] block text-xl whitespace-nowrap"
+                              onClick={() => setMenuOpen(false)}
+                            >
+                              {item.name}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>

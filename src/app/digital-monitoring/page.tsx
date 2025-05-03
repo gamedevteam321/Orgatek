@@ -29,7 +29,7 @@ export default function DigitalMonitoring() {
         <section className="py-10 md:py-16 bg-white px-4 md:px-[100px] text-start">
           <div className="max-w-7xl mx-auto">
             <p className="text-base md:text-lg mb-4 md:mb-6">
-              At Orgatek, rigorous digital monitoring and third-party verification are integral to every stage of our regenerative forestry model.
+              Rigorous digital monitoring and third-party verification are integral to every stage of our regenerative forestry model.
             </p>
             <p className="text-base md:text-lg mb-4 md:mb-6">
               We combine ground-level expertise with advanced technologies to track, measure, and validate carbon sequestration, soil regeneration, and biodiversity recovery with precision and transparency.

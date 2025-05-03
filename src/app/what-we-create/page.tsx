@@ -12,9 +12,9 @@ export default function WhatWeCreate() {
 
       {/* Hero Section */}
       <Hero
-        backgroundImage="/images/test.jpeg"
+        backgroundImage="/images/create-hero.png"
         title="What We Create"
-        subtitle="Our product range provides diverse global and sustainable solutions for the gardener, farmer or for carbon offset. For better tomorrow."
+        subtitle="We transform wastelands into valuable resources through sustainable practices, creating products that benefit both the environment and society."
         small={false}
       />
 
@@ -22,18 +22,15 @@ export default function WhatWeCreate() {
       <div className="bg-white py-16 px-[50px]">
         <div className="container mx-auto px-4 text-left">
           <p className="text-[#2B5741] font-semibold text-lg leading-relaxed max-w-auto mx-auto">
-            Orgatek is a leader in carbon sequestration through its managed estates of Australian Oil Mallee and other Eucalyptus trees, producing a range of products with a sustainable production cycle to generate increasing yields, enhance ecosystems, and lock carbon in soils for millennia. Our products provide diverse benefits, such as carbon offsets/credits and agricultural, pharmaceutical, industrial and other applications.
+          We grow short rotation, high yield  timber on regenerated lands to replace deforestation-linked wood, convert forestry biomass into high-quality biochar for permanent soil carbon storage, and generate certified carbon credits rooted in measurable, durable climate impact. Our vertically integrated model transforms degraded land into climate assets — producing nature-based solutions that are traceable, verified, and built to scale.
           </p>
         </div>
       </div>
 
       {/* Solutions Section */}
       <div className="bg-cream">
-        <div className="container mx-auto px-4 py-16">
-          <h2 className="text-4xl font-bold text-[#2B5741] text-center mb-4">What We Create</h2>
-          <p className="text-gray-600 text-center mb-16 max-w-3xl mx-auto">
-            We transform wastelands into valuable resources through sustainable practices, creating products that benefit both the environment and society.
-          </p>
+        <div className="container mx-auto px-[50px] py-16">
+          
 
           <AlternatingSection
             title="Timber"

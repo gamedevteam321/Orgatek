@@ -106,26 +106,16 @@ export default function AboutPage() {
         />
         <div className="absolute inset-0 bg-black/50 flex flex-col items-start justify-center p-8 md:p-16">
           <h2 className="text-5xl font-bold text-white mb-12 max-w-2xl">Our Impact</h2>
-          <button 
-            onClick={() => setIsPanelOpen(true)}
+          <Link 
+            href="/our-impact"
             className="px-8 py-3 bg-white text-black font-semibold rounded-lg hover:bg-gray-100 transition-colors"
           >
             Learn More
-          </button>
+          </Link>
         </div>
       </section>
 
       <Footer />
-
-      {/* Solution Panel */}
-      <SolutionPanel
-        isOpen={isPanelOpen}
-        onClose={() => setIsPanelOpen(false)}
-        title="Our Impact"
-        description="Discover how Orgatek is making a difference in transforming wastelands into productive, regenerative landscapes. Learn about our innovative approaches to forest management, carbon sequestration, and sustainable development."
-        image="/images/test.jpeg"
-        pagePath="/our-impact"
-      />
     </div>
   );
 } 

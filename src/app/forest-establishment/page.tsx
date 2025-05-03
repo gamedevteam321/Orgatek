@@ -21,7 +21,13 @@ export default function ForestEstablishment() {
           <div className="absolute inset-0 bg-black/50" />
           <div className="container mx-auto px-4 md:px-[100px] relative z-10 pb-10 md:pb-20">
             <h1 className="text-3xl md:text-6xl font-bold mb-4 md:mb-6">Forest Establishment</h1>
-            <p className="text-base md:text-xl max-w-6xl">
+          </div>
+        </section>
+
+        {/* Hero Subheading Section */}
+        <section className="bg-white py-8 md:py-12">
+          <div className="container mx-auto px-4 md:px-[100px]">
+            <p className="text-base md:text-xl max-w-6xl text-gray-700">
               India has over 55 million hectares classified as wastelands, with nearly 24 million hectares identified as having viable forestry potential. At Orgatek, every project begins with rigorous site and connected short-rotation, high yield tree species selection, based on detailed soil analysis, climatic assessment, water resource evaluation and market proximity.
             </p>
           </div>

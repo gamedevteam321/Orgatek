@@ -7,7 +7,7 @@ export default function OurImpactPage() {
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <section className="relative h-[400px] md:h-[600px] w-full">
+      <section className="relative h-[400px] md:h-[750px] w-full">
         <Image
           src="/images/our-impact.jpg"
           alt="Our Impact"
@@ -15,7 +15,7 @@ export default function OurImpactPage() {
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-black/50 flex items-end justify-start p-4 md:p-16">
+        <div className="absolute inset-0 bg-[#003714] opacity-70 flex items-end justify-start p-4 md:p-16">
           <h1 className="text-3xl md:text-5xl font-bold text-white max-w-2xl">Our Impact: Driving Carbon Removal and Rural Resilience</h1>
         </div>
       </section>
@@ -59,7 +59,8 @@ export default function OurImpactPage() {
               />
             </div>
             <div className="space-y-4 md:space-y-6">
-              <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8">Empowering Communities. Empowering People. Building Futures.</h2>
+              <h2 className="text-2xl md:text-3xl font-bold ">Empowering Communities</h2>
+              <h4 className="text-lg md:text-xl font-bold mb-6 md:mb-8">Empowering People. Building Futures.</h4>
               <p className="text-base md:text-lg leading-relaxed">
                 We believe that regenerating degraded lands must go hand in hand with revitalizing the lives of rural communities. Our work in India's remote interiors—regions often burdened by poverty and limited opportunities—delivering economic, social, and environmental resilience through forestry-based development.
               </p>
@@ -79,6 +80,7 @@ export default function OurImpactPage() {
           </div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 } 

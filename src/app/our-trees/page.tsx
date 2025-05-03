@@ -13,7 +13,7 @@ export default function OurTrees() {
       <Header />
       <div className="min-h-screen bg-white">
         {/* Header Section */}
-        <div className="relative h-[100vh] w-full ">
+        <div className="relative h-[100vh] w-full">
           <Image
             src="/images/our-trees.png"
             alt="Forest Landscape"
@@ -22,8 +22,8 @@ export default function OurTrees() {
             priority
           />
           <div className="absolute inset-0 bg-[#003714] opacity-70" />
-          <div className="absolute inset-0 ">
-            <div className="absolute bottom-10 left-0 p-8 md:p-12 max-w-2xl">
+          <div className="absolute inset-0">
+            <div className="absolute bottom-10 left-0 px-[50px] max-w-2xl">
               <h1 className="text-4xl md:text-6xl font-bold mb-4 text-white">Our Trees</h1>
               <p className="text-xl md:text-2xl text-white">
                 Restoring Ecosystems & Capturing Carbon
@@ -33,8 +33,8 @@ export default function OurTrees() {
         </div>
 
         {/* Introduction Section */}
-        <div className="max-w-7xl mx-auto px-4 py-16">
-          <p className="text-lg text-gray-700 leading-relaxed">
+        <div className="max-w-auto mx-auto px-[50px] py-16">
+          <p className="text-lg text-gray-700 leading-relaxed text-left">
             At Orgatek, every tree we plant serves a purpose beyond just growth—it contributes to ecosystem restoration, soil revitalization, and carbon sequestration, ensuring that degraded landscapes evolve into self-sustaining forests.
           </p>
         </div>
@@ -101,7 +101,7 @@ export default function OurTrees() {
         />
 
         {/* Conclusion Section */}
-        <div className="max-w-7xl mx-auto px-4 py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-[50px] py-16 bg-white">
           <p className="text-lg text-gray-700 leading-relaxed text-center">
             Together, these species form the backbone of Orgatek's regenerative forestry efforts, rebuilding ecosystems that not only capture carbon but also sustain communities for generations to come.
           </p>

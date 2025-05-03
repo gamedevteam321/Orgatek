@@ -30,8 +30,8 @@ export default function GetInvolved() {
       {/* Hero Section */}
       <Hero
         backgroundImage="/images/test.jpeg"
-        title="Nature-based investments for a sustainable future"
-        subtitle="We provide investors exposure to regional investment opportunities in real assets and natural capital."
+        title="Get Involved"
+        subtitle="We offer investors access to high-quality, regenerative land assets — combining sustainable timber, biochar, and long-term soil productivity."
         small={false}
       />
 
@@ -40,7 +40,7 @@ export default function GetInvolved() {
         <div className="orgatek-container">
           <div className="max-w-7xl mx-auto">
             <p className="text-gray-700 text-lg leading-relaxed text-center">
-              Our investment strategies support the role of forests as nature-based solutions, provide sustainable wood fibre for the growing circular bioeconomy, and contribute to the sustainable development of regional economies and rural communities.
+            Our strategy is rooted in operational control, circular biomass utilization, and scalable project development — delivering premium returns while restoring land and strengthening rural economies.
             </p>
           </div>
         </div>

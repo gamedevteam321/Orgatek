@@ -31,6 +31,9 @@ export default function ForestManagement() {
         <section className="py-10 md:py-16 bg-white px-4 md:px-[100px] text-start">
           <div className="max-w-7xl mx-auto">
             <p className="text-base md:text-lg mb-4 md:mb-6">
+            Efficient, professional forest management is at the heart of building high-performing regenerative ecosystems.
+            </p>
+            <p className="text-base md:text-lg mb-4 md:mb-6">
               Once planted, our forests are carefully managed through continuous field scouting, advanced digital monitoring, and skilled forestry operations and proactive interventions to ensure that our estates grow vigorously, remain healthy, and maximize carbon sequestration.
             </p>
             <p className="text-base md:text-lg">

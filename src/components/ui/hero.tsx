@@ -11,6 +11,7 @@ interface HeroProps {
   buttonText?: string;
   buttonLink?: string;
   titleClassName?: string;
+  subtitleClassName?: string;
 }
 
 export function Hero({
@@ -21,6 +22,7 @@ export function Hero({
   buttonText,
   buttonLink,
   titleClassName = 'text-4xl md:text-5xl lg:text-6xl',
+  subtitleClassName = 'text-xl md:text-2xl text-white/70 font-light mb-8 max-w-full',
 }: HeroProps) {
   return (
     <div
@@ -39,7 +41,7 @@ export function Hero({
       </div>
       
       <div className="absolute inset-0 flex items-end pb-20">
-        <div className="w-full max-w-[100%] xl:max-w-[1400px] mx-auto px-4">
+        <div className="w-full max-w-[100%] xl:max-w-[100%] mx-auto px-12">
           <div className="w-full">
             {Array.isArray(title) ? (
               <TextSlider items={title} />
@@ -49,7 +51,7 @@ export function Hero({
                   {title}
                 </h1>
                 {subtitle && (
-                  <p className="text-xl md:text-2xl text-white/70 font-light mb-8 max-w-full">
+                  <p className={subtitleClassName}>
                     {subtitle}
                   </p>
                 )}

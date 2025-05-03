@@ -16,11 +16,11 @@ export default function WhyWeDoIt() {
         title="Why We Exist"
          subtitle="A Growing Crisis — and a Missed Opportunity"
         titleClassName="text-5xl md:text-7xl lg:text-7xl"
-        subtitleClassName="text-lg text-gray-700 mb-6 font-medium"
+        subtitleClassName="text-lg text-white mb-6 font-medium"
       />
 
       {/* Intro Section */}
-      <section className="py-12 bg-[#eff1f1]">
+      <section className="py-12 bg-[#eff1f1] px-[50px]">
         <div className="orgatek-container">
           <div className="max-w-7xl mx-auto">
            
@@ -46,17 +46,20 @@ export default function WhyWeDoIt() {
         }
         imageLeft={true}
         bgColor="white"
+        className="px-[50px]"
       />
 
        {/* Global Forest Loss Impact */}
       <ContentSection
         image="/images/Forest-loss-by-driver-and-region.png"
         imageSize="full"
+        className="px-[50px]"
       />
 
       <ContentSection
         image="/images/Global-forest-loss-since-ice-age.png"
         imageSize="full"
+        className="px-[50px]"
       />
 
       {/* Healthy forests Section */}
@@ -71,6 +74,7 @@ export default function WhyWeDoIt() {
         image="/images/forest.png"
         imageLeft={false}
         bgColor="cream"
+        className="px-[50px]"
       />
 
       {/* Forests support earth's biodiversity Section */}
@@ -79,11 +83,12 @@ export default function WhyWeDoIt() {
         description={<div>
           <p>Forests are incredibly diverse ecosystems, hosting the majority of terrestrial plant and animal species. They represent a beautifully balanced system where soil, plants, and animals all depend on each other to thrive.</p> <br />
           <p>But why does this matter for us? First, biodiverse ecosystems provide the vital materials we need for food, shelter, clothing, and more. Biodiversity also fosters resilience. Healthy, rich ecosystems make earth habitable for humans. When forests disappear, these life-supporting systems begin to fail, putting humans at significant risk.</p> <br />
-          <p>According to the Intergovernmental Science-Policy Platform on Biodiversity and Ecosystem Services (IPBES), biodiversity is now declining faster than ever before. FSC's responsible forestry initiatives protect biodiversity in forests around the world.</p>
+          <p>According to the Intergovernmental Science-Policy Platform on Biodiversity and Ecosystem Services (IPBES), biodiversity is now declining faster than ever before.</p>
         </div>}
         image="/images/biodiversity.png"
         imageLeft={true}
         bgColor="white"
+        className="px-[50px]"
       />
 
       {/*Forests are essential Section */}
@@ -91,11 +96,11 @@ export default function WhyWeDoIt() {
         title="Forests are essential for people and communities"
         description={<div>
           <p>Forests support human life all over the world. They provide us with clean air, drinking water, and countless products we rely on every day. And for 300 million people, forests also provide a home. The communities living in and around forests depend on them for food, fuel, medicine, and their livelihoods. In turn, they make stewardship a part of everything they do.</p> <br />
-          <p>Indigenous groups and local communities manage one-quarter of the world's land. Globally, indigenous land experiences up to 26 per cent less deforestation than non-protected areas. And with support from FSC, Indigenous and local communities can achieve even better outcomes.</p> <br />
         </div>}
         image="/images/communities.png"
         imageLeft={false}
         bgColor="cream"
+        className="px-[50px]"
       />
 
       {/* Our Values Section
@@ -129,18 +134,35 @@ export default function WhyWeDoIt() {
       </section> */}
 
       {/* Join Our Mission Section */}
-      <section className="py-16 bg-[#27543a] text-white">
-        <div className="orgatek-container">
-          <h2 className="text-2xl font-semibold mb-4">Join Our Mission</h2>
-          <p className="mb-6">
-            Whether you're an investor, partner, or supporter, there are many ways to get involved with our work at Orgatek.
-          </p>
-          <a href="/get-involved" className="inline-flex items-center text-white hover:underline">
-            Get involved
-            <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-            </svg>
-          </a>
+      <section className="pt-4 pb-16 mt-4 bg-[#1B5E20] px-[50px] relative overflow-hidden">
+        {/* Curved lines background effect */}
+        <div className="absolute inset-x-0 -top-12 h-48 opacity-20">
+          <svg className="w-full h-full" viewBox="0 0 100 30" preserveAspectRatio="none">
+            <path d="M0,10 Q25,0 50,10 T100,10" stroke="white" fill="none" strokeWidth="0.5"/>
+            <path d="M0,15 Q25,5 50,15 T100,15" stroke="white" fill="none" strokeWidth="0.5"/>
+            <path d="M0,20 Q25,10 50,20 T100,20" stroke="white" fill="none" strokeWidth="0.5"/>
+          </svg>
+        </div>
+        <div className="orgatek-container relative z-10 pt-16 md:pt-24">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="border-r-0 md:border-r border-white/20 pr-0 md:pr-8">
+              <h2 className="text-2xl md:text-3xl font-semibold mb-4 text-white">Join Our Mission</h2>
+              <p className="text-base md:text-lg text-white/90 mb-4">
+                Whether you're an investor, partner, or supporter, there are many ways to get involved with our work at Orgatek.
+              </p>
+            </div>
+            <div className="pl-0 md:pl-8 flex items-center">
+              <a 
+                href="/get-involved"
+                className="inline-flex items-center bg-white text-[#1B5E20] px-8 py-3 hover:bg-opacity-90 transition-colors relative group"
+              >
+                <span>Get involved</span>
+                <svg className="ml-2 h-4 w-4 transform transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </a>
+            </div>
+          </div>
         </div>
       </section>
 
