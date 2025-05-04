@@ -8,6 +8,7 @@ import { useState } from 'react';
 import { Header } from '@/components/layout/header';
 import { LeadershipCard } from '@/components/LeadershipCard';
 import { ImageSlideshow } from '@/components/ImageSlideshow';
+import VideoSection from '@/components/sections/video-section';
 
 export default function AboutPage() {
   const [isPanelOpen, setIsPanelOpen] = useState(false);
@@ -27,7 +28,7 @@ export default function AboutPage() {
       {/* Hero Section */}
       <section className="relative h-[700px] w-full">
         <ImageSlideshow images={teamImages} interval={6000} />
-        <div className="absolute inset-0 bg-black/30 flex items-end justify-start p-8 md:p-16">
+        <div className="absolute inset-0 bg-black/30 flex items-end justify-start p-8 md:p-24">
           <h1 className="text-7xl font-bold text-white max-w-2xl">Our Team</h1>
         </div>
       </section>
@@ -45,10 +46,10 @@ export default function AboutPage() {
 
       {/* Leadership Section */}
       <section className="py-20 bg-gray-50 bg-cream">
-        <div className="max-w-6xl mx-auto px-4">
+        <div className="max-w-full mx-auto px-8 md:px-24">
           <h2 className="text-3xl font-bold mb-12">Our Leadership</h2>
           
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-4">
             <LeadershipCard
               name="Varun Mittal"
               designation="Founder & CEO"
@@ -83,35 +84,52 @@ export default function AboutPage() {
             </div>
           </div>
         </div>
-        <div className="max-w-7xl mx-auto px-4 md:px-8 pb-12 md:pb-20">
+        <div className="max-w-7xl mx-auto px-4 md:px-24 pb-10 md:pb-16">
           <p className="text-base md:text-lg leading-relaxed">
             Orgatek is supported by a cross-disciplinary team of senior agronomists, soil scientists, pathologists, forestry experts, GIS analysts, carbon project managers, and machinery and automation engineers — all aligned toward one mission: restoring land, removing carbon, and building robust, verifiable climate assets.
           </p>
-          <p className="text-base md:text-lg leading-relaxed mt-4">
+          <p className="text-base md:text-lg leading-relaxed mt-3">
             Together, this cohesive team ensures that every aspect of the project — from planting density to satellite mapping, from biochar application to carbon verification — is executed with technical excellence, ground truth, and environmental integrity.
           </p>
-          <p className="text-base md:text-lg leading-relaxed mt-4">
+          <p className="text-base md:text-lg leading-relaxed mt-3">
             We also draw expertise from advisors in sustainable forestry, regenerative agriculture, voluntary carbon markets, and ecosystem services valuation — ensuring we stay ahead of emerging standards and science.
           </p>
         </div>
       </section>
 
-      {/* Impact Section */}
-      <section className="relative h-[450px] w-full mb-16">
-        <Image
-          src="/images/our-impact.jpg"
-          alt="Our Impact"
-          fill
-          className="object-cover"
-        />
-        <div className="absolute inset-0 bg-black/50 flex flex-col items-start justify-center p-8 md:p-16">
-          <h2 className="text-5xl font-bold text-white mb-12 max-w-2xl">Our Impact</h2>
-          <Link 
-            href="/our-impact"
-            className="px-8 py-3 bg-white text-black font-semibold rounded-lg hover:bg-gray-100 transition-colors"
-          >
-            Learn More
-          </Link>
+      <VideoSection />
+
+      
+      {/* Join Our Mission Section */}
+      <section className="pb-16 mt-4 bg-[#1B5E20] px-[50px] relative overflow-hidden">
+        {/* Curved lines background effect */}
+        <div className="absolute inset-x-0 -top-12 h-48 opacity-20">
+          <svg className="w-full h-full" viewBox="0 0 100 30" preserveAspectRatio="none">
+            <path d="M0,10 Q25,0 50,10 T100,10" stroke="white" fill="none" strokeWidth="0.5"/>
+            <path d="M0,15 Q25,5 50,15 T100,15" stroke="white" fill="none" strokeWidth="0.5"/>
+            <path d="M0,20 Q25,10 50,20 T100,20" stroke="white" fill="none" strokeWidth="0.5"/>
+          </svg>
+        </div>
+        <div className="orgatek-container relative z-10 pt-16 md:pt-24">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="border-r-0 md:border-r border-white/20 pr-0 md:pr-8">
+              <h2 className="text-2xl md:text-3xl font-semibold mb-4 text-white">Join Our Mission</h2>
+              <p className="text-base md:text-lg text-white/90 mb-4">
+                Whether you're an investor, partner, or supporter, there are many ways to get involved with our work at Orgatek.
+              </p>
+            </div>
+            <div className="pl-0 md:pl-8 flex items-center">
+              <a 
+                href="/get-involved"
+                className="inline-flex items-center bg-white text-[#1B5E20] px-8 py-3 hover:bg-opacity-90 transition-colors relative group"
+              >
+                <span>Get involved</span>
+                <svg className="ml-2 h-4 w-4 transform transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </a>
+            </div>
+          </div>
         </div>
       </section>
 

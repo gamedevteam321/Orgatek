@@ -59,9 +59,9 @@ export default function Home() {
         backgroundImage="/images/hero-main.png"
         title={
           <div className="space-y-4">
-            <p className="block">Transforming Wastelands.</p>
-            <p className="block">Growing Forests.</p>
-            <p className="block">Reviving Nature.</p>
+            <p className="block">Transforming Wastelands</p>
+            <p className="block">Growing Forests</p>
+            <p className="block">Reviving Nature</p>
           </div>
         }
         subtitle="We transform degraded landscapes into thriving organic forests — producing sustainable timber, biochar, and certified carbon credits for a regenerative future."
@@ -344,20 +344,21 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="border-r-0 md:border-r border-white/20 pr-0 md:pr-8">
               <h2 className="text-2xl md:text-3xl font-semibold mb-4 text-white">INVESTMENT CAPABILITIES</h2>
-              <p className="text-base md:text-lg text-white/90 mb-4">
+              <p className="text-base md:text-lg text-white/90 pb-4">
                 We provide investors exposure to regional investment opportunities in real assets and natural capital.
               </p>
-              <p className="text-base md:text-xl text-white/90">
+              <p className="text-base md:text-xl text-white/90 pb-4">
                 Natural capital investments for a sustainable future
+              </p>
+              <p className="text-base md:text-lg text-white/90">
+              We offer investors access to high-quality, regenerative land assets & natural capital. 
               </p>
             </div>
             <div className="pl-0 md:pl-8">
-              <p className="text-base md:text-lg text-white/90 mb-4">
-                We offer investors access to high-quality, regenerative land assets — combining sustainable timber, biochar, and long-term soil productivity.
-              </p>
-              <p className="text-base md:text-lg text-white/90 mb-8">
-                Our strategy is rooted in operational control, circular biomass utilization, and scalable project development — delivering premium returns while restoring land and strengthening rural economies.
-              </p>
+              <p className="text-base md:text-lg text-white/90 pb-4">
+              Our strategy is rooted in operational control, circular biomass utilization, and scalable project development </p>
+              <p className="text-base md:text-lg text-white/90 pb-4">— delivering premium returns while restoring wastelands and strengthening rural economies.</p>
+              
               <Link 
                 href="/get-involved"
                 className="inline-flex items-center bg-white text-[#1B5E20] px-8 py-3 hover:bg-opacity-90 transition-colors relative group"

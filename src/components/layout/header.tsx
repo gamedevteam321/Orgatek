@@ -78,8 +78,8 @@ export function Header() {
           ></div>
           
           {/* Menu panel */}
-          <div className="fixed inset-y-0 right-0 w-[70%] bg-white z-[9999] shadow-xl transform transition-transform duration-300 ease-in-out">
-            <div className="flex items-center justify-between px-6 py-10">
+          <div className="fixed inset-y-0 right-0 w-[96%] bg-white/65 backdrop-blur-sm z-[9999] shadow-xl transform transition-transform duration-300 ease-in-out">
+            <div className="flex items-center justify-between px-10 py-10">
               <div className="flex items-center">
                 <Link 
                   href="/" 
@@ -90,8 +90,8 @@ export function Header() {
                     src="/Logo/logo1.png" 
                     alt="Orgatek Logo" 
                     width={160} 
-                    height={60}
-                    className="h-12 w-auto"
+                    height={80}
+                    className="h-16 w-full"
                   />
                 </Link>
               </div>
@@ -105,7 +105,7 @@ export function Header() {
               </button>
             </div>
             
-            <nav className="h-[calc(100vh-80px)] flex flex-col justify-center">
+            <nav className="h-full flex flex-col justify-start py-10 px-10">
               <div className="px-6">
                 <div className="grid grid-cols-1 md:grid-cols-[1.5fr,1fr] gap-12 lg:gap-24">
                   {/* Main Navigation - Left Column */}
@@ -122,7 +122,7 @@ export function Header() {
                           </Link>
                         </li>
                       ))}
-                      <li className="border-t border-[#38625c]/20"></li>
+                      <li className="border-t border-[#38625c]/40"></li>
                     </ul>
                   </div>
 
@@ -130,7 +130,7 @@ export function Header() {
                   <div className="space-y-12 pt-16">
                     {/* Connect Section */}
                     <div>
-                      <ul className="space-y-4">
+                      <ul className="space-y-4 border-t border-[#38625c]/40 pt-4">
                         {navItems.connect.map((item) => (
                           <li key={item.name}>
                             <Link
@@ -147,7 +147,7 @@ export function Header() {
 
                     {/* Legal Section */}
                     <div>
-                      <ul className="space-y-4">
+                      <ul className="space-y-4 border-t border-[#38625c]/40 pt-4">
                         {navItems.legal.map((item) => (
                           <li key={item.name}>
                             <Link

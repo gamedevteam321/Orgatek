@@ -47,7 +47,7 @@ export default function GetInvolved() {
       </section>
 
       {/* Video Section - Dynamically loaded */}
-      <VideoSection />
+      {/* <VideoSection /> */}
 
       {/* Certification Section */}
       {/* <section className="py-16 bg-white">

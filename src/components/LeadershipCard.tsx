@@ -13,7 +13,7 @@ export const LeadershipCard = ({ name, designation, image, description }: Leader
 
   return (
     <div className="bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-300">
-      <div className="relative h-[500px] w-full">
+      <div className="relative h-[380px] w-full">
         <Image
           src={image}
           alt={name}
@@ -23,9 +23,9 @@ export const LeadershipCard = ({ name, designation, image, description }: Leader
         />
       </div>
       
-      <div className="p-6">
+      <div className="p-3">
         <h3 className="text-2xl font-bold text-gray-900">{name}</h3>
-        <p className="text-gray-600 mb-3">{designation}</p>
+        <p className="text-gray-600 mb-2">{designation}</p>
         
         <div className={`overflow-hidden transition-all duration-300 ease-in-out ${isExpanded ? 'max-h-[1000px]' : 'max-h-[60px]'}`}>
           <div className="relative">
@@ -40,7 +40,7 @@ export const LeadershipCard = ({ name, designation, image, description }: Leader
         
         <button
           onClick={() => setIsExpanded(!isExpanded)}
-          className="mt-4 text-blue-600 font-medium hover:underline focus:outline-none"
+          className="mt-2 text-blue-600 font-medium hover:underline focus:outline-none"
         >
           {isExpanded ? 'Show less' : 'Read more'}
         </button>

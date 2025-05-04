@@ -7,7 +7,7 @@ export default function OurImpactPage() {
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <section className="relative h-[400px] md:h-[750px] w-full">
+      <section className="relative h-[400px] md:h-[650px] w-full">
         <Image
           src="/images/our-impact.jpg"
           alt="Our Impact"
@@ -15,9 +15,10 @@ export default function OurImpactPage() {
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-[#003714] opacity-70 flex items-end justify-start p-4 md:p-16">
-          <h1 className="text-3xl md:text-5xl font-bold text-white max-w-2xl">Our Impact: Driving Carbon Removal and Rural Resilience</h1>
-        </div>
+        <div className="h-full w-full bg-[#003714] opacity-70 flex flex-col items-start justify-end gap-4 p-4 md:p-16">
+          <h1 className="text-3xl md:text-5xl font-bold text-white">Our Impact</h1>
+          <h1 className="text-2xl md:text-4xl font-semibold text-white">Driving Carbon Removal and Rural Resilience</h1>       
+         </div>
       </section>
 
       {/* Environmental Impact Section */}

@@ -14,7 +14,7 @@ export default function WhatWeCreate() {
       <Hero
         backgroundImage="/images/create-hero.png"
         title="What We Create"
-        subtitle=""
+        subtitle={<><h2>Built from Soil.</h2><h2>Made to Matter.</h2></>}
         small={false}
       />
 
