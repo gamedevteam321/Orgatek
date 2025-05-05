@@ -12,6 +12,7 @@ interface SolutionPanelProps {
   description: string | React.ReactNode;
   image: string;
   pagePath?: string;
+  customContent?: React.ReactNode;
 }
 
 // Pre-define all possible page imports
@@ -36,6 +37,7 @@ export function SolutionPanel({
   description,
   image,
   pagePath,
+  customContent,
 }: SolutionPanelProps) {
   const [pageContent, setPageContent] = useState<React.ReactNode>(null);
   const [isLoading, setIsLoading] = useState(false);
@@ -108,9 +110,9 @@ export function SolutionPanel({
             <div className="flex items-center justify-center h-full">
               <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-[#38625c]"></div>
             </div>
-          ) : pageContent ? (
+          ) : pageContent || customContent ? (
             <div className="">
-              {pageContent}
+              {pageContent || customContent}
             </div>
           ) : (
             <div className="flex flex-col gap-6 p-8">

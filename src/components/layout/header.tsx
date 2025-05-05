@@ -15,7 +15,6 @@ const navItems = {
   ],
   connect: [
     { name: 'About Us', href: '/about-us' },
-    { name: 'Our Team', href: '/our-team' },
     { name: 'Contact', href: '/get-involved' },
   ],
   legal: [
@@ -36,6 +35,20 @@ export function Header() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Add effect to handle body overflow
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+
+    // Cleanup function to reset overflow when component unmounts
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [menuOpen]);
 
   return (
     <>
@@ -73,31 +86,29 @@ export function Header() {
         <>
           {/* Overlay */}
           <div 
-            className="fixed inset-0 bg-black bg-opacity-50 z-[9999]"
+            className="fixed inset-0 bg-black/40 z-[9999] transition-opacity duration-300"
             onClick={() => setMenuOpen(false)}
           ></div>
           
           {/* Menu panel */}
-          <div className="fixed inset-y-0 right-0 w-[96%] bg-white/65 backdrop-blur-sm z-[9999] shadow-xl transform transition-transform duration-300 ease-in-out">
-            <div className="flex items-center justify-between px-10 py-10">
-              <div className="flex items-center">
-                <Link 
-                  href="/" 
-                  className="flex items-center"
-                  onClick={() => setMenuOpen(false)}
-                >
-                  <Image 
-                    src="/Logo/logo1.png" 
-                    alt="Orgatek Logo" 
-                    width={160} 
-                    height={80}
-                    className="h-16 w-full"
-                  />
-                </Link>
-              </div>
+          <div className="fixed inset-0 bg-[#DFECE1] z-[9999] shadow-xl transform transition-transform duration-300 ease-in-out overflow-y-auto">
+            <div className="flex items-center justify-between px-12 py-8">
+              <Link 
+                href="/" 
+                className="flex items-center"
+                onClick={() => setMenuOpen(false)}
+              >
+                <Image 
+                  src="/Logo/leaf-logo.png" 
+                  alt="Orgatek Logo" 
+                  width={160} 
+                  height={80}
+                  className="h-14 w-auto"
+                />
+              </Link>
               <button
                 type="button"
-                className="text-[#38625c]"
+                className="text-[#005133] hover:text-[#5E9F69] transition-colors"
                 onClick={() => setMenuOpen(false)}
               >
                 <span className="sr-only">Close menu</span>
@@ -105,37 +116,37 @@ export function Header() {
               </button>
             </div>
             
-            <nav className="h-full flex flex-col justify-start py-10 px-10">
-              <div className="px-6">
-                <div className="grid grid-cols-1 md:grid-cols-[1.5fr,1fr] gap-12 lg:gap-24">
-                  {/* Main Navigation - Left Column */}
-                  <div>
-                    <ul className="space-y-0">
-                      {navItems.main.map((item, index) => (
-                        <li key={item.name}>
-                          <Link
-                            href={item.href}
-                            className={`text-[#38625c] hover:text-[#915662] block text-4xl font-medium tracking-tight py-4 ${index !== 0 ? 'border-t border-[#38625c]/20' : ''}`}
-                            onClick={() => setMenuOpen(false)}
-                          >
-                            {item.name}
-                          </Link>
-                        </li>
-                      ))}
-                      <li className="border-t border-[#38625c]/40"></li>
-                    </ul>
-                  </div>
+            <nav className="px-12 py-10">
+              <div className="grid grid-cols-1 md:grid-cols-[1.5fr,1fr] gap-16">
+                {/* Main Navigation */}
+                <div>
+                  <ul className="space-y-0">
+                    {navItems.main.map((item) => (
+                      <li key={item.name}>
+                        <Link
+                          href={item.href}
+                          className="text-[#005133] hover:text-[#5E9F69] block text-[42px] font-medium py-5 border-b border-[#005133]/60 transition-colors"
+                          onClick={() => setMenuOpen(false)}
+                        >
+                          {item.name}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
 
-                  {/* Right Column - Connect and Legal */}
-                  <div className="space-y-12 pt-16">
+                {/* Secondary Navigation */}
+                <div className="pt-8">
+                  <div className="grid grid-cols-2 gap-24">
                     {/* Connect Section */}
                     <div>
-                      <ul className="space-y-4 border-t border-[#38625c]/40 pt-4">
+                      <div className="border-t border-[#005133]/60 mb-6"></div>
+                      <ul className="space-y-4">
                         {navItems.connect.map((item) => (
                           <li key={item.name}>
                             <Link
                               href={item.href}
-                              className="text-[#38625c] hover:text-[#915662] block text-xl whitespace-nowrap"
+                              className="text-[#005133] hover:text-[#5E9F69] block text-lg"
                               onClick={() => setMenuOpen(false)}
                             >
                               {item.name}
@@ -147,12 +158,13 @@ export function Header() {
 
                     {/* Legal Section */}
                     <div>
-                      <ul className="space-y-4 border-t border-[#38625c]/40 pt-4">
+                      <div className="border-t border-[#005133]/60 mb-6"></div>
+                      <ul className="space-y-4">
                         {navItems.legal.map((item) => (
                           <li key={item.name}>
                             <Link
                               href={item.href}
-                              className="text-[#38625c] hover:text-[#915662] block text-xl whitespace-nowrap"
+                              className="text-[#005133] hover:text-[#5E9F69] block text-lg"
                               onClick={() => setMenuOpen(false)}
                             >
                               {item.name}

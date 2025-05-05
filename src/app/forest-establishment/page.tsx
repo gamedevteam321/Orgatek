@@ -27,6 +27,9 @@ export default function ForestEstablishment() {
         {/* Hero Subheading Section */}
         <section className="bg-white py-8 md:py-12">
           <div className="container mx-auto px-4 md:px-[100px]">
+            <p className="text-base md:text-xl max-w-6xl text-gray-700 mb-4">
+            Every Orgatek project begins with rigorous site selection and matching of short-rotation, high-yield tree species — based on detailed soil analysis, climatic conditions, water resource evaluation, and market proximity.
+            </p>
             <p className="text-base md:text-xl max-w-6xl text-gray-700">
               India has over 55 million hectares classified as wastelands, with nearly 24 million hectares identified as having viable forestry potential. At Orgatek, every project begins with rigorous site and connected short-rotation, high yield tree species selection, based on detailed soil analysis, climatic assessment, water resource evaluation and market proximity.
             </p>

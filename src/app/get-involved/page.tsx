@@ -1,8 +1,14 @@
+"use client";
+
 import { Footer } from '@/components/layout/footer';
 import { Hero } from '@/components/ui/hero';
 import { ContactFormSection } from '@/components/sections/contact-form-section';
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
+
+interface GetInvolvedProps {
+  isInPanel?: boolean;
+}
 
 // Dynamically import video section to reduce initial bundle size
 const VideoSection = dynamic(() => import('@/components/sections/video-section'), {
@@ -24,12 +30,12 @@ const VideoSection = dynamic(() => import('@/components/sections/video-section')
   )
 });
 
-export default function GetInvolved() {
+export default function GetInvolved({ isInPanel = false }: GetInvolvedProps) {
   return (
     <main>
       {/* Hero Section */}
       <Hero
-        backgroundImage="/images/test.jpeg"
+        backgroundImage="/images/get-involved-hero.png"
         title="Get Involved"
         subtitle="We offer investors access to high-quality, regenerative land assets — combining sustainable timber, biochar, and long-term soil productivity."
         small={false}
@@ -166,11 +172,11 @@ export default function GetInvolved() {
       {/* Contact Form Section */}
       <ContactFormSection
         title="Let's discuss how we can work together"
-        subtitle="Whether you're a business looking to offset carbon, a landowner interested in carbon farming, or an investor seeking sustainable returns, we'd love to hear from you."
+        subtitle="Whether you're a carbon buyer, a landowner exploring carbon farming, or an investor seeking long-term, land-backed returns — we'd love to connect."
         backgroundColor="white"
       />
 
-      <Footer />
+      {!isInPanel && <Footer />}
     </main>
   );
 }

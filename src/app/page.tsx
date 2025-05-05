@@ -4,18 +4,21 @@ import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 import { useState } from 'react';
 import Link from 'next/link';
-
+import Image from 'next/image';
 import { Hero } from '@/components/ui/hero';
 import { ContentSection } from '@/components/ui/content-section';
 import { FeatureCard } from '@/components/ui/feature-card';
 import { PartnersSection } from '@/components/sections/partners-section';
 import { ContactFormSection } from '@/components/sections/contact-form-section';
-import Image from 'next/image';
-
 import { ExpandableText } from '@/components/ui/ExpandableText';
 import { ProcessCard } from '@/components/ui/ProcessCard';
 import SupplyChainSection from '@/components/ui/SupplyChainSection';
 import { SolutionPanel } from '@/components/ui/solution-panel';
+import dynamic from 'next/dynamic';
+
+const GetInvolved = dynamic(() => import('./get-involved/page'), {
+  loading: () => <div className="animate-pulse">Loading...</div>
+});
 
 export default function Home() {
   // Mock data for the partners section
@@ -30,6 +33,7 @@ export default function Home() {
   const [isImpactPanelOpen, setIsImpactPanelOpen] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);
+  const [isInvestmentPanelOpen, setIsInvestmentPanelOpen] = useState(false);
 
   const handleProductClick = (product: string) => {
     setSelectedProduct(product);
@@ -45,9 +49,16 @@ export default function Home() {
     setSelectedProduct(null);
   };
 
-  // Add loading state handler
   const handleGetInvolvedClick = () => {
     setIsLoading(true);
+    setTimeout(() => {
+      setIsLoading(false);
+      setIsInvestmentPanelOpen(true);
+    }, 500);
+  };
+
+  const handleInvestmentPanelClose = () => {
+    setIsInvestmentPanelOpen(false);
   };
 
   return (
@@ -58,15 +69,15 @@ export default function Home() {
       <Hero
         backgroundImage="/images/hero-main.png"
         title={
-          <div className="space-y-4">
-            <p className="block">Transforming Wastelands</p>
-            <p className="block">Growing Forests</p>
-            <p className="block">Reviving Nature</p>
+          <div className="space-y-2 md:space-y-4 text-center md:text-left">
+            <h2 className="block text-4xl md:text-4xl lg:text-6xl">Regenerating Wastelands</h2>
+            <h2 className="block text-4xl md:text-4xl lg:text-6xl">Building Forests</h2>
+            <h2 className="block text-4xl md:text-4xl lg:text-6xl">Empowering Communities</h2>
           </div>
         }
-        subtitle="We transform degraded landscapes into thriving organic forests — producing sustainable timber, biochar, and certified carbon credits for a regenerative future."
+        subtitle="We transform degraded landscapes into thriving organic forests — producing sustainable timber, biochar, and verified carbon credits for a regenerative future."
         subtitleBelowImage={true}
-        subtitleClassName="text-xl md:text-2xl text-gray-700 font-light mb-8 max-w-full text-center mx-auto"
+        subtitleClassName="text-xl md:text-2xl lg:text-3xl text-gray-700 font-light mb-4 md:mb-8 max-w-full text-center md:text-center mx-auto md:mx-0"
       />
       {/* Why Forests Matter Section */}
       <ContentSection
@@ -75,43 +86,53 @@ export default function Home() {
         image="/images/what-hero.jpg"
         imageLeft={false}
         bgColor="cream"
-        className="px-[50px]" 
+        className="px-[10px] md:px-[50px]"
+        imageHeight="h-[200px] md:h-[500px]"
+        imageObjectFit="cover"
+        titleClassName="text-2  xl md:text-2xl lg:text-3xl font-semibold text-black mb-4 md:mb-6 font-[var(--font-montserrat)] text-center md:text-left"
       />
 
-
-{/* Our Process Section */}
-<ContentSection
-        title="Why We Exist"
-        description={<><p className="text-base md:text-xl mb-4 md:mb-6">Each year, over 10 million hectares of natural forest are lost globally  due to unsustainable timber harvesting and agricultural expansion, putting immense pressure on ecosystems, accelerating climate change, and destroying vital biodiversity.</p>
-        <p className="text-base md:text-xl mb-6 md:mb-8">
-        Meanwhile, 2 billion hectares of wastelands—barren, unproductive, and ecologically poor—lie abandoned.
-        </p></>}
-        buttonText="Learn More"
-        buttonLink="/why-we-exist"
-        openLink={true}
+      {/* Why We Exist Section */}
+      <ContentSection
+        title=""
+        description={<>
+            <h2 className="text-2xl md:text-2xl lg:text-3xl font-semibold text-white mb-4 md:mb-6 font-[var(--font-montserrat)] text-center md:text-left">Why We Exist</h2>
+            <div className=" text-white text-center md:text-left">
+              <p className="text-lg md:text-xl mb-8 font-regular">
+              Each year, over 10 million hectares of natural forests are lost to unsustainable timber harvesting and agricultural expansion — accelerating carbon emissions and degrading critical ecosystems.
+              </p>
+              <p className="text-lg md:text-xl font-regular mb-8">
+              Meanwhile, over 2 billion hectares of unproductive, degraded wastelands lie idle.
+              </p>
+              <p className="text-lg md:text-xl font-regular ">
+              We see these lands not as liabilities, but as untapped assets.
+              </p>
+              <div className="mt-8 flex justify-center md:justify-start">
+                <Link href="/why-we-exist" className="inline-block bg-[#1B5E20] text-white px-8 py-3 hover:bg-[#1B5E20]/90 transition-colors">
+                  Learn More
+                </Link>
+              </div>
+            </div>
+        </>}
         bgImage="/images/why-we-exist-bg.png"
-        className="px-[50px] h-[500px] flex items-center"
-        imageHeight="h-[500px]"
-        buttonStyle="solid-green"
-      >
-        
-      </ContentSection>
-
+        className="py-16 md:py-24 relative overflow-hidden before:content-[''] before:absolute before:inset-0 before:bg-black/80 before:z-0"
+      />
 
       {/* How We Transform Wastelands Section */}
     <ContentSection
-        title="How we Regenerate Land"
+        title="How we Do"
         description="We transform wastelands into thriving ecosystems through a symbiotic process of planting short-rotation high-yield trees and enriching the soil with Biochar made from their waste biomass. This combination enhances soil fertility, improves water retention, accelerates healthy tree growth, and creates high-quality, traceable, and verified carbon sinks."
         bgColor="cream"
-        className="px-[50px]"
+        className="text-center md:text-left py-8 md:py-12"
+        titleClassName="text-2xl md:text-2xl lg:text-3xl font-semibold text-black mb-4 md:mb-6 font-[var(--font-montserrat)] text-center md:text-left"
       >
-        <div className="">
+        <div className="mt-6 md:mt-12">
           {/* Horizontal scrollable slider */}
-          <div className="flex overflow-x-auto pb-6 space-x-16 scrollbar-hide">
-            <div className="flex-shrink-0 min-w-[280px] max-w-[280px]">
+          <div className="flex overflow-x-auto pb-8 space-x-16 md:space-x-12 scrollbar-hide">
+            <div className="flex-shrink-0 w-[280px] md:w-[300px] md:min-w-[300px] md:max-w-[300px] snap-center">
               <ProcessCard
                 title="Forest Establishment"
-                description="India has over 55 million hectares classified as wastelands, with nearly 24 million hectares identified as having viable forestry potential. At Orgatek, every project begins with rigorous site and connected short-rotation, high yield tree species selection, based on detailed soil analysis, climatic assessment, water resource evaluation and market proximity. We plant high-yielding, short-rotation species such as Eucalyptus, Poplar, Acacia, Bamboo, Casuarina, and Gmelina Arborea, selected for their adaptability to local conditions and ability to deliver maximum environmental impact."
+                description="Every Orgatek project begins with rigorous site selection and matching of short-rotation, high-yield tree species — based on detailed soil analysis, climatic conditions, water resource evaluation, and market proximity."
                 image="/images/forest-establishment.png"
                 pagePath="/forest-establishment"
                 useSidePanel={true}
@@ -119,7 +140,7 @@ export default function Home() {
               />
             </div>
 
-            <div className="flex-shrink-0 min-w-[280px] max-w-[280px]">
+            <div className="flex-shrink-0 w-[280px] md:w-[300px] md:min-w-[300px] md:max-w-[300px] snap-center">
               <ProcessCard
                 title="Forest Management"
                 description="Efficient, professional forest management is at the heart of building high-performing regenerative ecosystems. Once planted, our forests are carefully managed through continuous field scouting, advanced digital monitoring, and skilled forestry operations and proactive interventions to ensure that our estates grow vigorously, remain healthy, and maximize carbon sequestration."
@@ -130,7 +151,7 @@ export default function Home() {
               />
             </div>
 
-            <div className="flex-shrink-0 min-w-[280px] max-w-[280px]">
+            <div className="flex-shrink-0 w-[280px] md:w-[300px] md:min-w-[300px] md:max-w-[300px] snap-center">
               <ProcessCard
                 title="Sustainable Harvesting"
                 description="We practice strategic rotational cycles by planting and harvesting in carefully managed phases — establishing new areas each year while earlier phases mature. This ensures our forests remain vibrant and continuously productive, keeping large sections of the landscape actively growing at all times, sustaining carbon sequestration, preserving soil health, and maintaining lush, living ecosystems, while avoiding periods of barrenness or ecological disruption."
@@ -141,7 +162,7 @@ export default function Home() {
               />
             </div>
 
-            <div className="flex-shrink-0 min-w-[280px] max-w-[280px]">
+            <div className="flex-shrink-0 w-[280px] md:w-[300px] md:min-w-[300px] md:max-w-[300px] snap-center">
               <ProcessCard
                 title="Proprietary Organic Inputs"
                 description="Restoring wastelands demands a soil-first approach that transcends traditional tree planting. Our in-house manufactured proprietary organic inputs, developed through years of research and crafted with precise quality control, offer unmatched flexibility to customize solutions for specific conditions to support robust tree growth and long term soil fertility."
@@ -152,7 +173,7 @@ export default function Home() {
               />
             </div>
 
-            <div className="flex-shrink-0 min-w-[280px] max-w-[280px]">
+            <div className="flex-shrink-0 w-[280px] md:w-[300px] md:min-w-[300px] md:max-w-[300px] snap-center">
               <ProcessCard
                 title="Biochar Enrichment"
                 description="Biochar soil application  is an integral part of our regenerative forestry model — enhancing soil health, improving ecosystem resilience, and delivering verified, high-durability carbon removal."
@@ -163,7 +184,7 @@ export default function Home() {
               />
             </div>
 
-            <div className="flex-shrink-0 min-w-[280px] max-w-[280px]">
+            <div className="flex-shrink-0 w-[280px] md:w-[300px] md:min-w-[300px] md:max-w-[300px] snap-center">
               <ProcessCard
                 title="Digital Monitoring & Verification"
                 description="Rigorous digital monitoring and third-party verification are integral to every stage of our regenerative forestry model..."
@@ -174,24 +195,24 @@ export default function Home() {
               />
             </div>
           </div>
-        </div>
-
-        {/* Optional scroll indicator */}
-        <div className="flex justify-center mt-6">
-          <span className="text-sm text-gray-400">← Scroll to see more →</span>
+          {/* Scroll indicator */}
+          <div className="mt-6 text-sm text-gray-500 text-center md:hidden px-[10px]">
+            Scroll to see more →
+          </div>
         </div>
       </ContentSection>
 
       {/* Our Solutions Section */}
-      <section className="py-8 md:py-16 lg:py-24 bg-white px-[50px]">
+      <section className="py-8 md:py-16 lg:py-24 bg-white">
         <div className="orgatek-container">
-          <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold text-black mb-3 md:mb-4">What we Create</h2>
-          <p className="text-sm md:text-base text-gray-600 mb-8 md:mb-12 max-w-full" >
-          We grow short rotation, high yield  timber on regenerated lands to replace deforestation-linked wood, convert forestry biomass into high-quality biochar for permanent soil carbon storage, and generate certified carbon credits rooted in measurable, durable climate impact. Our vertically integrated model transforms degraded land into climate assets — producing nature-based solutions that are traceable, verified, and built to scale.
+          <h2 className="text-2xl md:text-2xl lg:text-3xl font-semibold text-black mb-4 md:mb-6 font-[var(--font-montserrat)] text-center md:text-left">What We Create</h2>
+          <p className="text-base md:text-lg text-black mb-4 max-w-full font-[var(--font-poppins)] text-center md:text-left" >
+            We grow short rotation, high yield timber on regenerated lands to replace deforestation-linked wood, convert forestry biomass into high-quality biochar for permanent soil carbon storage, and generate certified carbon credits rooted in measurable, durable climate impact.
           </p>
+          <p className="text-base md:text-lg text-black mb-6 max-w-full font-[var(--font-poppins)] text-center md:text-left" > Our vertically integrated model transforms degraded land into climate assets — producing nature-based solutions that are traceable, verified, and built to scale.</p>
 
-          <div className="flex flex-col md:flex-row md:flex-wrap lg:flex-nowrap md:justify-center gap-4 md:gap-6 lg:gap-16 overflow-x-auto pb-4 md:pb-6 scrollbar-hide">
-            <div className="w-full md:w-[calc(50%-12px)] lg:w-[400px] min-w-[280px]">
+          <div className="flex flex-col md:flex-row md:flex-wrap lg:flex-nowrap md:justify-center gap-6 md:gap-8">
+            <div className="w-full md:w-[calc(50%-16px)] lg:w-[400px]">
               <FeatureCard
                 title="Timber"
                 description="Sustainable timber production from our short rotation, high yielding forestry plantations."
@@ -202,7 +223,7 @@ export default function Home() {
               />
             </div>
 
-            <div className="w-full md:w-[calc(50%-12px)] lg:w-[400px] min-w-[280px]">
+            <div className="w-full md:w-[calc(50%-16px)] lg:w-[400px]">
               <FeatureCard
                 title="Biochar"
                 description="High Quality Biochar for Soil Application."
@@ -213,7 +234,7 @@ export default function Home() {
               />
             </div>
 
-            <div className="w-full md:w-[calc(50%-12px)] lg:w-[400px] min-w-[280px]">
+            <div className="w-full md:w-[calc(50%-16px)] lg:w-[400px]">
               <FeatureCard
                 title="Carbon Credits"
                 description="Verified aforestation and carbon removal credits from our plantations and Biochar produced from and applied into the same wastelands."
@@ -233,18 +254,18 @@ export default function Home() {
       </section>
 
       {/* Integrated Regenerative Model Section */}
-      <section className="overflow-hidden px-[50px]">
+      <section className="overflow-hidden">
         <ContentSection
           title="A Fully Integrated Regenerative Model"
           description={
             <>
-              <p className="mb-4">
+              <p className="mb-4 text-center md:text-left">
                 Orgatek is fully integrated across the entire land regeneration cycle — from soil to seedling to supply chain.
               </p>
-              <p className="mb-4">
+              <p className="mb-4 text-center md:text-left">
                 We develop and apply our own proprietary organic inputs, grow resilient saplings in our certified nurseries, and manage every phase of forest establishment on leased and partner lands. Our plantations are operated in rotational cycles to ensure consistent yield, strict quality control, and uninterrupted biomass availability.
               </p>
-              <p>
+              <p className="text-center md:text-left">
                 With in-house logistics and delivery systems, we guarantee traceable, year-round supply of timber, biochar, and biomass — all from a controlled, regenerative platform built for scale.
               </p>
             </>
@@ -254,53 +275,43 @@ export default function Home() {
           bgColor="cream"
           imageObjectFit="contain"
           imageHeight="h-96 md:h-[400px] lg:h-[500px]"
+          className="text-center md:text-left"
+          titleClassName="text-2xl md:text-2xl lg:text-3xl font-semibold text-black mb-4 md:mb-6 font-[var(--font-montserrat)] text-center md:text-left"
         />
       </section>
 
       {/* Our Impact Section */}
       <section className="overflow-hidden text-white bg-white">
-        <div className="relative   px-[50px]">
+        <div className="relative">
           {/* Banner image container */}
           <div className="absolute inset-0 w-full">
-            <div className="relative h-[500px] md:h-[500px] w-full">
+            <div className="relative h-[600px] md:h-[500px] w-full">
               <div className="absolute inset-0 bg-cover bg-center" style={{backgroundImage: `url('/images/our-impact.jpg')`}}>
-                {/* Black overlay */}
-                <div className="absolute inset-0 bg-black opacity-70"></div>
+                <div className="absolute inset-0 bg-black opacity-80"></div>
               </div>
             </div>
           </div>
 
-          <div className="relative z-10 h-[500px] flex flex-col">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white py-6 md:py-12 px-4 md:pl-16">OUR IMPACT</h2>
-            
-            <div className="flex-1 px-4 md:pl-16 md:pr-12 lg:pr-24 max-w-8xl overflow-y-auto pb-20 md:pb-0">
-              <p className="text-base md:text-xl mb-4 md:mb-6">
-              For us, impact means delivering measurable change — for the climate, for ecosystems, and for communities.
-              </p>
-              <p className="text-base md:text-xl mb-4 md:mb-6">
-              Through regenerative forestry, soil carbon innovation, and rural development initiatives, we transform degraded lands into high-performing natural assets.
-              </p>
-              <p className="text-base md:text-xl mb-6 md:mb-8">
-              Our integrated model generates verified carbon removal, restores biodiversity, strengthens local economies, and builds sustainable futures — creating lasting environmental and social value at scale.
-              </p>
-              <div className="hidden md:block ">
-                <Link
-                  href="/our-impact"
-                  className="text-white border border-white bg-[#1B5E20] px-4 md:px-6 py-2 hover:bg-white hover:text-[#38625c] transition duration-300 inline-block"
-                >
-                  Learn More
-                </Link>
+          <div className="relative z-10 h-[600px] md:h-[500px] flex flex-col justify-center">
+            <div className="orgatek-container">
+              <h2 className="text-2xl md:text-2xl lg:text-3xl font-semibold text-white mb-4 md:mb-6 font-[var(--font-montserrat)] text-center md:text-left">Our Impact</h2>
+              
+              <div className="md:pr-12 lg:pr-24 max-w-8xl">
+                <p className="text-base md:text-lg mb-6 text-white font-[var(--font-poppins)] text-center md:text-left">
+                  <strong>For us, impact means delivering measurable change — through regenerative forestry, soil carbon systems, and rural value creation.</strong>
+                </p>
+                <p className="text-base md:text-lg mb-6 text-white font-[var(--font-poppins)] text-center md:text-left">
+                  We convert unutilized wastelands into high-performing natural assets through an integrated model that regenerates soils, delivers consistent biomass output, enables verified carbon removal, and creates long-term economic value for local communities.
+                </p>
+                <div className="flex justify-center md:justify-start mt-8">
+                  <Link 
+                    href="/our-impact" 
+                    className="inline-block bg-[#1B5E20] text-white px-8 py-3 hover:bg-[#1B5E20]/90 transition-colors"
+                  >
+                    Learn More
+                  </Link>
+                </div>
               </div>
-            </div>
-
-            {/* Mobile Learn More button */}
-            <div className="md:hidden absolute bottom-8 left-4 z-20">
-              <Link
-                href="/our-impact"
-                className="text-white border border-white px-8 py-2 hover:bg-white hover:text-[#38625c] transition duration-300 inline-block"
-              >
-                Learn More
-              </Link>
             </div>
           </div>
         </div>
@@ -326,56 +337,57 @@ export default function Home() {
         pagePath="/our-impact"
       />
 
-     
-
-      
+      {/* Investment Panel */}
+      <SolutionPanel
+        isOpen={isInvestmentPanelOpen}
+        onClose={handleInvestmentPanelClose}
+        title="Get Involved"
+        description="Join us in our mission to transform wastelands into thriving forests while generating sustainable returns. Our investment opportunities combine environmental impact with financial growth, offering a unique pathway to participate in the future of regenerative forestry."
+        image="/images/get-involved-hero.png"
+        customContent={<GetInvolved isInPanel={true} />}
+      />
 
       {/* Investment Section */}
-      <section className="pt-4 pb-16 mt-4  bg-[#1B5E20] px-[50px] relative overflow-hidden">
-        {/* Curved lines background effect */}
-        <div className="absolute inset-x-0 -top-12 h-56 opacity-20">
+      <section className="pt-8 pb-16 bg-[#1B5E20] relative overflow-hidden">
+      <div className="absolute inset-x-0 -top-12 h-48 opacity-20">
           <svg className="w-full h-full" viewBox="0 0 100 30" preserveAspectRatio="none">
             <path d="M0,10 Q25,0 50,10 T100,10" stroke="white" fill="none" strokeWidth="0.5"/>
             <path d="M0,15 Q25,5 50,15 T100,15" stroke="white" fill="none" strokeWidth="0.5"/>
             <path d="M0,20 Q25,10 50,20 T100,20" stroke="white" fill="none" strokeWidth="0.5"/>
           </svg>
         </div>
-        <div className="orgatek-container relative z-10 pt-16 md:pt-24">
+        <div className="orgatek-container relative z-10 pt-8 md:pt-16 lg:pt-24">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="border-r-0 md:border-r border-white/20 pr-0 md:pr-8">
-              <h2 className="text-2xl md:text-3xl font-semibold mb-4 text-white">INVESTMENT CAPABILITIES</h2>
-              <p className="text-base md:text-lg text-white/90 pb-4">
-                We provide investors exposure to regional investment opportunities in real assets and natural capital.
+            <div className="border-b md:border-b-0 md:border-r border-white/20 pr-0 md:pr-8 pb-8 md:pb-0">
+              <h2 className="text-2xl md:text-2xl lg:text-3xl font-semibold text-white mb-4 md:mb-6 font-[var(--font-montserrat)] text-center md:text-left">Investment Opportunities</h2>
+              <p className="text-base md:text-lg text-white/90 pb-6 font-[var(--font-poppins)] text-center md:text-left">
+              We offer investors access to high-quality, regenerative land assets and scalable natural capital.
               </p>
-              <p className="text-base md:text-xl text-white/90 pb-4">
-                Natural capital investments for a sustainable future
-              </p>
-              <p className="text-base md:text-lg text-white/90">
-              We offer investors access to high-quality, regenerative land assets & natural capital. 
-              </p>
+              
             </div>
             <div className="pl-0 md:pl-8">
-              <p className="text-base md:text-lg text-white/90 pb-4">
-              Our strategy is rooted in operational control, circular biomass utilization, and scalable project development </p>
-              <p className="text-base md:text-lg text-white/90 pb-4">— delivering premium returns while restoring wastelands and strengthening rural economies.</p>
+              <p className="text-base md:text-lg text-white/90 pb-6 font-[var(--font-poppins)] mt-0 md:mt-[52px] text-center md:text-left">
+              Our strategy is built around sustainable forestry as a nature-based solution — with operational control, circular biomass utilization, and integrated project development delivering strong, long-term returns while restoring wastelands and strengthening rural economies. </p>
               
-              <Link 
-                href="/get-involved"
-                className="inline-flex items-center bg-white text-[#1B5E20] px-8 py-3 hover:bg-opacity-90 transition-colors relative group"
-                onClick={handleGetInvolvedClick}
-              >
-                <span className={isLoading ? 'opacity-0' : ''}>Explore our vision</span>
-                {!isLoading && (
-                  <svg className="ml-2 h-4 w-4 transform transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                  </svg>
-                )}
-                {isLoading && (
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-[#1B5E20]"></div>
-                  </div>
-                )}
-              </Link>
+              
+              <div className="flex justify-center md:justify-start">
+                <button 
+                  className="inline-flex items-center bg-white text-[#1B5E20] px-6 md:px-8 py-3 hover:bg-opacity-90 transition-colors relative group text-sm md:text-base"
+                  onClick={handleGetInvolvedClick}
+                >
+                  <span className={isLoading ? 'opacity-0' : ''}>Explore More</span>
+                  {!isLoading && (
+                    <svg className="ml-2 h-3 md:h-4 w-3 md:w-4 transform transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                  )}
+                  {isLoading && (
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="animate-spin rounded-full h-4 md:h-5 w-4 md:w-5 border-b-2 border-[#1B5E20]"></div>
+                    </div>
+                  )}
+                </button>
+              </div>
             </div>
           </div>
         </div>

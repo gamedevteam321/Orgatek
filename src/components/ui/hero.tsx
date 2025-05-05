@@ -44,7 +44,7 @@ export function Hero({
         </div>
         
         <div className="absolute inset-0 flex items-end pb-20">
-          <div className="w-full max-w-[100%] xl:max-w-[100%] mx-auto px-12">
+          <div className="w-full max-w-[100%] xl:max-w-[100%] mx-auto px-[10px] md:px-12">
             <div className="w-full">
               {Array.isArray(title) ? (
                 <TextSlider items={title} />
@@ -73,7 +73,7 @@ export function Hero({
         </div>
       </div>
       {subtitle && subtitleBelowImage && (
-        <div className="bg-white py-16 px-[50px]">
+        <div className="bg-white py-16 px-[10px] md:px-[50px]">
           <div className="container mx-auto">
             <p className={subtitleClassName}>
               {subtitle}

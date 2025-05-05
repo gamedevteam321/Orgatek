@@ -13,7 +13,7 @@ interface ContentSectionProps {
   imageAlt?: string;
   buttonText?: string;
   buttonLink?: string;
-  imageLeft?: boolean;
+  imageLeft?: boolean | { mobile: boolean; desktop: boolean };
   bgColor?: 'white' | 'cream' | 'green' | 'maroon';
   children?: React.ReactNode;
   imageSize?: 'default' | 'full';
@@ -24,6 +24,7 @@ interface ContentSectionProps {
   imageHeight?: string;
   className?: string;
   buttonStyle?: 'default' | 'solid-green';
+  titleClassName?: string;
 }
 
 export function ContentSection({
@@ -44,6 +45,7 @@ export function ContentSection({
   imageHeight = 'h-96 md:h-[300px] lg:h-[400px]',
   className = '',
   buttonStyle = 'default',
+  titleClassName = 'text-3xl md:text-4xl font-bold mb-4',
 }: ContentSectionProps) {
   const [isPanelOpen, setIsPanelOpen] = useState(false);
 
@@ -62,7 +64,7 @@ export function ContentSection({
 
   const getButtonClass = () => {
     if (buttonStyle === 'solid-green') {
-      return 'bg-[#1B5E20] text-white hover:bg-[#154a19] border border-white px-8 py-2.5 text-base';
+      return 'bg-[#1B5E20] text-white hover:bg-[#154a19] px-16 py-3 text-base font-medium transition-colors duration-200';
     }
     if (bgColor === 'green' || bgColor === 'maroon') {
       return 'border border-white text-white hover:bg-white hover:text-[#38625c]';
@@ -119,20 +121,38 @@ export function ContentSection({
         )}
         <div className="orgatek-container relative z-10">
           <div className={`grid grid-cols-1 gap-8 md:gap-12 ${image && !bgImage ? 'lg:grid-cols-2' : ''}`}>
-            {image && !bgImage && imageLeft && (
-              <div className="w-full">
-                {renderImage()}
-              </div>
+            {image && !bgImage && (
+              <>
+                {/* Mobile Image (Always First) */}
+                <div className="block lg:hidden w-full">
+                  {renderImage()}
+                </div>
+
+                {/* Desktop Image (Position Based on imageLeft) */}
+                {typeof imageLeft === 'object' ? (
+                  imageLeft.desktop && (
+                    <div className="hidden lg:block w-full">
+                      {renderImage()}
+                    </div>
+                  )
+                ) : (
+                  imageLeft && (
+                    <div className="hidden lg:block w-full">
+                      {renderImage()}
+                    </div>
+                  )
+                )}
+              </>
             )}
 
             <div className="flex flex-col justify-center">
-              {title && <h2 className={`text-2xl md:text-3xl font-semibold mb-4 ${bgImage ? 'text-white' : ''}`}>{title}</h2>}
-              {description && <p className={`text-base md:text-lg opacity-90 mb-6 ${bgImage ? 'text-white' : ''}`}>{description}</p>}
+              {title && <h2 className={`${titleClassName} ${bgImage ? 'text-white' : ''} font-[var(--font-montserrat)]`}>{title}</h2>}
+              {description && <div className={`text-base md:text-lg opacity-90 mb-6 ${bgImage ? 'text-white' : ''} font-[var(--font-poppins)]`}>{description}</div>}
 
               {children}
 
               {buttonText && (
-                <div className="mt-6">
+                <div className="mt-6 flex justify-center md:justify-start">
                   {openLink && buttonLink ? (
                     <Link href={buttonLink} className={`orgatek-button ${getButtonClass()}`}>
                       {buttonText}
@@ -149,10 +169,23 @@ export function ContentSection({
               )}
             </div>
 
-            {image && !bgImage && !imageLeft && (
-              <div className="w-full">
-                {renderImage()}
-              </div>
+            {image && !bgImage && (
+              <>
+                {/* Desktop Image (Position Based on imageLeft) */}
+                {typeof imageLeft === 'object' ? (
+                  !imageLeft.desktop && (
+                    <div className="hidden lg:block w-full">
+                      {renderImage()}
+                    </div>
+                  )
+                ) : (
+                  !imageLeft && (
+                    <div className="hidden lg:block w-full">
+                      {renderImage()}
+                    </div>
+                  )
+                )}
+              </>
             )}
           </div>
         </div>

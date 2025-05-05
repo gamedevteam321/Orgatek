@@ -29,18 +29,15 @@ export default function WhatWeDo() {
   const nextSlide = useCallback(() => {
     setCurrentSlide((prev) => (prev + 1) % processSteps.length);
     setIsAutoPlaying(false);
-    // Resume autoplay after 10 seconds of inactivity
     setTimeout(() => setIsAutoPlaying(true), 10000);
   }, [processSteps.length]);
 
   const prevSlide = useCallback(() => {
     setCurrentSlide((prev) => (prev - 1 + processSteps.length) % processSteps.length);
     setIsAutoPlaying(false);
-    // Resume autoplay after 10 seconds of inactivity
     setTimeout(() => setIsAutoPlaying(true), 10000);
   }, [processSteps.length]);
 
-  // Auto-advance slides
   useEffect(() => {
     let slideTimer: NodeJS.Timeout;
     
@@ -64,24 +61,34 @@ export default function WhatWeDo() {
       {/* Hero Section */}
       <Hero
         backgroundImage="/images/what-hero.jpg"
-        title="What We Do"
+        title={
+          <div className="space-y-2 md:space-y-4 text-center md:text-left">
+            <h2 className="block text-4xl md:text-4xl lg:text-6xl">What We Do</h2>
+          </div>
+        }
         subtitle=""
-        small={false}
+        titleClassName="text-2xl md:text-4xl lg:text-6xl"
+        subtitleClassName="text-2xl md:text-xl lg:text-2xl text-white/90 mb-6 text-center md:text-left"
+        subtitleBelowImage={false}
       />
 
       {/* Intro Section */}
-      <section className="py-12 bg-[#eff1f1]">
+      <section className="py-16 md:py-24 bg-[#eff1f1]">
         <div className="orgatek-container">
-          <div className="max-w-full mx-auto">
-            <p className="text-lg text-gray-700">
-            We transform wastelands into thriving ecosystems through a symbiotic process of planting short-rotation high-yield trees and enriching the soil with Biochar made from their waste biomass. This combination enhances soil fertility, improves water retention, accelerates healthy tree growth, and creates high-quality, traceable, and verifiable carbon sinks.
+          <div className="max-w-7xl mx-auto px-[10px] md:px-[50px]">
+            <p className="text-lg md:text-xl mb-8 text-gray-700 text-center md:text-left mb-4">
+            We transform wastelands into thriving ecosystems and productive, long-term natural assets through a fully integrated approach.
+            </p>
+            <p className="text-lg md:text-xl mb-8 text-gray-700 text-center md:text-left">
+            We plant short-rotation, high-yield trees, enrich soils with proprietary organic inputs and biochar produced through on-site biomass,and manage every stage with full operational control and digital transparency. This system rebuilds soil fertility, improves water retention, accelerates healthy tree growth, and creates high-quality, traceable, and verified carbon sinks.
             </p>
           </div>
         </div>
       </section>
-       {/* Production Cycle Section */}
-      <section className="py-10 bg-white">
-        <div className="orgatek-container">
+
+      {/* Production Cycle Section */}
+      <section className="py-16 md:py-24 bg-white">
+        <div className="orgatek-container px-[10px] md:px-[50px]">
           <div className="flex flex-col md:flex-row items-center gap-10">
             <div className="w-full md:w-1/2 h-full">
               <div className="h-full">
@@ -94,95 +101,146 @@ export default function WhatWeDo() {
               </div>
             </div>
             <div className="w-full md:w-1/2 flex flex-col justify-center">
-              <h2 className="text-4xl font-semibold text-[#27543a] mb-8">The Production Cycle</h2>
+              <h2 className="text-2xl md:text-2xl lg:text-3xl font-semibold text-[#27543a] mb-8 text-center md:text-left font-[var(--font-montserrat)]">The Production Cycle</h2>
               <div className="space-y-6">
-                <p className="text-[#27543a] text-2xl font-medium leading-relaxed">
+                <p className="text-lg md:text-xl text-[#27543a] font-medium leading-relaxed text-center md:text-left">
                   Our plantation management includes planting new seedlings to expand our plantations, harvesting mature trees, coppicing (to produce regenerative growth, increased biomass and multiple trunk development) and processing the harvested plant biomass.
                 </p>
-                
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      
-
       {/* Forest Establishment Section */}
       <ContentSection
         title="Forest Establishment"
-        description="India has over 55 million hectares classified as wastelands, with nearly 24 million hectares identified as having viable forestry potential. At Orgatek, every project begins with rigorous site and connected short-rotation, high yield tree species selection, based on detailed soil analysis, climatic assessment, water resource evaluation and market proximity. We plant high-yielding, short-rotation species such as Eucalyptus, Poplar, Acacia, Bamboo, Casuarina, and Gmelina Arborea, selected for their adaptability to local conditions and ability to deliver maximum environmental impact."
+        description={
+          <div className="text-center md:text-left">
+            <p className="text-lg md:text-xl text-gray-700">
+              India has over 55 million hectares classified as wastelands, with nearly 24 million hectares identified as having viable forestry potential. At Orgatek, every project begins with rigorous site and connected short-rotation, high yield tree species selection, based on detailed soil analysis, climatic assessment, water resource evaluation and market proximity. We plant high-yielding, short-rotation species such as Eucalyptus, Poplar, Acacia, Bamboo, Casuarina, and Gmelina Arborea, selected for their adaptability to local conditions and ability to deliver maximum environmental impact.
+            </p>
+          </div>
+        }
         image="/images/forest-establishment.png"
         imageLeft={false}
-        buttonText="Read More"
-        buttonLink="#"
-        pagePath="/forest-establishment"
         bgColor="cream"
+        className="px-[10px] md:px-[50px]"
+        titleClassName="text-2xl md:text-2xl lg:text-3xl font-semibold text-black mb-4 md:mb-6 font-[var(--font-montserrat)] text-center md:text-left"
+        buttonText="Read More"
+        buttonStyle="solid-green"
+        openLink={false}
+        pagePath="/forest-establishment"
       />
 
       {/* Forest Management Section */}
       <ContentSection
         title="Forest Management"
-        description="Efficient, professional forest management is at the heart of building high-performing regenerative ecosystems. Once planted, our forests are carefully managed through continuous field scouting, advanced digital monitoring, and skilled forestry operations and proactive interventions to ensure that our estates grow vigorously, remain healthy, and maximize carbon sequestration."
+        description={
+          <div className="text-center md:text-left">
+            <p className="text-lg md:text-xl text-gray-700">
+              Efficient, professional forest management is at the heart of building high-performing regenerative ecosystems. Once planted, our forests are carefully managed through continuous field scouting, advanced digital monitoring, and skilled forestry operations and proactive interventions to ensure that our estates grow vigorously, remain healthy, and maximize carbon sequestration.
+            </p>
+          </div>
+        }
         image="/images/forest-management.jpg"
         imageLeft={true}
-        buttonText="Read More"
-        buttonLink="#"
-        pagePath="/forest-management"
         bgColor="white"
+        className="px-[10px] md:px-[50px]"
+        titleClassName="text-2xl md:text-2xl lg:text-3xl font-semibold text-black mb-4 md:mb-6 font-[var(--font-montserrat)] text-center md:text-left"
+        buttonText="Read More"
+        buttonStyle="solid-green"
+        openLink={false}
+        pagePath="/forest-management"
       />
 
       {/* Sustainable Harvesting Section */}
       <ContentSection
         title="Sustainable Harvesting"
-        description="We practice strategic rotational cycles by planting and harvesting in carefully managed phases — establishing new areas each year while earlier phases mature. This ensures our forests remain vibrant and continuously productive, keeping large sections of the landscape actively growing at all times, sustaining carbon sequestration, preserving soil health, and maintaining lush, living ecosystems, while avoiding periods of barrenness or ecological disruption."
+        description={
+          <div className="text-center md:text-left">
+            <p className="text-lg md:text-xl text-gray-700">
+              We practice strategic rotational cycles by planting and harvesting in carefully managed phases — establishing new areas each year while earlier phases mature. This ensures our forests remain vibrant and continuously productive, keeping large sections of the landscape actively growing at all times, sustaining carbon sequestration, preserving soil health, and maintaining lush, living ecosystems, while avoiding periods of barrenness or ecological disruption.
+            </p>
+          </div>
+        }
         image="/images/sustainable-harvesting.png"
         imageLeft={false}
-        buttonText="Read More"
-        buttonLink="#"
-        pagePath="/sustainable-harvesting"
         bgColor="cream"
+        className="px-[10px] md:px-[50px]"
+        titleClassName="text-2xl md:text-2xl lg:text-3xl font-semibold text-black mb-4 md:mb-6 font-[var(--font-montserrat)] text-center md:text-left"
+        buttonText="Read More"
+        buttonStyle="solid-green"
+        openLink={false}
+        pagePath="/sustainable-harvesting"
       />
 
       {/* Proprietary Organic Inputs Section */}
       <ContentSection
         title="Proprietary Organic Inputs"
-        description="Restoring wastelands demands a soil-first approach that transcends traditional tree planting. Our in-house manufactured proprietary organic inputs, developed through years of research and crafted with precise quality control, offer unmatched flexibility to customize solutions for specific conditions to support robust tree growth and long term soil fertility."
+        description={
+          <div className="text-center md:text-left">
+            <p className="text-lg md:text-xl text-gray-700">
+              Restoring wastelands demands a soil-first approach that transcends traditional tree planting. Our in-house manufactured proprietary organic inputs, developed through years of research and crafted with precise quality control, offer unmatched flexibility to customize solutions for specific conditions to support robust tree growth and long term soil fertility.
+            </p>
+          </div>
+        }
         image="/images/proprietary-organic-inputs.png"
         imageLeft={true}
-        buttonText="Read More"
-        buttonLink="#"
-        pagePath="/unique-organic-inputs"
         bgColor="white"
+        className="px-[10px] md:px-[50px]"
+        titleClassName="text-2xl md:text-2xl lg:text-3xl font-semibold text-black mb-4 md:mb-6 font-[var(--font-montserrat)] text-center md:text-left"
+        buttonText="Read More"
+        buttonStyle="solid-green"
+        openLink={false}
+        pagePath="/unique-organic-inputs"
       />
 
       {/* Biochar Enrichment Section */}
       <ContentSection
         title="Biochar Enrichment"
-        description="At Orgatek, we convert forestry biomass into high-quality biochar through on-site, high-temperature pyrolysis — permanently removing carbon while enriching degraded soils. Our biochar practices close the carbon loop locally, rebuild ecosystem resilience, and deliver durable, verifiable climate impact at scale."
+        description={
+          <div className="text-center md:text-left">
+            <p className="text-lg md:text-xl text-gray-700">
+              At Orgatek, we convert forestry biomass into high-quality biochar through on-site, high-temperature pyrolysis — permanently removing carbon while enriching degraded soils. Our biochar practices close the carbon loop locally, rebuild ecosystem resilience, and deliver durable, verifiable climate impact at scale.
+            </p>
+          </div>
+        }
         image="/images/biochar-enrichment.png"
         imageLeft={false}
-        buttonText="Read More"
-        buttonLink="#"
-        pagePath="/biochar-enrichment"
         bgColor="cream"
+        className="px-[10px] md:px-[50px]"
+        titleClassName="text-2xl md:text-2xl lg:text-3xl font-semibold text-black mb-4 md:mb-6 font-[var(--font-montserrat)] text-center md:text-left"
+        buttonText="Read More"
+        buttonStyle="solid-green"
+        openLink={false}
+        pagePath="/biochar-enrichment"
       />
 
       {/* Digital Monitoring Section */}
       <ContentSection
         title="Digital Monitoring & Verification"
-        description="We integrate the best digital technologies including IoT sensors, computer vision and satellite imagery, to monitor and verify every aspect of forest establishment, management, harvesting and carbon sequestration. Our digital platform ensures real-time visibility, transparent reporting, and third-party validated impact across all our projects."
+        description={
+          <div className="text-center md:text-left">
+            <p className="text-lg md:text-xl text-gray-700">
+              We integrate the best digital technologies including IoT sensors, computer vision and satellite imagery, to monitor and verify every aspect of forest establishment, management, harvesting and carbon sequestration. Our digital platform ensures real-time visibility, transparent reporting, and third-party validated impact across all our projects.
+            </p>
+          </div>
+        }
         image="/images/digital-monitoring.png"
         imageLeft={true}
-        buttonText="Read More"
-        buttonLink="#"
-        pagePath="/digital-monitoring"
         bgColor="white"
+        className="px-[10px] md:px-[50px]"
+        titleClassName="text-2xl md:text-2xl lg:text-3xl font-semibold text-black mb-4 md:mb-6 font-[var(--font-montserrat)] text-center md:text-left"
+        buttonText="Read More"
+        buttonStyle="solid-green"
+        openLink={false}
+        pagePath="/digital-monitoring"
       />
 
       {/* Full Circle Process Section */}
-      <section className="py-16 bg-[#eff1f1]">
-        <div className="orgatek-container">
+      <section className="py-16 md:py-24 bg-[#eff1f1]">
+        <div className="orgatek-container px-[10px] md:px-[50px]">
           <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-0">
             {/* Content */}
             <div className="flex-1 max-w-4xl mx-auto">
@@ -224,7 +282,7 @@ export default function WhatWeDo() {
 
               {/* Text Content */}
               <div className="text-center md:text-center mt-8 md:mt-12">
-                <p className="text-[#27543a] text-lg leading-relaxed transition-opacity duration-500">
+                <p className="text-lg md:text-xl text-[#27543a] leading-relaxed transition-opacity duration-500">
                   {processSteps[currentSlide].text}
                 </p>
               </div>
@@ -244,10 +302,6 @@ export default function WhatWeDo() {
           </div>
         </div>
       </section>
-
-      
-
-      
 
       <Footer />
     </main>

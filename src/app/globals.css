@@ -72,7 +72,7 @@
     @apply overflow-x-hidden bg-[#eff1f1] text-foreground font-[var(--font-poppins)];
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply font-[var(--font-poppins)] font-semibold;
+    @apply font-[var(--font-montserrat)] font-semibold;
   }
   p {
     @apply font-[var(--font-poppins)];
@@ -81,7 +81,7 @@
 
 @layer components {
   .orgatek-container {
-    @apply max-w-[1440px] mx-auto px-[50px];
+    @apply max-w-[1440px] mx-auto px-[10px] md:px-[50px];
   }
 
   .orgatek-button {

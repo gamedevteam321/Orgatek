@@ -9,8 +9,8 @@ interface ContactFormSectionProps {
 
 export function ContactFormSection({
   title = "INVESTMENT OPPORTUNITIES",
-  subtitle = "We provide investors exposure to regional investment opportunities in real assets and natural capital.",
-  subtitle2 = "Our investment strategies support the role of forests as nature-based solutions, provide sustainable wood fibre for the growing circular bioeconomy, and contribute to the sustainable development of regional economies and rural communities.",
+  subtitle = "Whether you're a carbon buyer, a landowner exploring carbon farming, or an investor seeking long-term, land-backed returns — we'd love to connect",
+  subtitle2 = "Our integrated projects deliver sustainable timber, soil regeneration, and verified carbon credits while supporting circular bioeconomy goals and strengthening rural communities.",
   backgroundColor = 'white',
 }: ContactFormSectionProps) {
   const getBgColor = () => {
