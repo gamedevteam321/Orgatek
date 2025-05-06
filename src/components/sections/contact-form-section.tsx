@@ -25,10 +25,7 @@ export function ContactFormSection({
   };
 
   const getButtonClass = () => {
-    if (backgroundColor === 'maroon') {
-      return 'bg-white text-[#915662] hover:bg-gray-100';
-    }
-    return 'bg-[#38625c] text-white hover:bg-[#2e4a3d]';
+    return 'bg-green-600 text-white hover:bg-green-700';
   };
 
   return (
@@ -36,9 +33,9 @@ export function ContactFormSection({
       <div className="orgatek-container">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div>
-            <h2 className="text-2xl md:text-3xl font-semibold mb-4">{title}</h2>
-            {subtitle && <p className="text-base md:text-lg opacity-90 mb-6">{subtitle}</p>}
-            {subtitle2 && <p className="text-base md:text-lg opacity-90 mb-6">{subtitle2}</p>}
+            <h2 className="text-2xl md:text-3xl font-semibold mb-4 font-[var(--font-montserrat)] text-black">{title}</h2>
+            {subtitle && <p className="text-base md:text-lg mb-6 font-[var(--font-poppins)] text-gray-700">{subtitle}</p>}
+            {subtitle2 && <p className="text-base md:text-lg mb-6 font-[var(--font-poppins)] text-gray-700">{subtitle2}</p>}
           </div>
 
           <div>
@@ -120,7 +117,7 @@ export function ContactFormSection({
                     required
                   />
                 </div>
-                <div className="ml-3 text-sm">
+                <div className="ml-3 text-sm text-gray-700">
                   <label htmlFor="terms" className="opacity-80">
                     I agree to receive emails from Orgatek. I understand that my personal information will be processed in accordance with Orgatek's Privacy Policy.
                   </label>

@@ -69,7 +69,7 @@ export default function Home() {
       <Hero
         backgroundImage="/images/hero-main.png"
         title={
-          <div className="space-y-2 md:space-y-4 text-center md:text-left">
+          <div className="space-y-2 md:space-y-4 text-center md:text-left font-[var(--font-montserrat)]">
             <h2 className="block text-4xl md:text-4xl lg:text-6xl">Regenerating Wastelands</h2>
             <h2 className="block text-4xl md:text-4xl lg:text-6xl">Building Forests</h2>
             <h2 className="block text-4xl md:text-4xl lg:text-6xl">Empowering Communities</h2>
@@ -77,7 +77,7 @@ export default function Home() {
         }
         subtitle="We transform degraded landscapes into thriving organic forests — producing sustainable timber, biochar, and verified carbon credits for a regenerative future."
         subtitleBelowImage={true}
-        subtitleClassName="text-xl md:text-2xl lg:text-3xl text-gray-700 font-light mb-4 md:mb-8 max-w-full text-center md:text-center mx-auto md:mx-0"
+        subtitleClassName="text-2xl md:text-2xl lg:text-2xl text-black font-regular mb-4 md:mb-8 max-w-full text-center md:text-center mx-auto md:mx-0 font-[var(--font-poppins)]"
       />
       {/* Why Forests Matter Section */}
       <ContentSection
@@ -98,13 +98,13 @@ export default function Home() {
         description={<>
             <h2 className="text-2xl md:text-2xl lg:text-3xl font-semibold text-white mb-4 md:mb-6 font-[var(--font-montserrat)] text-center md:text-left">Why We Exist</h2>
             <div className=" text-white text-center md:text-left">
-              <p className="text-lg md:text-xl mb-8 font-regular">
+              <p className="text-lg md:text-xl mb-8 font-regular font-[var(--font-poppins)]">
               Each year, over 10 million hectares of natural forests are lost to unsustainable timber harvesting and agricultural expansion — accelerating carbon emissions and degrading critical ecosystems.
               </p>
-              <p className="text-lg md:text-xl font-regular mb-8">
+              <p className="text-lg md:text-xl font-regular mb-8 font-[var(--font-poppins)]">
               Meanwhile, over 2 billion hectares of unproductive, degraded wastelands lie idle.
               </p>
-              <p className="text-lg md:text-xl font-regular ">
+              <p className="text-lg md:text-xl font-regular mb-8 font-[var(--font-poppins)]">
               We see these lands not as liabilities, but as untapped assets.
               </p>
               <div className="mt-8 flex justify-center md:justify-start">
@@ -120,7 +120,7 @@ export default function Home() {
 
       {/* How We Transform Wastelands Section */}
     <ContentSection
-        title="How we Do"
+        title="What We Do"
         description="We transform wastelands into thriving ecosystems through a symbiotic process of planting short-rotation high-yield trees and enriching the soil with Biochar made from their waste biomass. This combination enhances soil fertility, improves water retention, accelerates healthy tree growth, and creates high-quality, traceable, and verified carbon sinks."
         bgColor="cream"
         className="text-center md:text-left py-8 md:py-12"
@@ -206,10 +206,10 @@ export default function Home() {
       <section className="py-8 md:py-16 lg:py-24 bg-white">
         <div className="orgatek-container">
           <h2 className="text-2xl md:text-2xl lg:text-3xl font-semibold text-black mb-4 md:mb-6 font-[var(--font-montserrat)] text-center md:text-left">What We Create</h2>
-          <p className="text-base md:text-lg text-black mb-4 max-w-full font-[var(--font-poppins)] text-center md:text-left" >
+          <p className="text-base md:text-lg text-grey-700 mb-4 max-w-full font-[var(--font-poppins)] text-center md:text-left" >
             We grow short rotation, high yield timber on regenerated lands to replace deforestation-linked wood, convert forestry biomass into high-quality biochar for permanent soil carbon storage, and generate certified carbon credits rooted in measurable, durable climate impact.
           </p>
-          <p className="text-base md:text-lg text-black mb-6 max-w-full font-[var(--font-poppins)] text-center md:text-left" > Our vertically integrated model transforms degraded land into climate assets — producing nature-based solutions that are traceable, verified, and built to scale.</p>
+          <p className="text-base md:text-lg text-grey-700 mb-6 max-w-full font-[var(--font-poppins)] text-center md:text-left" > Our vertically integrated model transforms degraded land into climate assets — producing nature-based solutions that are traceable, verified, and built to scale.</p>
 
           <div className="flex flex-col md:flex-row md:flex-wrap lg:flex-nowrap md:justify-center gap-6 md:gap-8">
             <div className="w-full md:w-[calc(50%-16px)] lg:w-[400px]">
@@ -259,13 +259,13 @@ export default function Home() {
           title="A Fully Integrated Regenerative Model"
           description={
             <>
-              <p className="mb-4 text-center md:text-left">
+              <p className="mb-4 text-center md:text-left font-[var(--font-poppins)]">
                 Orgatek is fully integrated across the entire land regeneration cycle — from soil to seedling to supply chain.
               </p>
-              <p className="mb-4 text-center md:text-left">
+              <p className="mb-4 text-center md:text-left font-[var(--font-poppins)]">
                 We develop and apply our own proprietary organic inputs, grow resilient saplings in our certified nurseries, and manage every phase of forest establishment on leased and partner lands. Our plantations are operated in rotational cycles to ensure consistent yield, strict quality control, and uninterrupted biomass availability.
               </p>
-              <p className="text-center md:text-left">
+              <p className="text-center md:text-left font-[var(--font-poppins)]">
                 With in-house logistics and delivery systems, we guarantee traceable, year-round supply of timber, biochar, and biomass — all from a controlled, regenerative platform built for scale.
               </p>
             </>

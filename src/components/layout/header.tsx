@@ -7,7 +7,7 @@ import { Menu, X } from 'lucide-react';
 
 const navItems = {
   main: [
-    { name: 'Why we Exist', href: '/why-we-exist' },
+    { name: 'Why we exist', href: '/why-we-exist' },
     { name: 'What we do', href: '/what-we-do' },
     { name: 'What we create', href: '/what-we-create' },
     { name: 'Our Trees', href: '/our-trees' },

@@ -31,18 +31,18 @@ export default function OurImpactPage() {
       <section className="bg-white py-16 md:py-24">
         <div className="orgatek-container">
           <div className="max-w-7xl mx-auto px-[10px] md:px-[50px]">
-            <h2 className="text-2xl md:text-2xl lg:text-3xl font-semibold text-black mb-1 font-[var(--font-montserrat)] text-center md:text-left">
-              Environmental Impact
-            </h2>
             <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-              <div className="space-y-6 md:space-y-8">
-                <p className="text-lg md:text-xl text-gray-700 text-center md:text-left font-[var(--font-poppins)]">
+              <div className="space-y-4 flex flex-col justify-center">
+                <h2 className="text-2xl md:text-2xl lg:text-3xl font-semibold text-black font-[var(--font-montserrat)] text-center md:text-left">
+                  Environmental Impact
+                </h2>
+                <p className="text-lg md:text-xl text-grey-700 text-center md:text-left font-[var(--font-poppins)]">
                   Orgatek's regenerative forestry model transforms degraded wastelands into thriving ecosystems through a symbiotic process of reforestation, soil enrichment, and carbon capture.
                 </p>
-                <p className="text-lg md:text-xl text-gray-700 text-center md:text-left font-[var(--font-poppins)]">
+                <p className="text-lg md:text-xl text-grey-700 text-center md:text-left font-[var(--font-poppins)]">
                   By planting short-rotation, high yield trees and enriching soils with our proprietary organic inputs and Biochar, we boost fertility, enhance water retention, and accelerate robust tree growth. Each acre of our forestry sequesters approximately 5 Mt of CO2 annually, while 2 Mt of biochar applied per acre yearly removes 5 metric tons of CO2e.
                 </p>
-                <p className="text-lg md:text-xl text-gray-700 text-center md:text-left font-[var(--font-poppins)]">
+                <p className="text-lg md:text-xl text-grey-700 text-center md:text-left font-[var(--font-poppins)]">
                   Scaling to our 100,000-acre goal, this creates massive, traceable carbon sinks, revives biodiversity, fosters native habitats, and combats climate change for a healthier planet.
                 </p>
               </div>
@@ -64,7 +64,7 @@ export default function OurImpactPage() {
         <div className="orgatek-container">
           <div className="max-w-7xl mx-auto px-[10px] md:px-[50px]">
             <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-              <div className="relative h-[300px] md:h-[600px] w-full">
+              <div className="relative h-[300px] md:h-[900px] w-full">
                 <Image
                   src="/images/empowering-communities.png"
                   alt="Community Impact"
@@ -72,26 +72,26 @@ export default function OurImpactPage() {
                   className="object-cover rounded-lg"
                 />
               </div>
-              <div className="space-y-6 md:space-y-8">
-                <h2 className="text-2xl md:text-2xl lg:text-3xl font-semibold text-black mb-2 font-[var(--font-montserrat)] text-center md:text-left">
+              <div className="space-y-4">
+                <h2 className="text-2xl md:text-2xl lg:text-3xl font-semibold text-black  font-[var(--font-montserrat)] text-center md:text-left">
                   Empowering Communities
                 </h2>
                 <h4 className="text-xl md:text-2xl font-semibold text-black mb-3 font-[var(--font-montserrat)] text-center md:text-left">
                   Empowering People. Building Futures.
                 </h4>
-                <p className="text-lg md:text-xl text-gray-700 text-center md:text-left font-[var(--font-poppins)]">
+                <p className="text-lg md:text-xl text-grey-700 text-center md:text-left font-[var(--font-poppins)]">
                   We believe that regenerating degraded lands must go hand in hand with revitalizing the lives of rural communities. Our work in India's remote interiors—regions often burdened by poverty and limited opportunities—delivering economic, social, and environmental resilience through forestry-based development.
                 </p>
-                <p className="text-lg md:text-xl text-gray-700 text-center md:text-left font-[var(--font-poppins)]">
+                <p className="text-lg md:text-xl text-grey-700 text-center md:text-left font-[var(--font-poppins)]">
                   We lease wastelands from landowners under long-term agreements, providing steady income from once-barren, unproductive plots. These leases provide immediate financial stability, turning dormant lands into pillars of family security.
                 </p>
-                <p className="text-lg md:text-xl text-gray-700 text-center md:text-left font-[var(--font-poppins)]">
+                <p className="text-lg md:text-xl text-grey-700 text-center md:text-left font-[var(--font-poppins)]">
                   Our forestry projects generate steady employment, from land preparation and planting to estate management and biomass harvesting. By hiring and training local workers, we build green job ecosystems, equipping communities with skills and resilience in India's most underserved areas.
                 </p>
-                <p className="text-lg md:text-xl text-gray-700 text-center md:text-left font-[var(--font-poppins)]">
+                <p className="text-lg md:text-xl text-grey-700 text-center md:text-left font-[var(--font-poppins)]">
                   We reinvest in village prosperity through initiatives that enhance healthcare access, support early education and promote local enterprises linked to forestry, to cultivate thriving, self-reliant communities. Micro-initiatives, like our biochar cookstove program, further augment incomes: we provide cookstoves, collect biochar for carbon credits, and share the value with communities via a digital platform, fostering self-reliance.
                 </p>
-                <p className="text-lg md:text-xl text-gray-700 text-center md:text-left font-[var(--font-poppins)]">
+                <p className="text-lg md:text-xl text-grey-700 text-center md:text-left font-[var(--font-poppins)]">
                   While restoring land lays the foundation, empowering communities builds sustainable futures and heralds transformative change that endures for generations.
                 </p>
               </div>

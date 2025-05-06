@@ -76,10 +76,10 @@ export default function WhatWeDo() {
       <section className="py-16 md:py-24 bg-[#eff1f1]">
         <div className="orgatek-container">
           <div className="max-w-7xl mx-auto px-[10px] md:px-[50px]">
-            <p className="text-lg md:text-xl mb-8 text-gray-700 text-center md:text-left mb-4">
+            <p className="text-lg md:text-xl mb-8 text-black font-regular text-center md:text-left mb-4 font-[var(--font-poppins)]">
             We transform wastelands into thriving ecosystems and productive, long-term natural assets through a fully integrated approach.
             </p>
-            <p className="text-lg md:text-xl mb-8 text-gray-700 text-center md:text-left">
+            <p className="text-lg md:text-xl mb-8 text-black font-regular text-center md:text-left font-[var(--font-poppins)]">
             We plant short-rotation, high-yield trees, enrich soils with proprietary organic inputs and biochar produced through on-site biomass,and manage every stage with full operational control and digital transparency. This system rebuilds soil fertility, improves water retention, accelerates healthy tree growth, and creates high-quality, traceable, and verified carbon sinks.
             </p>
           </div>
@@ -101,9 +101,9 @@ export default function WhatWeDo() {
               </div>
             </div>
             <div className="w-full md:w-1/2 flex flex-col justify-center">
-              <h2 className="text-2xl md:text-2xl lg:text-3xl font-semibold text-[#27543a] mb-8 text-center md:text-left font-[var(--font-montserrat)]">The Production Cycle</h2>
+              <h2 className="text-2xl md:text-2xl lg:text-3xl font-semibold text-black mb-8 text-center md:text-left font-[var(--font-montserrat)]">The Production Cycle</h2>
               <div className="space-y-6">
-                <p className="text-lg md:text-xl text-[#27543a] font-medium leading-relaxed text-center md:text-left">
+                <p className="text-lg md:text-xl text-grey-700  leading-relaxed text-center md:text-left font-[var(--font-poppins)]">
                   Our plantation management includes planting new seedlings to expand our plantations, harvesting mature trees, coppicing (to produce regenerative growth, increased biomass and multiple trunk development) and processing the harvested plant biomass.
                 </p>
               </div>
@@ -117,7 +117,7 @@ export default function WhatWeDo() {
         title="Forest Establishment"
         description={
           <div className="text-center md:text-left">
-            <p className="text-lg md:text-xl text-gray-700">
+            <p className="text-lg md:text-xl text-gray-700 font-[var(--font-poppins)]">
               India has over 55 million hectares classified as wastelands, with nearly 24 million hectares identified as having viable forestry potential. At Orgatek, every project begins with rigorous site and connected short-rotation, high yield tree species selection, based on detailed soil analysis, climatic assessment, water resource evaluation and market proximity. We plant high-yielding, short-rotation species such as Eucalyptus, Poplar, Acacia, Bamboo, Casuarina, and Gmelina Arborea, selected for their adaptability to local conditions and ability to deliver maximum environmental impact.
             </p>
           </div>
@@ -138,7 +138,7 @@ export default function WhatWeDo() {
         title="Forest Management"
         description={
           <div className="text-center md:text-left">
-            <p className="text-lg md:text-xl text-gray-700">
+            <p className="text-lg md:text-xl text-gray-700 font-[var(--font-poppins)]">
               Efficient, professional forest management is at the heart of building high-performing regenerative ecosystems. Once planted, our forests are carefully managed through continuous field scouting, advanced digital monitoring, and skilled forestry operations and proactive interventions to ensure that our estates grow vigorously, remain healthy, and maximize carbon sequestration.
             </p>
           </div>
@@ -159,7 +159,7 @@ export default function WhatWeDo() {
         title="Sustainable Harvesting"
         description={
           <div className="text-center md:text-left">
-            <p className="text-lg md:text-xl text-gray-700">
+            <p className="text-lg md:text-xl text-gray-700 font-[var(--font-poppins)]">
               We practice strategic rotational cycles by planting and harvesting in carefully managed phases — establishing new areas each year while earlier phases mature. This ensures our forests remain vibrant and continuously productive, keeping large sections of the landscape actively growing at all times, sustaining carbon sequestration, preserving soil health, and maintaining lush, living ecosystems, while avoiding periods of barrenness or ecological disruption.
             </p>
           </div>
@@ -180,7 +180,7 @@ export default function WhatWeDo() {
         title="Proprietary Organic Inputs"
         description={
           <div className="text-center md:text-left">
-            <p className="text-lg md:text-xl text-gray-700">
+            <p className="text-lg md:text-xl text-gray-700 font-[var(--font-poppins)]">
               Restoring wastelands demands a soil-first approach that transcends traditional tree planting. Our in-house manufactured proprietary organic inputs, developed through years of research and crafted with precise quality control, offer unmatched flexibility to customize solutions for specific conditions to support robust tree growth and long term soil fertility.
             </p>
           </div>
@@ -201,7 +201,7 @@ export default function WhatWeDo() {
         title="Biochar Enrichment"
         description={
           <div className="text-center md:text-left">
-            <p className="text-lg md:text-xl text-gray-700">
+            <p className="text-lg md:text-xl text-gray-700 font-[var(--font-poppins)]">
               At Orgatek, we convert forestry biomass into high-quality biochar through on-site, high-temperature pyrolysis — permanently removing carbon while enriching degraded soils. Our biochar practices close the carbon loop locally, rebuild ecosystem resilience, and deliver durable, verifiable climate impact at scale.
             </p>
           </div>
@@ -222,7 +222,7 @@ export default function WhatWeDo() {
         title="Digital Monitoring & Verification"
         description={
           <div className="text-center md:text-left">
-            <p className="text-lg md:text-xl text-gray-700">
+            <p className="text-lg md:text-xl text-gray-700 font-[var(--font-poppins)]">
               We integrate the best digital technologies including IoT sensors, computer vision and satellite imagery, to monitor and verify every aspect of forest establishment, management, harvesting and carbon sequestration. Our digital platform ensures real-time visibility, transparent reporting, and third-party validated impact across all our projects.
             </p>
           </div>
@@ -282,7 +282,7 @@ export default function WhatWeDo() {
 
               {/* Text Content */}
               <div className="text-center md:text-center mt-8 md:mt-12">
-                <p className="text-lg md:text-xl text-[#27543a] leading-relaxed transition-opacity duration-500">
+                <p className="text-lg md:text-xl text-black font-regular leading-relaxed transition-opacity duration-500 font-[var(--font-poppins)]">
                   {processSteps[currentSlide].text}
                 </p>
               </div>

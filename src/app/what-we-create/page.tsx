@@ -30,10 +30,10 @@ export default function WhatWeCreate() {
         <div className="orgatek-container">
           <div className="max-w-7xl mx-auto px-[10px] md:px-[50px]">
             
-            <p className="text-lg md:text-xl mb-8 text-[#2B5741] font-medium text-center md:text-left font-[var(--font-poppins)]">
+            <p className="text-lg md:text-xl mb-8 text-black font-regular text-center md:text-left font-[var(--font-poppins)]">
               We grow short rotation, high yield timber on regenerated lands to replace deforestation-linked wood, convert forestry biomass into high-quality biochar for permanent soil carbon storage, and generate certified carbon credits rooted in measurable, durable climate impact. Our vertically integrated model transforms degraded land into climate assets — producing nature-based solutions that are traceable, verified, and built to scale.
             </p>
-            <p className="text-lg md:text-xl  text-[#2B5741] font-medium text-center md:text-left font-[var(--font-poppins)]">
+            <p className="text-lg md:text-xl text-black font-regular text-center md:text-left font-[var(--font-poppins)]">
             Our vertically integrated model turns degraded land into productive natural capital — producing nature-based solutions that are traceable, verified, and built to scale.
             </p>
           </div>
@@ -51,7 +51,7 @@ export default function WhatWeCreate() {
               buttonText="Read More"
               imagePosition="left"
               pagePath="/sustainable-timber"
-              titleClassName="text-2xl md:text-2xl lg:text-3xl font-semibold text-[#2B5741] mb-4 md:mb-6 font-[var(--font-montserrat)] text-center md:text-left"
+              titleClassName="text-2xl md:text-2xl lg:text-3xl font-semibold text-black mb-4 md:mb-6 font-[var(--font-montserrat)] text-center md:text-left"
               descriptionClassName="text-lg md:text-xl text-gray-700 text-center md:text-left font-[var(--font-poppins)]"
               buttonStyle="solid-green"
             />
@@ -63,7 +63,7 @@ export default function WhatWeCreate() {
               buttonText="Read More"
               imagePosition="right"
               pagePath="/biochar"
-              titleClassName="text-2xl md:text-2xl lg:text-3xl font-semibold text-[#2B5741] mb-4 md:mb-6 font-[var(--font-montserrat)] text-center md:text-left"
+              titleClassName="text-2xl md:text-2xl lg:text-3xl font-semibold text-black mb-4 md:mb-6 font-[var(--font-montserrat)] text-center md:text-left"
               descriptionClassName="text-lg md:text-xl text-gray-700 text-center md:text-left font-[var(--font-poppins)]"
               buttonStyle="solid-green"
             />
@@ -75,7 +75,7 @@ export default function WhatWeCreate() {
               buttonText="Read More"
               imagePosition="left"
               pagePath="/carbon-credits"
-              titleClassName="text-2xl md:text-2xl lg:text-3xl font-semibold text-[#2B5741] mb-4 md:mb-6 font-[var(--font-montserrat)] text-center md:text-left"
+              titleClassName="text-2xl md:text-2xl lg:text-3xl font-semibold text-black mb-4 md:mb-6 font-[var(--font-montserrat)] text-center md:text-left"
               descriptionClassName="text-lg md:text-xl text-gray-700 text-center md:text-left font-[var(--font-poppins)]"
               buttonStyle="solid-green"
             />

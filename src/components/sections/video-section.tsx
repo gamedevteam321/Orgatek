@@ -55,7 +55,7 @@ function VideoCard({ videoId, title, description }: VideoCardProps) {
           />
         )}
       </div>
-      <h3 className="text-xl font-semibold text-[#38625c] mb-2">{title}</h3>
+      <h3 className="text-xl font-semibold text-black mb-2">{title}</h3>
       <p className="text-gray-700">{description}</p>
     </div>
   );
@@ -83,7 +83,7 @@ export default function VideoSection() {
   return (
     <section className="py-16 bg-[#eff1f1]">
       <div className="orgatek-container">
-        <h2 className="text-2xl md:text-3xl font-semibold text-[#38625c] mb-8 text-center">
+        <h2 className="text-2xl md:text-3xl font-semibold text-black mb-8 text-center font-[var(--font-montserrat)]">
           Our Impact in Action
         </h2>
 

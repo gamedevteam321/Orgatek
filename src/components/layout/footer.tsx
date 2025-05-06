@@ -36,7 +36,7 @@ export function Footer() {
             <ul className="space-y-0">
               <li>
                 <Link href="/why-we-exist" className="text-[#005133] hover:text-[#5E9F69] block text-3xl font-medium py-3 border-b border-[#005133]/60">
-                  Why we Exist
+                  Why we exist
                 </Link>
               </li>
               <li>

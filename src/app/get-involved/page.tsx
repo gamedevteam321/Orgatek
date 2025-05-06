@@ -45,7 +45,7 @@ export default function GetInvolved({ isInPanel = false }: GetInvolvedProps) {
       <section className="py-12 bg-white">
         <div className="orgatek-container">
           <div className="max-w-7xl mx-auto">
-            <p className="text-gray-700 text-lg leading-relaxed text-center">
+            <p className="text-black font-regular text-lg leading-relaxed text-center font-[var(--font-poppins)]">
             Our strategy is rooted in operational control, circular biomass utilization, and scalable project development — delivering premium returns while restoring land and strengthening rural economies.
             </p>
           </div>

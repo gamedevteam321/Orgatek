@@ -53,13 +53,13 @@ export default function WhyWeDoIt() {
       <section className="py-16 md:py-24 bg-[#eff1f1]">
         <div className="orgatek-container">
           <div className="max-w-7xl mx-auto px-[10px] md:px-[50px]">
-            <p className="text-lg md:text-xl mb-8 text-gray-700 text-center md:text-left">
+            <p className="text-lg md:text-xl mb-8 text-black font-regular text-center md:text-left">
               Each year, over 10 million hectares of natural forest are lost globally due to unsustainable timber harvesting and agricultural expansion, putting immense pressure on ecosystems, accelerating climate change, and destroying vital biodiversity.
             </p>
-            <p className="text-lg md:text-xl mb-8 text-gray-700 text-center md:text-left">
+            <p className="text-lg md:text-xl mb-8 text-black font-regular text-center md:text-left">
               Meanwhile, 2 billion hectares of wastelands—barren, unproductive, and ecologically poor—lie abandoned.
             </p>
-            <p className="text-lg md:text-xl text-gray-700 text-center md:text-left">
+            <p className="text-lg md:text-xl text-black font-regular text-center md:text-left">
               We see these lands not as liabilities, but as climate solutions waiting to be unlocked. Through the integration of regenerative forestry and biochar made from our forest residues, our mission is to transform them into thriving ecosystems, growing sustainable timber, restoring soils empowering communities,and capturing carbon at scale.
             </p>
           </div>
