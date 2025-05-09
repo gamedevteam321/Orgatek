@@ -29,7 +29,7 @@ export default function CarbonCredits() {
         <section className="py-10 md:py-16 bg-white px-4 md:px-[100px] text-start">
           <div className="max-w-7xl mx-auto">
             <p className="text-base md:text-lg mb-4 md:mb-6">
-              We generate high-quality, verifiable afforestation-based carbon credits by restoring degraded lands into vibrant, sustainably managed forests, and carbon removal credits by locking carbon into soils through biochar integration.
+            We generate high-quality, verified afforestation credits through carbon sequestration in fast-growing, sustainably managed forests — and carbon removal credits by locking carbon into soils through high-integrity biochar application.
             </p>
             <p className="text-base md:text-lg mb-4 md:mb-6">
               Through this combination of above-ground carbon capture with durable soil carbon removal, our projects deliver both immediate climate benefits and long-term carbon permanence.

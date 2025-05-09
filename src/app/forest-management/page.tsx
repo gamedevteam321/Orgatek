@@ -48,7 +48,7 @@ export default function ForestManagement() {
             <div className="mb-8 md:mb-12">
               <h2 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6">Growth and Health Monitoring</h2>
               <p className="text-base md:text-lg">
-                Maintaining vigorous forest growth and ecosystem resilience requires continuous monitoring throughout the plantation lifecycle. We implement a dual approach of combining on-ground field scouting with advanced digital monitoring technologies to ensure timely interventions and optimize forest productivity.
+                Maintaining vigorous forest growth and ecosystem resilience requires continuous monitoring throughout the plantation lifecycle. We implement a dual approach of combining <b>on-ground field scouting</b> with <b>advanced digital monitoring technologies</b> to ensure timely interventions and optimize forest productivity.
               </p>
             </div>
 
@@ -78,7 +78,10 @@ export default function ForestManagement() {
               <div>
                 <h3 className="text-xl md:text-2xl font-bold mb-4">Digital Monitoring</h3>
                 <p className="text-base md:text-lg">
-                  We complement field activities with a suite of digital monitoring tools, including IoT sensors, remote sensing devices, and satellite imagery. These systems deliver real-time data on key parameters such as soil moisture, growth dynamics, and canopy health, enabling continuous oversight across large-scale projects with improved precision and early risk detection.
+                  We complement field activities with a suite of digital monitoring tools, including <b>IoT sensors</b>, <b>remote sensing devices</b>, and <b>satellite imagery</b>. 
+                </p>
+                <p className="text-base md:text-lg">
+                  These systems deliver real-time data on key parameters such as soil moisture, growth dynamics, and canopy health, enabling continuous oversight across large-scale projects with improved precision and early risk detection.
                 </p>
               </div>
               <div className="relative h-[250px] md:h-[400px]">
@@ -111,7 +114,7 @@ export default function ForestManagement() {
                   Sustaining healthy, high-performing forests requires continuous operational management.
                 </h4>
                 <p className="text-base md:text-lg mb-4 md:mb-6">
-                  Our experienced teams execute critical activities such as pruning to optimize tree form and light penetration, deweeding to minimize competition for nutrients, soil management through organic amendments like biochar to enhance fertility, thinning to strengthen stand structure, irrigation management to maintain optimal water supply, and pest and disease control using integrated organic practices.
+                  Our experienced teams execute critical activities such as <b>pruning</b> to optimize tree form and light penetration, <b>deweeding</b> to minimize competition for nutrients, <b>soil management</b> through organic amendments like <b>biochar</b> to enhance fertility, <b>thinning</b> to strengthen stand structure, <b>irrigation management</b> to maintain optimal water supply, and <b>pest and disease control</b> using integrated organic practices.
                 </p>
                 <p className="text-base md:text-lg">
                   All activities are performed by skilled personnel using specialized tools and modern machinery — including mechanized pruners, brush cutters, soil conditioners, drip irrigation systems, and biological sprayers — ensuring operational efficiency, forest resilience, and maximum carbon sequestration potential.
@@ -131,7 +134,7 @@ export default function ForestManagement() {
                   Accelerating Forest Regrowth
                 </h4>
                 <p className="text-base md:text-lg mb-4 md:mb-6">
-                  We utilize coppicing as a sustainable forest management technique for selected tree species with strong regenerative characteristics, such as Eucalyptus.
+                  We utilize <b>coppicing</b> as a sustainable forest management technique for selected tree species with strong regenerative characteristics, such as <b>Eucalyptus</b>.
                 </p>
                 <p className="text-base md:text-lg mb-4 md:mb-6">
                   Through controlled cutting at harvest, we stimulate multiple new shoots from the original tree base, which are later pruned to retain the best stands, and help maximize future yields without the need for replanting.
@@ -173,7 +176,7 @@ export default function ForestManagement() {
               <div>
                 <h2 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6">Digital Platform and Data Integration</h2>
                 <p className="text-base md:text-lg mb-4 md:mb-6">
-                  All monitoring data — from field scouting and digital systems — is consolidated into Orgatek's proprietary Forestry Operations Platform.
+                  All monitoring data — from <b>field scouting</b> and <b>digital systems</b> — is consolidated into Orgatek's proprietary <b>Forestry Operations Platform</b>.
                 </p>
                 <p className="text-base md:text-lg">
                   This centralized system manages the planning, scheduling, and execution of all forestry activities, enabling real-time visibility, streamlined operations, and full traceability for internal governance, investor reporting, and third-party carbon verification.

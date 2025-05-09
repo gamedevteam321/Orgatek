@@ -21,7 +21,7 @@ export default function Biochar() {
           <div className="absolute inset-0 bg-black/50" />
           <div className="container mx-auto px-4 md:px-[100px] relative z-10 pb-10 md:pb-20">
             <h1 className="text-3xl md:text-6xl font-bold mb-4 md:mb-6">Biochar</h1>
-            <h2 className="text-xl md:text-4xl font-bold mb-4 md:mb-6">Turning Biomass Into Climate Solutions</h2>
+            <h2 className="text-xl md:text-4xl font-bold mb-4 md:mb-6">Building Soil Health. Locking Away Carbon</h2>
           </div>
         </section>
 
@@ -32,7 +32,7 @@ export default function Biochar() {
               We produce high-quality biochar from sustainably harvested forestry biomass through controlled, high-temperature pyrolysis. Our process transforms residual biomass into a stable, carbon-rich material that locks atmospheric carbon into a solid form for centuries — delivering measurable, verifiable CO₂ removal aligned with global certification standards, methodologies and verification.
             </p>
             <p className="text-base md:text-lg mb-4 md:mb-6">
-              The integrity of our biochar is rooted in three fundamentals: carbon permanence, soil enhancement capability, and circular economy integration.
+              The integrity of our biochar is rooted in three fundamentals: <b>carbon permanence</b>, <b>soil enhancement capability</b>, and <b>circular economy integration</b>.
             </p>
             <p className="text-base md:text-lg mb-4 md:mb-6">
               Produced at optimal pyrolysis temperatures between 500°C and 700°C, our biochar exhibits high fixed carbon content, low volatile organic compounds, and a porous structure ideal for soil applications. These properties enable biochar to serve as both a long-term carbon sink and a catalyst for land regeneration.

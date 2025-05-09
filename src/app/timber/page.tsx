@@ -29,14 +29,12 @@ export default function Timber() {
         <section className="py-10 md:py-16 bg-white px-4 md:px-[100px] text-start">
           <div className="max-w-7xl mx-auto">
             <p className="text-base md:text-lg mb-4 md:mb-6">
-              We recognize that rising global timber demand is a major driver of deforestation and biodiversity loss. We address this challenge by cultivating high-yield, fast-growing tree species on regenerated lands — supplying sustainable timber while reducing the extraction pressure on natural forests.
+            We recognize that rising global timber demand is a major driver of deforestation and biodiversity loss. We address this challenge by cultivating high-yield, fast-growing tree species on regenerated lands — supplying sustainable timber while reducing the extraction pressure on natural forests.
             </p>
             <p className="text-base md:text-lg mb-4 md:mb-6">
-              Our trees are carefully selected to match local soil and climate conditions, producing strong, versatile wood for industries such as plywood, MDF, furniture, and construction.
+            Our trees are carefully selected to match local soil and climate conditions, producing strong, versatile wood for industries such as plywood, MDF, furniture, and construction.Lower-grade wood and biomass are directed into pulp, paper, or biochar production — maximizing resource efficiency and closing the material loop.
             </p>
-            <p className="text-base md:text-lg mb-4 md:mb-6">
-              Lower-grade wood and biomass are directed into pulp, paper, or biochar production — maximizing resource efficiency and closing the material loop.
-            </p>
+            
             <p className="text-base md:text-lg mb-4 md:mb-6">
               Every ton of timber we grow offsets the need to harvest from old-growth forests, helping safeguard critical ecosystems and support global conservation efforts.
             </p>
