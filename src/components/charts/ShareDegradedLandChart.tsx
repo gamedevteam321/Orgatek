@@ -176,8 +176,12 @@ export default function ShareDegradedLandChart() {
 
       {/* Map View */}
       {activeTab === 'map' && (
-        <div className="h-[600px] bg-gray-100 flex items-center justify-center">
-          <p className="text-gray-500">Map view coming soon...</p>
+        <div className="h-[350px] bg-white flex items-center justify-center">
+          <img 
+            src="/images/map.png" 
+            alt="Degraded Land Map" 
+            className="max-w-full max-h-full object-cover"
+          />
         </div>
       )}
 
