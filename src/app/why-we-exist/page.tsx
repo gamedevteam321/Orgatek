@@ -43,7 +43,7 @@ export default function WhyWeDoIt() {
             <h2 className="block text-4xl md:text-4xl lg:text-6xl">Why We Exist</h2>
           </div>
         }
-        subtitle="A Growing Crisis — and a Missed Opportunity"
+        subtitle=" Breaking the Degraded Land–Food Security–Deforestation Cycle"
         titleClassName="text-2xl md:text-4xl lg:text-6xl"
         subtitleClassName="text-2xl md:text-xl lg:text-2xl text-white/90 mb-6 text-center md:text-left"
         subtitleBelowImage={false}
@@ -54,14 +54,97 @@ export default function WhyWeDoIt() {
         <div className="orgatek-container">
           <div className="max-w-7xl mx-auto px-[10px] md:px-[50px]">
             <p className="text-lg md:text-xl mb-8 text-black font-regular text-center md:text-left">
-              Each year, over 10 million hectares of natural forest are lost globally due to unsustainable timber harvesting and agricultural expansion, putting immense pressure on ecosystems, accelerating climate change, and destroying vital biodiversity.
+              Soil is the foundation of life on Earth. It sustains 95% of global food production - making access to fertile soil essential to feed the growing global population, supports nearly all terrestrial biodiversity, stores & clean our water, filters pollutants, does flood regulation, nutrient cycling, waste decomposition and stores more carbon than all vegetation combined.
             </p>
             <p className="text-lg md:text-xl mb-8 text-black font-regular text-center md:text-left">
-              Meanwhile, 2 billion hectares of wastelands—barren, unproductive, and ecologically poor—lie abandoned.
+              Yet this vital, finite, non renewable and irreplaceable resource on a human timescale is in crisis. Over one-third of the world's soils are already degraded, and we are losing fertile land faster than it can recover.
+            </p>
+            <p className="text-lg md:text-xl mb-8 text-black font-regular text-center md:text-left">
+              Every year, more than 12 million hectares of agricultural land degrade due to erosion, nutrient depletion, salinisation, and intensive land use. At the same time, over 10 million hectares of forests are cleared — much of it to replace lost farmland. This creates a compounding cycle: degraded soils reduce yields, pushing agriculture into forests, which further accelerates deforestation and long-term soil collapse.
+            </p>
+            <p className="text-lg md:text-xl mb-8 text-black font-regular text-center md:text-left">
+              Meanwhile, over 2 billion hectares of land lie degraded and underutilized — abandoned due to exhaustion, poor management, or ecological collapse. We see this not as a liability, but as a strategic opportunity and untapped assets.
             </p>
             <p className="text-lg md:text-xl text-black font-regular text-center md:text-left">
-              We see these lands not as liabilities, but as climate solutions waiting to be unlocked. Through the integration of regenerative forestry and biochar made from our forest residues, our mission is to transform them into thriving ecosystems, growing sustainable timber, restoring soils empowering communities,and capturing carbon at scale.
+              We break this cycle at the root — regenerating degraded soils through sustainable forestry supported by biochar, proprietary organic inputs and processes. We rebuild soil fertility, restore carbon, and create future agricultural potential at scale that is productive, resilient, and ready for long-term use.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Hidden Costs Section */}
+      <section className="py-16 md:py-16 bg-white">
+        <div className="orgatek-container">
+          <div className="max-w-7xl mx-auto px-[10px] md:px-[50px]">
+            <h2 className="text-2xl md:text-2xl lg:text-3xl font-semibold text-black mb-8 text-center md:text-left font-[var(--font-montserrat)]">
+              The Hidden Costs of Land Degradation
+            </h2>
+            <p className="text-lg md:text-xl mb-8 text-black font-regular text-center md:text-left">
+              The hidden costs of Land degradation — environmental, health, social, and economic often go unnoticed, but True Cost Accounting reveals the real impact on ecosystems and communities. It is estimated that the global cost of lost ecosystem services due to degradation may be even upto $10.6 trillion USD per year.
+            </p>
+            <p className="text-lg md:text-xl mb-8 text-black font-regular text-center md:text-left">
+              These lost ecosystem services include water filtration and retention, flood regulation, nutrient cycling, and waste decomposition. As soils degrade, their ability to perform these essential functions diminishes, leading to increased vulnerability to floods, reduced water quality, and declining agricultural productivity.
+            </p>
+            <p className="text-lg md:text-xl mb-8 text-black font-regular text-center md:text-left">
+              Degraded land also poses serious risks to human health. As productivity drops and water sources dry up, communities face increased food insecurity and malnutrition. This cycle of loss is not isolated — it affects every continent, driven by human activities such as deforestation, poor agricultural practices, and urban expansion.
+            </p>
+            <p className="text-lg md:text-xl text-black font-regular text-center md:text-left">
+              Reversing land degradation is not just an environmental goal — it is a global imperative to secure ecosystems, sustain food systems, and support human well-being.
+            </p>
+
+            {/* Stats/Info Block - Single Row */}
+            <div className="mt-12 grid grid-cols-1 md:grid-cols-4 gap-8">
+              {/* Left Stat */}
+              <div className="bg-[#f5f5f5] flex flex-col items-center justify-center p-8 rounded">
+                <span className="text-5xl font-bold text-[#f9a825] leading-none">1.56</span>
+                <span className="text-xl font-semibold text-[#f9a825] mb-2">billion ha</span>
+                <span className="text-base text-gray-700 text-center">of degraded land reported</span>
+              </div>
+
+              {/* Land Degradation Info */}
+              <div className="flex flex-col justify-center">
+                <h3 className="text-xl md:text-2xl font-bold text-black mb-2">Land degradation is increasing at a steady rate</h3>
+                <p className="text-base md:text-lg text-black mb-2">15.4 % of the reported land is degraded, an increase of 4 % in four years.</p>
+                
+              </div>
+
+              {/* Right Stat */}
+              <div className="bg-[#f5f5f5] flex flex-col items-center justify-center p-8 rounded">
+                <span className="text-5xl font-bold text-[#f9a825] leading-none">15</span>
+                <span className="text-xl font-semibold text-[#f9a825] mb-2">countries</span>
+                <span className="text-base text-gray-700 text-center">severely affected by drought</span>
+              </div>
+
+              {/* Drought Info */}
+              <div className="flex flex-col justify-center">
+                <h3 className="text-xl md:text-2xl font-bold text-black mb-2">Drought's hazard is far reaching</h3>
+                <p className="text-base md:text-lg text-black mb-2">Out of 98 countries affected by drought, 15 have experienced severe or extreme drought over some or all of their territory.</p>
+                
+              </div>
+            </div>
+            <p className="text-lg md:text-xl mt-8 text-black font-regular text-center md:text-left">
+              Between 2015 and 2019, at least 100 million hectares of healthy and productive land were degraded every year, affecting food and water security globally. The loss is equivalent to twice the size of Greenland, impacting the lives of 1.3 billion people, who are estimated to be directly exposed to land degradation.
+            </p>
+
+            {/* Full-width images */}
+            <div className="w-full mt-8 space-y-8">
+              <Image
+                src="/images/land-degrade-image.png"
+                alt="Degraded land aerial view"
+                width={1920}
+                height={600}
+                className="w-full h-auto object-cover rounded"
+                priority={false}
+              />
+              <Image
+                src="/images/land-degrade-image.png"
+                alt="Impact of land degradation on communities"
+                width={1920}
+                height={600}
+                className="w-full h-auto object-cover rounded"
+                priority={false}
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -75,9 +158,30 @@ export default function WhyWeDoIt() {
         }
         imageLeft={false}
         bgColor="white"
-        className="px-[10px] md:px-[50px] pb-8 md:pb-12"
+        className="px-[10px] md:px-[50px] pb-8 md:pb-12 py-16 md:py-16"
         titleClassName="text-2xl md:text-2xl lg:text-3xl font-semibold text-black mb-4 md:mb-6 font-[var(--font-montserrat)] text-center md:text-left"
       />
+
+      
+
+      {/* Global Forest Loss since Ice Age */}
+      <ContentSection
+        className="px-[10px] md:px-[50px] py-8 md:py-12"
+      >
+        <div className="flex justify-center">
+          <div className="w-full max-w-4xl">
+            <Image 
+              src="/images/Global-forest-loss-since-ice-age.png"
+              alt="Global Forest Loss since Ice Age"
+              width={1200}
+              height={500}
+              className="object-contain w-full h-[250px] md:h-[500px]"
+            />
+            <p className="text-lg md:text-xl text-black font-regular text-center md:text-left py-4"><p>Almost 10 M HA of Forests are completely destroyed and occupied every year for Agriculture & Forestry Products Globally
+            </p></p>
+          </div>
+        </div>
+      </ContentSection>
 
       {/* Global Forest Loss Impact */}
       <ContentSection
@@ -93,23 +197,7 @@ export default function WhyWeDoIt() {
               className="object-contain w-full h-[250px] md:h-[700px]"
             />
           </div>
-        </div>
-      </ContentSection>
-
-      {/* Global Forest Loss since Ice Age */}
-      <ContentSection
-        className="px-[10px] md:px-[50px] py-8 md:py-12"
-      >
-        <div className="flex justify-center">
-          <div className="w-full max-w-4xl">
-            <Image 
-              src="/images/Global-forest-loss-since-ice-age.png"
-              alt="Global Forest Loss since Ice Age"
-              width={1200}
-              height={500}
-              className="object-contain w-full h-[250px] md:h-[500px]"
-            />
-          </div>
+          
         </div>
       </ContentSection>
 

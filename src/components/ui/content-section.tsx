@@ -105,7 +105,7 @@ export function ContentSection({
 
   return (
     <>
-      <section className={`py-16 md:py-24 ${getBgColor()} relative ${className}`}>
+      <section className={`py-16 md:py-16 ${getBgColor()} relative ${className}`}>
         {bgImage && (
           <>
             <div className="absolute inset-0 w-full h-full">

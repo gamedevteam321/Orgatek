@@ -36,7 +36,7 @@ export default function OurTrees() {
         <div className="orgatek-container">
           <div className="max-w-7xl mx-auto px-[10px] md:px-[50px]">
             <p className="text-lg md:text-xl text-black font-regular text-center md:text-left font-[var(--font-poppins)]">
-              At Orgatek, every tree we plant serves a purpose beyond just growth—it contributes to ecosystem restoration, soil revitalization, and carbon sequestration, ensuring that degraded landscapes evolve into self-sustaining forests.
+              At Orgatek, every tree we plant serves a purpose beyond just growth—it contributes to <b>ecosystem restoration</b>, <b>soil revitalization</b>, and <b>carbon sequestration</b>, ensuring that degraded landscapes evolve into <b>self-sustaining forests</b>.
             </p>
           </div>
         </div>
@@ -47,7 +47,7 @@ export default function OurTrees() {
         title="Eucalyptus"
         description={
           <p className="text-lg md:text-xl text-gray-700 text-center md:text-left font-[var(--font-poppins)]">
-            A resilient, fast-growing species ideal for carbon sequestration, water conservation, and soil stabilization. Its ability to thrive in arid conditions makes it a cornerstone of land regeneration efforts.
+            A resilient, fast-growing species ideal for <b>carbon sequestration</b>, water conservation, and soil stabilization. Its ability to thrive in arid conditions makes it a cornerstone of <b>land regeneration efforts</b>.
           </p>
         }
         image="/images/eucalyptus.png"
@@ -63,7 +63,7 @@ export default function OurTrees() {
         title="Poplar"
         description={
           <p className="text-lg md:text-xl text-gray-700 text-center md:text-left font-[var(--font-poppins)]">
-            With rapid growth and adaptability, poplar enhances biodiversity, prevents soil erosion, and provides valuable biomass for sustainable agroforestry solutions.
+            With rapid growth and adaptability, poplar enhances <b>biodiversity</b>, prevents soil erosion, and provides valuable biomass for <b>sustainable agroforestry</b> solutions.
           </p>
         }
         image="/images/poplar.png"
@@ -79,7 +79,7 @@ export default function OurTrees() {
         title="Acacia"
         description={
           <p className="text-lg md:text-xl text-gray-700 text-center md:text-left font-[var(--font-poppins)]">
-            Known for enriching soils with nitrogen fixation, Acacia fosters healthy ecosystems while serving as a natural defense against desertification.
+            Known for enriching soils with <b>nitrogen fixation</b>, Acacia fosters healthy ecosystems while serving as a<b> natural defense against desertification</b>.
           </p>
         }
         image="/images/acacia.png"
@@ -95,7 +95,7 @@ export default function OurTrees() {
         title="Bamboo"
         description={
           <p className="text-lg md:text-xl text-gray-700 text-center md:text-left font-[var(--font-poppins)]">
-            A versatile and renewable resource, bamboo is essential for erosion control, soil enrichment, and carbon absorption, offering a sustainable alternative to traditional timber.
+            A versatile and renewable resource, bamboo is essential for <b>erosion control</b>, <b>soil enrichment</b>, and <b>carbon absorption</b>, offering a sustainable alternative to traditional timber.
           </p>
         }
         image="/images/bamboo.png"
@@ -111,7 +111,7 @@ export default function OurTrees() {
         title="Casuarina"
         description={
           <p className="text-lg md:text-xl text-gray-700 text-center md:text-left font-[var(--font-poppins)]">
-            Highly tolerant to saline and degraded soils, Casuarina plays a crucial role in coastal restoration, windbreaks, and carbon storage, reinforcing landscapes against climate challenges.
+            Highly tolerant to <b>saline and degraded soils</b>, Casuarina plays a crucial role in <b>coastal restoration</b>, <b>windbreaks</b>, and <b>carbon storage</b>, reinforcing landscapes against climate challenges.
           </p>
         }
         image="/images/Casuarina.png"
@@ -127,7 +127,7 @@ export default function OurTrees() {
         title="Gmelina Arborea"
         description={
           <p className="text-lg md:text-xl text-gray-700 text-center md:text-left font-[var(--font-poppins)]">
-            With its high-yield biomass and rapid regeneration, Gmelina supports sustainable forestry, efficient carbon sequestration, and long-term soil productivity, making it a key species for restoring deforested regions.
+            With its <b>high-yield biomass and rapid regeneration</b>, Gmelina supports <b>sustainable forestry</b>, efficient <b>carbon sequestration</b>, and long-term <b>soil productivity</b>, making it a key species for <b>restoring deforested regions</b>.
           </p>
         }
         image="/images/Gmelina Arborea.png"
@@ -144,7 +144,7 @@ export default function OurTrees() {
         <div className="orgatek-container">
           <div className="max-w-7xl mx-auto px-[10px] md:px-[50px]">
             <p className="text-lg md:text-xl text-black font-regular text-center font-[var(--font-poppins)]">
-              Together, these species form the backbone of Orgatek's regenerative forestry efforts, rebuilding ecosystems that not only capture carbon but also sustain communities for generations to come.
+              Together, these species form the backbone of Orgatek's <b>regenerative forestry</b> efforts, rebuilding ecosystems that not only <b>capture carbon but also sustain communities</b> for generations to come.
             </p>
           </div>
         </div>
