@@ -66,7 +66,7 @@ export default function WhatWeDo() {
             <h2 className="block text-4xl md:text-4xl lg:text-6xl">What We Do</h2>
           </div>
         }
-        subtitle=""
+        subtitle="Regenerate Soils to Secure Land, Food, and Climate"
         titleClassName="text-2xl md:text-4xl lg:text-6xl"
         subtitleClassName="text-2xl md:text-xl lg:text-2xl text-white/90 mb-6 text-center md:text-left"
         subtitleBelowImage={false}
@@ -77,7 +77,7 @@ export default function WhatWeDo() {
         <div className="orgatek-container">
           <div className="max-w-7xl mx-auto px-[10px] md:px-[50px]">
             <p className="text-lg md:text-xl mb-8 text-black font-regular text-center md:text-left mb-4 font-[var(--font-poppins)]">
-            We transform wastelands into thriving ecosystems and productive, long-term natural assets through a fully integrated approach.
+            We transform wastelands into thriving ecosystems, fertile soils and productive, long-term natural capital assets through a fully integrated approach.
             </p>
             <p className="text-lg md:text-xl mb-8 text-black font-regular text-center md:text-left font-[var(--font-poppins)]">
             We plant short-rotation, high-yield trees, enrich soils with proprietary organic inputs and biochar produced through on-site biomass,and manage every stage with full operational control and digital transparency. This system rebuilds soil fertility, improves water retention, accelerates healthy tree growth, and creates high-quality, traceable, and verified carbon sinks.

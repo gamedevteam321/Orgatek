@@ -27,11 +27,9 @@ export default function ForestEstablishment() {
         {/* Hero Subheading Section */}
         <section className="bg-white py-8 md:py-12">
           <div className="container mx-auto px-4 md:px-[100px]">
-            <p className="text-base md:text-xl max-w-6xl text-gray-700 mb-4">
-            Every Orgatek project begins with rigorous site selection and matching of short-rotation, high-yield tree species — based on detailed soil analysis, climatic conditions, water resource evaluation, and market proximity.
-            </p>
+            
             <p className="text-base md:text-xl max-w-6xl text-gray-700">
-              India has over 55 million hectares classified as wastelands, with nearly 24 million hectares identified as having viable forestry potential. At Orgatek, every project begins with rigorous site and connected short-rotation, high yield tree species selection, based on detailed soil analysis, climatic assessment, water resource evaluation and market proximity.
+              India has over 55 million hectares classified as wastelands, with nearly <b>24 million hectares</b> identified as having viable forestry potential. At Orgatek, every project begins with rigorous site and connected short-rotation, high yield tree species selection, based on detailed soil analysis, climatic assessment, water resource evaluation and market proximity.
             </p>
           </div>
         </section>
@@ -116,7 +114,10 @@ export default function ForestEstablishment() {
             <div className="order-1 md:order-2">
               <h2 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6">Land Preparation</h2>
               <p className="mb-4">
-                Following land acquisition, we implement comprehensive land preparation to optimize conditions for plantation success. Activities include site leveling, primary and secondary tilling using modern mechanized equipment, detailed land planning for irrigation and operational access, and — where appropriate — the installation of drip irrigation systems.
+                Following land acquisition, we implement comprehensive land preparation to optimize conditions for plantation success.
+              </p>
+              <p className="mb-4">
+                Activities include site leveling, primary and secondary tilling using modern mechanized equipment, detailed land planning for irrigation and operational access, and — where appropriate — the installation of drip irrigation systems.
               </p>
               <p>
                 At this stage, the first application of biochar is incorporated into the soil to enhance fertility, water retention, and early-stage soil carbon enrichment.
@@ -131,7 +132,10 @@ export default function ForestEstablishment() {
             <div>
               <h2 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6">Planting Plan</h2>
               <p className="mb-4">
-                At Orgatek, precision planting establishes the foundation for continuous forest productivity and carbon sequestration. We deploy mechanical pit-digging equipment to ensure uniform depth, spacing, and alignment based on species-specific requirements and site conditions.
+                At Orgatek, precision planting establishes the foundation for continuous forest productivity and carbon sequestration.
+              </p>
+              <p className="mb-4">
+                We deploy mechanical pit-digging equipment to ensure uniform depth, spacing, and alignment based on species-specific requirements and site conditions.
               </p>
               <p>
                 Planting is executed in phased rotations, with different sections of land planted sequentially over time — maintaining active forest cover, optimizing growth cycles, and ensuring year-round ecosystem vitality. Each seedling is placed during optimal soil moisture windows and supported with a proprietary organic basal nutrient application to promote rapid establishment, early resilience, and healthy long-term development.
