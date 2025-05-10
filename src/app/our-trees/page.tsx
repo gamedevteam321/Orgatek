@@ -140,7 +140,7 @@ export default function OurTrees() {
       />
 
       {/* Conclusion Section */}
-      <section className="bg-white py-16 md:py-24">
+      <section className=" py-16 md:py-24 bg-[#eff1f1]">
         <div className="orgatek-container">
           <div className="max-w-7xl mx-auto px-[10px] md:px-[50px]">
             <p className="text-lg md:text-xl text-black font-regular text-center font-[var(--font-poppins)]">

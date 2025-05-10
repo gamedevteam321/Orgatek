@@ -143,26 +143,31 @@ export default function WhyWeDoIt() {
       </section>
 
       {/* Our Mission Section */}
-      <ContentSection
-        title="The world has lost one-third of its forest, but an end of deforestation is possible"
-        description="Over the last 10,000 years the world has lost one-third of its forests. An area twice the size of the United States. Half occurred in the last century."
-        image={
+      <section className="w-full bg-white pb-8 md:pb-12 py-16 md:py-16 bg-[#eff1f1]">
+        <div className="w-full bg-[#eff1f1]">
           <ShareDegradedLandChart />
-        }
-        imageLeft={false}
-        bgColor="white"
-        className="px-[10px] md:px-[50px] pb-8 md:pb-12 py-16 md:py-16"
-        titleClassName="text-2xl md:text-2xl lg:text-3xl font-semibold text-black mb-4 md:mb-6 font-[var(--font-montserrat)] text-center md:text-left"
-      />
+        </div>
+      </section>
 
-      
-
-      {/* Global Forest Loss since Ice Age */}
+      {/* Global Forest Loss Images Side by Side */}
       <ContentSection
+        title="The Global Loss of Forests"
+        description={
+          <div className="text-black text-lg md:text-xl">
+            <p className="mb-4">The world has lost <b>one-third of its forests</b> over the past <b>10,000 years</b> — an area twice the size of the <b>United States</b>. Alarmingly, <b>half of this loss occurred in the last century</b>, driven primarily by <b>agriculture</b>, followed by <b>forestry products</b>.</p>
+            <p className="mb-4"><b>Forest loss</b> includes both <b>deforestation</b> and <b>forest degradation</b>:</p>
+            <ul className="list-disc pl-6 mb-4">
+              <li className="mb-2"><b>Deforestation:</b> The complete removal of tree cover, transitioning land from forest to non-forest without regrowth.</li>
+              <li><b>Forest Degradation:</b> The thinning of the forest canopy and loss of carbon without a change in land use, with the expectation of natural regrowth.</li>
+            </ul>
+            <p><b>Regenerating wastelands through sustainable forestry</b> directly addresses the root causes of deforestation by creating <b>fertile land for agriculture</b> and producing <b>sustainable timber</b>.</p>
+          </div>
+        }
         className="px-[10px] md:px-[50px] py-8 md:py-12"
+        titleClassName="text-2xl md:text-2xl lg:text-3xl font-semibold text-black mb-4 md:mb-6 font-[var(--font-montserrat)] text-center md:text-left"
       >
-        <div className="flex justify-center">
-          <div className="w-full max-w-4xl">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="w-full">
             <Image 
               src="/images/Global-forest-loss-since-ice-age.png"
               alt="Global Forest Loss since Ice Age"
@@ -170,29 +175,20 @@ export default function WhyWeDoIt() {
               height={500}
               className="object-contain w-full h-[250px] md:h-[500px]"
             />
-            <p className="text-lg md:text-xl text-black font-regular text-center md:text-left py-4"><p>Almost 10 M HA of Forests are completely destroyed and occupied every year for Agriculture & Forestry Products Globally
-            </p></p>
           </div>
-        </div>
-      </ContentSection>
-
-      {/* Global Forest Loss Impact */}
-      <ContentSection
-        className="px-[10px] md:px-[50px] py-8 md:py-12"
-      >
-        <div className="flex justify-center">
-          <div className="w-full max-w-5xl">
+          <div className="w-full">
             <Image 
               src="/images/Forest-loss-by-driver-and-region.png"
               alt="Global Forest Loss Impact"
               width={1200}
               height={500}
-              className="object-contain w-full h-[250px] md:h-[700px]"
+              className="object-contain w-full h-[250px] md:h-[500px]"
             />
           </div>
-          
         </div>
       </ContentSection>
+
+      
 
       {/* Healthy forests Section */}
       <ContentSection
