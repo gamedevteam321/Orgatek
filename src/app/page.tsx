@@ -124,7 +124,7 @@ export default function Home() {
       {/* How We Transform Wastelands Section */}
     <ContentSection
         title="What We Do"
-        description="We plant short-rotation, high-yield trees, enrich soils with proprietary organic inputs and biochar produced through on-site biomass,and manage every stage with full operational control and digital transparency. This system rebuilds soil fertility, improves water retention, accelerates healthy tree growth, and creates high-quality, traceable, and verified carbon sinks."
+        description="We transform wastelands into thriving ecosystems, fertile soils, and productive natural capital — unlocking long-term agricultural potential through a fully integrated approach. This system rebuilds soil fertility, improves water retention, accelerates healthy tree growth, and creates high-quality, traceable, and verified carbon sinks — laying the foundation for sustainable agriculture and long term land productivity."
         bgColor="cream"
         className="text-center md:text-left py-8 md:py-12"
         titleClassName="text-2xl md:text-2xl lg:text-3xl font-semibold text-black mb-4 md:mb-6 font-[var(--font-montserrat)] text-center md:text-left"
@@ -210,9 +210,9 @@ export default function Home() {
         <div className="orgatek-container">
           <h2 className="text-2xl md:text-2xl lg:text-3xl font-semibold text-black mb-4 md:mb-6 font-[var(--font-montserrat)] text-center md:text-left">What We Create</h2>
           <p className="text-base md:text-lg text-grey-700 mb-4 max-w-full font-[var(--font-poppins)] text-center md:text-left" >
-          We grow short-rotation, high-yield timber on regenerated lands to replace deforestation-linked wood, convert forestry biomass into high-quality biochar for permanent soil carbon storage, and generate verified  carbon credits rooted in measurable, durable climate impact.
+          We grow short-rotation, high-yield trees that produce sustainable timber to replace deforestation-linked wood, biochar from on-site biomass for permanent soil carbon storage, and verified carbon credits rooted in measurable, durable impact.
           </p>
-          <p className="text-base md:text-lg text-grey-700 mb-6 max-w-full font-[var(--font-poppins)] text-center md:text-left" > Our vertically integrated model turns degraded land into productive natural capital — producing nature-based solutions that are traceable, verified, and built to scale.          </p>
+          <p className="text-base md:text-lg text-grey-700 mb-6 max-w-full font-[var(--font-poppins)] text-center md:text-left" > These nature-based products are traceable, verifiable, and built to scale — delivering tangible value while supporting resilient landscapes and rural communities.</p>
 
           <div className="flex flex-col md:flex-row md:flex-wrap lg:flex-nowrap md:justify-center gap-6 md:gap-8">
             <div className="w-full md:w-[calc(50%-16px)] lg:w-[400px]">

@@ -77,10 +77,10 @@ export default function WhatWeDo() {
         <div className="orgatek-container">
           <div className="max-w-7xl mx-auto px-[10px] md:px-[50px]">
             <p className="text-lg md:text-xl mb-8 text-black font-regular text-center md:text-left mb-4 font-[var(--font-poppins)]">
-            We transform wastelands into thriving ecosystems, fertile soils and productive, long-term natural capital assets through a fully integrated approach.
+            We transform wastelands into thriving ecosystems, fertile soils, and productive natural capital — unlocking long-term agricultural potential through a fully integrated approach. From seedling production and forest management to proprietary inputs, biochar application, digital transparency, and sustainable harvesting, we ensure that degraded lands can once again support future food production and economic value.
             </p>
             <p className="text-lg md:text-xl mb-8 text-black font-regular text-center md:text-left font-[var(--font-poppins)]">
-            We plant short-rotation, high-yield trees, enrich soils with proprietary organic inputs and biochar produced through on-site biomass,and manage every stage with full operational control and digital transparency. This system rebuilds soil fertility, improves water retention, accelerates healthy tree growth, and creates high-quality, traceable, and verified carbon sinks.
+            This system rebuilds soil fertility, improves water retention, accelerates healthy tree growth, and creates high-quality, traceable, and verified carbon sinks — laying the foundation for sustainable agriculture and long term land productivity.
             </p>
           </div>
         </div>
@@ -118,7 +118,7 @@ export default function WhatWeDo() {
         description={
           <div className="text-center md:text-left">
             <p className="text-lg md:text-xl text-gray-700 font-[var(--font-poppins)]">
-              India has over 55 million hectares classified as wastelands, with nearly 24 million hectares identified as having viable forestry potential. At Orgatek, every project begins with rigorous site and connected short-rotation, high yield tree species selection, based on detailed soil analysis, climatic assessment, water resource evaluation and market proximity. We plant high-yielding, short-rotation species such as Eucalyptus, Poplar, Acacia, Bamboo, Casuarina, and Gmelina Arborea, selected for their adaptability to local conditions and ability to deliver maximum environmental impact.
+            India has over 55 million hectares classified as wastelands, with nearly 24 million hectares identified as having viable forestry potential. Every Orgatek project begins with rigorous site selection and matching of short-rotation, high-yield tree species — based on detailed soil analysis, climatic conditions, water resource evaluation, and market proximity.
             </p>
           </div>
         }
@@ -139,7 +139,10 @@ export default function WhatWeDo() {
         description={
           <div className="text-center md:text-left">
             <p className="text-lg md:text-xl text-gray-700 font-[var(--font-poppins)]">
-              Efficient, professional forest management is at the heart of building high-performing regenerative ecosystems. Once planted, our forests are carefully managed through continuous field scouting, advanced digital monitoring, and skilled forestry operations and proactive interventions to ensure that our estates grow vigorously, remain healthy, and maximize carbon sequestration.
+            Efficient, professional forest management is at the heart of building high-performing regenerative ecosystems.
+            </p>
+            <p className="text-lg md:text-xl text-gray-700 font-[var(--font-poppins)]">
+            <br/>Once planted, our forests are carefully managed through continuous field scouting, advanced digital monitoring, and skilled forestry operations and proactive interventions  to ensure that our estates grow vigorously, remain healthy, and maximize carbon sequestration.
             </p>
           </div>
         }
@@ -181,7 +184,7 @@ export default function WhatWeDo() {
         description={
           <div className="text-center md:text-left">
             <p className="text-lg md:text-xl text-gray-700 font-[var(--font-poppins)]">
-              Restoring wastelands demands a soil-first approach that transcends traditional tree planting. Our in-house manufactured proprietary organic inputs, developed through years of research and crafted with precise quality control, offer unmatched flexibility to customize solutions for specific conditions to support robust tree growth and long term soil fertility.
+            Restoring wastelands demands a soil-first approach that transcends traditional tree planting. Unlike conventional forestry’s dependence on chemical fertilizers, our proprietary organic inputs, developed through years of research, drive natural regeneration. These solutions enhance soil health, sequester carbon, and boost biodiversity, transforming barren landscapes into thriving, resilient forests.
             </p>
           </div>
         }
@@ -202,7 +205,8 @@ export default function WhatWeDo() {
         description={
           <div className="text-center md:text-left">
             <p className="text-lg md:text-xl text-gray-700 font-[var(--font-poppins)]">
-              At Orgatek, we convert forestry biomass into high-quality biochar through on-site, high-temperature pyrolysis — permanently removing carbon while enriching degraded soils. Our biochar practices close the carbon loop locally, rebuild ecosystem resilience, and deliver durable, verifiable climate impact at scale.
+            Biochar soil application  is an integral part of our regenerative forestry model — enhancing soil health, improving ecosystem resilience, and delivering verified, high-durability carbon removal.
+            <br/> <br/>We establish on-site biochar production facilities at each forestry project, converting residual biomass of our projects directly into high-quality biochar using high-temperature pyrolysis processes.
             </p>
           </div>
         }
@@ -223,7 +227,9 @@ export default function WhatWeDo() {
         description={
           <div className="text-center md:text-left">
             <p className="text-lg md:text-xl text-gray-700 font-[var(--font-poppins)]">
-              We integrate the best digital technologies including IoT sensors, computer vision and satellite imagery, to monitor and verify every aspect of forest establishment, management, harvesting and carbon sequestration. Our digital platform ensures real-time visibility, transparent reporting, and third-party validated impact across all our projects.
+            Rigorous digital monitoring and third-party verification are integral to every stage of our regenerative forestry model.
+            <br/> <br/>We combine ground-level expertise with advanced technologies to track, measure, and validate carbon sequestration, soil regeneration, and biodiversity recovery with precision and transparency.
+
             </p>
           </div>
         }

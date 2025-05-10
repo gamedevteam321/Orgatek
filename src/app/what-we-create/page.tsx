@@ -31,10 +31,11 @@ export default function WhatWeCreate() {
           <div className="max-w-7xl mx-auto px-[10px] md:px-[50px]">
             
             <p className="text-lg md:text-xl mb-8 text-black font-regular text-center md:text-left font-[var(--font-poppins)]">
-            We grow short-rotation, high-yield timber on degraded lands — regenerating soils, replacing deforestation-linked wood, converting forestry biomass into high-quality biochar for permanent soil carbon storage, and generating verified carbon credits rooted in measurable, durable impact.
+            Our regenerative process yields high-quality, sustainable outputs that address climate and resource challenges.
             </p>
             <p className="text-lg md:text-xl text-black font-regular text-center md:text-left font-[var(--font-poppins)]">
-            Our integrated model restores fertility and turns underutilized land into productive natural capital — delivering nature-based solutions that are traceable, verifiable, and built to scale.
+            We plant short-rotation, high-yield trees that produce sustainable timber to replace deforestation-linked wood, biochar from on-site biomass for permanent soil carbon storage, and verified carbon credits rooted in measurable, durable impact.
+            <br/> <br/>These nature-based products are traceable, verifiable, and built to scale — delivering tangible value while supporting resilient landscapes and rural communities.
             </p>
           </div>
         </div>
@@ -46,7 +47,7 @@ export default function WhatWeCreate() {
           <div className="max-w-7xl mx-auto px-[10px] md:px-[50px]">
             <AlternatingSection
               title="Sustainable Timber"
-              description="Sustainable timber harvested from our carefully managed forests. Our timber products are certified organic and sourced from short-rotation, high-yield tree species that are specifically selected for their environmental benefits and commercial viability."
+              description="We recognize that rising global timber demand is a major driver of deforestation and biodiversity loss. We address this challenge by cultivating high-yield, fast-growing tree species on regenerated lands — supplying sustainable timber while reducing the extraction pressure on natural forests."
               image="/images/timber.png"
               buttonText="Read More"
               imagePosition="left"
@@ -58,7 +59,7 @@ export default function WhatWeCreate() {
 
             <AlternatingSection
               title="Biochar"
-              description="High-quality biochar produced through our proprietary pyrolysis process. This carbon-rich material enhances soil fertility, improves water retention, and sequesters carbon for centuries, making it an essential tool for sustainable agriculture and carbon offset initiatives."
+              description="We produce high-quality biochar from sustainably harvested forestry biomass through controlled, high-temperature pyrolysis. Our process transforms residual biomass into a stable, carbon-rich material that locks atmospheric carbon into a solid form for centuries — delivering measurable, verified CO₂ removal aligned with global certification standards, methodologies and verification."
               image="/images/biochar.png"
               buttonText="Read More"
               imagePosition="right"
@@ -70,7 +71,7 @@ export default function WhatWeCreate() {
 
             <AlternatingSection
               title="Carbon Credits"
-              description="Verifiable carbon credits generated through our sustainable forestry and biochar production processes. These credits help organizations meet their emission reduction targets while supporting environmental restoration and sustainable development."
+              description="We generate high-quality, verified afforestation credits through carbon sequestration in fast-growing, sustainably managed forests — and carbon removal credits by locking carbon into soils through high-integrity biochar application."
               image="/images/carbon-credits.png"
               buttonText="Read More"
               imagePosition="left"

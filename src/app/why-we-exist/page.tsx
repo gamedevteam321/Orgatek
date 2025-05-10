@@ -76,21 +76,38 @@ export default function WhyWeDoIt() {
       <section className="py-16 md:py-16 bg-white">
         <div className="orgatek-container">
           <div className="max-w-7xl mx-auto px-[10px] md:px-[50px]">
-            <h2 className="text-2xl md:text-2xl lg:text-3xl font-semibold text-black mb-8 text-center md:text-left font-[var(--font-montserrat)]">
-              The Hidden Costs of Land Degradation
-            </h2>
-            <p className="text-lg md:text-xl mb-8 text-black font-regular text-center md:text-left">
-              The hidden costs of Land degradation — environmental, health, social, and economic often go unnoticed, but True Cost Accounting reveals the real impact on ecosystems and communities. It is estimated that the global cost of lost ecosystem services due to degradation may be even upto $10.6 trillion USD per year.
-            </p>
-            <p className="text-lg md:text-xl mb-8 text-black font-regular text-center md:text-left">
-              These lost ecosystem services include water filtration and retention, flood regulation, nutrient cycling, and waste decomposition. As soils degrade, their ability to perform these essential functions diminishes, leading to increased vulnerability to floods, reduced water quality, and declining agricultural productivity.
-            </p>
-            <p className="text-lg md:text-xl mb-8 text-black font-regular text-center md:text-left">
-              Degraded land also poses serious risks to human health. As productivity drops and water sources dry up, communities face increased food insecurity and malnutrition. This cycle of loss is not isolated — it affects every continent, driven by human activities such as deforestation, poor agricultural practices, and urban expansion.
-            </p>
-            <p className="text-lg md:text-xl text-black font-regular text-center md:text-left">
-              Reversing land degradation is not just an environmental goal — it is a global imperative to secure ecosystems, sustain food systems, and support human well-being.
-            </p>
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-8 items-start">
+              {/* Left side - Image (40%) */}
+              <div className="w-full md:col-span-2">
+                <Image
+                  src="/images/land-degradation.png"
+                  alt="Hidden costs of land degradation"
+                  width={400}
+                  height={400}
+                  className="w-full h-auto object-cover rounded"
+                  priority={false}
+                />
+              </div>
+
+              {/* Right side - Content (60%) */}
+              <div className="md:col-span-3">
+                <h2 className="text-2xl md:text-2xl lg:text-3xl font-semibold text-black mb-8 text-center md:text-left font-[var(--font-montserrat)]">
+                  The Hidden Costs of Land Degradation
+                </h2>
+                <p className="text-lg md:text-xl mb-8 text-black font-regular text-center md:text-left">
+                  The hidden costs of Land degradation — environmental, health, social, and economic often go unnoticed, but True Cost Accounting reveals the real impact on ecosystems and communities. It is estimated that the global cost of lost ecosystem services due to degradation may be even upto $10.6 trillion USD per year.
+                </p>
+                <p className="text-lg md:text-xl mb-8 text-black font-regular text-center md:text-left">
+                  These lost ecosystem services include water filtration and retention, flood regulation, nutrient cycling, and waste decomposition. As soils degrade, their ability to perform these essential functions diminishes, leading to increased vulnerability to floods, reduced water quality, and declining agricultural productivity.
+                </p>
+                <p className="text-lg md:text-xl mb-8 text-black font-regular text-center md:text-left">
+                  Degraded land also poses serious risks to human health. As productivity drops and water sources dry up, communities face increased food insecurity and malnutrition. This cycle of loss is not isolated — it affects every continent, driven by human activities such as deforestation, poor agricultural practices, and urban expansion.
+                </p>
+                <p className="text-lg md:text-xl text-black font-regular text-center md:text-left">
+                  Reversing land degradation is not just an environmental goal — it is a global imperative to secure ecosystems, sustain food systems, and support human well-being.
+                </p>
+              </div>
+            </div>
 
             {/* Stats/Info Block - Single Row */}
             <div className="mt-12 grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -129,6 +146,19 @@ export default function WhyWeDoIt() {
             {/* Full-width images */}
             <div className="w-full mt-8 space-y-8">
               <Image
+                src="/images/land-degrade-image1.png"
+                alt="Degraded land aerial view"
+                width={1920}
+                height={600}
+                className="w-full h-auto object-cover rounded"
+                priority={false}
+              />
+              
+            </div>
+
+            {/* Full-width images */}
+            <div className="w-full mt-8 space-y-8">
+              <Image
                 src="/images/land-degrade-image.png"
                 alt="Degraded land aerial view"
                 width={1920}
@@ -138,6 +168,8 @@ export default function WhyWeDoIt() {
               />
               
             </div>
+
+
           </div>
         </div>
       </section>
