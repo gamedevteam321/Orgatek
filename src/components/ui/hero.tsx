@@ -40,7 +40,7 @@ export function Hero({
             className="object-cover"
             quality={100}
           />
-          <div className="absolute inset-0 bg-[#003714] opacity-70" />
+          <div className="absolute inset-0 bg-[#003714] opacity-50" />
         </div>
         
         <div className="absolute inset-0 flex items-end pb-20">

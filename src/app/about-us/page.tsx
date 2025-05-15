@@ -15,7 +15,7 @@ export default function AboutPage() {
   
   const teamImages = [
     
-    '/images/team/2.jpg',
+    
     '/images/team/3.jpg',
     '/images/team/4.jpg',
     '/images/team/6.jpg',
@@ -26,7 +26,7 @@ export default function AboutPage() {
     <div className="w-full">
       <Header />
       {/* Hero Section */}
-      <section className="relative h-[500px] md:h-[700px] w-full">
+      <section className="relative h-[500px] md:h-[735px] w-full">
         <ImageSlideshow images={teamImages} interval={6000} />
         <div className="absolute inset-0 bg-black/30 flex items-end justify-start px-[10px] md:px-[50px] py-16 md:py-24">
           <h1 className="text-2xl md:text-4xl lg:text-6xl font-bold text-white max-w-2xl font-[var(--font-montserrat)]">Our Team</h1>

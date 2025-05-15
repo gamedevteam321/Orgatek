@@ -13,13 +13,12 @@ export const LeadershipCard = ({ name, designation, image, description }: Leader
 
   return (
     <div className="bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-300">
-      <div className="relative h-[380px] w-full">
+      <div className="relative h-[500px] w-full">
         <Image
           src={image}
           alt={name}
           fill
           className="object-cover bg-gray-50 object-top rounded-t-2xl"
-          style={{ objectPosition: '0 -30px' }}
         />
       </div>
       

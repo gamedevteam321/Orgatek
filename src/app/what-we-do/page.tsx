@@ -4,56 +4,9 @@ import { Footer } from '@/components/layout/footer';
 import { Hero } from '@/components/ui/hero';
 import { ContentSection } from '@/components/ui/content-section';
 import { ContactFormSection } from '@/components/sections/contact-form-section';
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function WhatWeDo() {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-  const SLIDE_INTERVAL = 5000; // 5 seconds per slide
-
-  const processSteps = [
-    {
-      image: "/images/land-preparation.png",
-      text: "Our team of experts locate and identify land perfect for being replanted with oil mallee seedlings in environmental plantings which regenerate landscapes, reduce salinity and prevent erosion."
-    },
-    {
-      image: "/images/our-impact.jpg",
-      text: "We transform these lands through sustainable forestry practices, implementing advanced planting techniques and careful management to ensure optimal growth and environmental impact."
-    },
-    {
-      image: "/images/biochar-enrichment.png",
-      text: "Through our innovative processing methods, we convert harvested biomass into valuable products while maintaining the ecological balance and creating sustainable carbon sinks."
-    }
-  ];
-
-  const nextSlide = useCallback(() => {
-    setCurrentSlide((prev) => (prev + 1) % processSteps.length);
-    setIsAutoPlaying(false);
-    setTimeout(() => setIsAutoPlaying(true), 10000);
-  }, [processSteps.length]);
-
-  const prevSlide = useCallback(() => {
-    setCurrentSlide((prev) => (prev - 1 + processSteps.length) % processSteps.length);
-    setIsAutoPlaying(false);
-    setTimeout(() => setIsAutoPlaying(true), 10000);
-  }, [processSteps.length]);
-
-  useEffect(() => {
-    let slideTimer: NodeJS.Timeout;
-    
-    if (isAutoPlaying) {
-      slideTimer = setInterval(() => {
-        setCurrentSlide((prev) => (prev + 1) % processSteps.length);
-      }, SLIDE_INTERVAL);
-    }
-
-    return () => {
-      if (slideTimer) {
-        clearInterval(slideTimer);
-      }
-    };
-  }, [isAutoPlaying, processSteps.length]);
-
   return (
     <main>
       <Header />
@@ -93,10 +46,10 @@ export default function WhatWeDo() {
             <div className="w-full md:w-1/2 h-full">
               <div className="h-full">
                 <img 
-                  src="/images/production-cycle.png" 
+                  src="/images/flowchart.png" 
                   alt="Production cycle process" 
-                  className="w-full h-[100%] object-contain rounded-lg"
-                  style={{ minHeight: '600px' }}
+                  className="w-full h-[100%] object-cover rounded-lg"
+                  style={{ minHeight: '500px' }}
                 />
               </div>
             </div>
@@ -184,7 +137,7 @@ export default function WhatWeDo() {
         description={
           <div className="text-center md:text-left">
             <p className="text-lg md:text-xl text-gray-700 font-[var(--font-poppins)]">
-            Restoring wastelands demands a soil-first approach that transcends traditional tree planting. Unlike conventional forestry’s dependence on chemical fertilizers, our proprietary organic inputs, developed through years of research, drive natural regeneration. These solutions enhance soil health, sequester carbon, and boost biodiversity, transforming barren landscapes into thriving, resilient forests.
+            Restoring wastelands demands a soil-first approach that transcends traditional tree planting. Unlike conventional forestry's dependence on chemical fertilizers, our proprietary organic inputs, developed through years of research, drive natural regeneration. These solutions enhance soil health, sequester carbon, and boost biodiversity, transforming barren landscapes into thriving, resilient forests.
             </p>
           </div>
         }
@@ -243,71 +196,6 @@ export default function WhatWeDo() {
         openLink={false}
         pagePath="/digital-monitoring"
       />
-
-      {/* Full Circle Process Section */}
-      <section className="py-16 md:py-24 bg-[#eff1f1]">
-        <div className="orgatek-container px-[10px] md:px-[50px]">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-0">
-            {/* Content */}
-            <div className="flex-1 max-w-4xl mx-auto">
-              {/* Image and Arrows Container */}
-              <div className="relative flex items-center justify-center mb-8 md:mb-0">
-                {/* Left Arrow */}
-                <button 
-                  onClick={prevSlide}
-                  className="absolute left-0 md:-left-16 w-12 h-12 flex items-center justify-center bg-[#27543a] text-white rounded-lg hover:bg-[#1e3f2c] transition-colors z-10"
-                  aria-label="Previous slide"
-                >
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                  </svg>
-                </button>
-
-                {/* Circular Image */}
-                <div className="w-[200px] h-[200px] md:w-[300px] md:h-[300px] flex-shrink-0">
-                  <div className="w-full h-full rounded-full overflow-hidden border-4 border-[#27543a]">
-                    <img 
-                      src={processSteps[currentSlide].image}
-                      alt={`Process step ${currentSlide + 1}`}
-                      className="w-full h-full object-cover transition-opacity duration-500"
-                    />
-                  </div>
-                </div>
-
-                {/* Right Arrow */}
-                <button 
-                  onClick={nextSlide}
-                  className="absolute right-0 md:-right-16 w-12 h-12 flex items-center justify-center bg-[#27543a] text-white rounded-lg hover:bg-[#1e3f2c] transition-colors z-10"
-                  aria-label="Next slide"
-                >
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </button>
-              </div>
-
-              {/* Text Content */}
-              <div className="text-center md:text-center mt-8 md:mt-12">
-                <p className="text-lg md:text-xl text-black font-regular leading-relaxed transition-opacity duration-500 font-[var(--font-poppins)]">
-                  {processSteps[currentSlide].text}
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Progress Indicator */}
-          <div className="mt-8 flex justify-center gap-4">
-            {processSteps.map((_, index) => (
-              <div 
-                key={index}
-                className={`w-12 md:w-16 h-1 rounded-full transition-all duration-500 ${
-                  index === currentSlide ? 'bg-[#27543a]' : 'bg-[#27543a]/30'
-                }`}
-              />
-            ))}
-          </div>
-        </div>
-      </section>
 
       <Footer />
     </main>

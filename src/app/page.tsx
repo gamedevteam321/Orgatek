@@ -15,6 +15,11 @@ import { ProcessCard } from '@/components/ui/ProcessCard';
 import SupplyChainSection from '@/components/ui/SupplyChainSection';
 import { SolutionPanel } from '@/components/ui/solution-panel';
 import dynamic from 'next/dynamic';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/autoplay';
 
 const GetInvolved = dynamic(() => import('./get-involved/page'), {
   loading: () => <div className="animate-pulse">Loading...</div>
@@ -61,6 +66,48 @@ export default function Home() {
     setIsInvestmentPanelOpen(false);
   };
 
+  const processSteps = [
+    {
+      text: "Soil is essential for life and a non renewable resource on a human timescale"
+    },
+    {
+      text: "95% of the food we eat comes from the soil. (FAO, 2019)"
+    },
+    {
+      text: "Soil is home to over a quarter of all living species on Earth. (European Union, 2010)"
+    },
+    {
+      text: "50-70% of the carbon stored in farm soils have already been lost. (UN Environment, 2019)"
+    },
+    {
+      text: "By 2050, 90% of Earth's soils could be degraded, unless we act now. (UNCCD, 2020)"
+    },
+    {
+      text: "It is estimated that the total actual cost of global soil degradation is up to US$ 10.6 trillion every year. (ELD Initiative, 2015)"
+    },
+    {
+      text: "Since the dawn of agriculture, more CO2 has been released from soil and the clearing of forests for farms than from all the world's industries in the last 250 years. (UN Environment, 2019)"
+    },
+    {
+      text: "A study on nutrients in food concluded that we would have to eat 8 oranges to get the same amount of Vitamin A as our grandparents did with one orange, because soil depletion has caused massive drops in nutrient levels in food. (Scientific American, 2011)"
+    },
+    {
+      text: "Fruits, vegetables, and grains like wheat have half the micronutrients they used to. If it's not in the soil, it's not in our food. (TIME, 2012)"
+    },
+    {
+      text: "12 million hectares of topsoil are lost every year across the world. That's almost the size of the entire nation of Greece. (FAO, 2015)"
+    },
+    {
+      text: "20 M HA of Forests are lost every year"
+    },
+    {
+      text: "Population growth, and food and water scarcity could cause over 1 billion to migrate to other regions and countries by 2050. (Reuters, 2020)"
+    },
+    {
+      text: "Revitalising soil can reduce humanity's current annual Greenhouse Gas emissions by 25-35%, according to UN estimates. (UN Environment, 2019)"
+    }
+  ];
+
   return (
     <main>
       <Header />
@@ -99,7 +146,7 @@ export default function Home() {
             <h2 className="text-2xl md:text-2xl lg:text-3xl font-semibold text-white mb-4 md:mb-6 font-[var(--font-montserrat)] text-center md:text-left">Why We Exist</h2>
             <div className=" text-white text-center md:text-left">
               <p className="text-lg md:text-xl mb-8 font-regular font-[var(--font-poppins)]">
-              Soil is the foundation of life on Earth. It sustains 95% of global food production - making access to fertile soil essential to feed the growing global population. Yet this vital, finite, non renewable and irreplaceable resource on a human timescale is in crisis. Over one-third of the world’s soils are already degraded, and we are losing fertile land faster than it can recover.
+              Soil is the foundation of life on Earth. It sustains 95% of global food production - making access to fertile soil essential to feed the growing global population. Yet this vital, finite, non renewable and irreplaceable resource on a human timescale is in crisis. Over one-third of the world's soils are already degraded, and we are losing fertile land faster than it can recover.
               </p>
               <p className="text-lg md:text-xl font-regular mb-8 font-[var(--font-poppins)]">
               Every year, more than 12 million hectares of agricultural land degrade and over 10 million hectares of forests are cleared — much of it to replace lost farmland.
@@ -273,10 +320,10 @@ export default function Home() {
               </p>
             </>
           }
-          image="/images/integrated-model.png"
+          image="/images/flowchart.png"
           imageLeft={false}
           bgColor="cream"
-          imageObjectFit="contain"
+          imageObjectFit="cover"
           imageHeight="h-96 md:h-[400px] lg:h-[500px]"
           className="text-center md:text-left"
           titleClassName="text-2xl md:text-2xl lg:text-3xl font-semibold text-black mb-4 md:mb-6 font-[var(--font-montserrat)] text-center md:text-left"
@@ -393,6 +440,57 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Slider Section */}
+      <section className="py-8 md:py-16 bg-white">
+        <div className="orgatek-container px-[10px] md:px-[50px]">
+          <style jsx global>{`
+            .swiper-pagination-bullet {
+              width: 24px !important;
+              height: 4px !important;
+              border-radius: 2px !important;
+              background: rgba(39, 84, 58, 0.3) !important;
+            }
+            .swiper-pagination-bullet-active {
+              background: #27543a !important;
+            }
+            .quote-swiper {
+              padding-bottom: 50px !important;
+            }
+            .quote-swiper .swiper-pagination {
+              bottom: 0 !important;
+            }
+          `}</style>
+          <Swiper
+            modules={[Autoplay, Pagination]}
+            spaceBetween={30}
+            slidesPerView={1}
+            loop={true}
+            autoplay={{
+              delay: 5000,
+              disableOnInteraction: false,
+            }}
+            pagination={{
+              clickable: true,
+              el: '.swiper-pagination',
+            }}
+            className="quote-swiper"
+          >
+            {processSteps.map((step, index) => (
+              <SwiperSlide key={index}>
+                <div className="flex items-center justify-center min-h-[120px] md:min-h-[150px]">
+                  <div className="w-full max-w-5xl">
+                    <p className="text-xl md:text-2xl lg:text-3xl text-black font-regular leading-relaxed font-[var(--font-poppins)] italic text-center px-4 md:px-0">
+                      "{step.text}"
+                    </p>
+                  </div>
+                </div>
+              </SwiperSlide>
+            ))}
+            <div className="swiper-pagination"></div>
+          </Swiper>
         </div>
       </section>
 

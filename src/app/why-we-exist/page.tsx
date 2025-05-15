@@ -50,7 +50,7 @@ export default function WhyWeDoIt() {
       />
 
       {/* Intro Section */}
-      <section className="py-16 md:py-24 bg-[#eff1f1]">
+      <section className="py-16 md:py-24 bg-cream">
         <div className="orgatek-container">
           <div className="max-w-7xl mx-auto px-[10px] md:px-[50px]">
             <p className="text-lg md:text-xl mb-8 text-black font-regular text-center md:text-left">
@@ -73,7 +73,7 @@ export default function WhyWeDoIt() {
       </section>
 
       {/* Hidden Costs Section */}
-      <section className="py-16 md:py-16 bg-white">
+      <section className="py-16 md:py-20  bg-white">
         <div className="orgatek-container">
           <div className="max-w-7xl mx-auto px-[10px] md:px-[50px]">
             <div className="grid grid-cols-1 md:grid-cols-5 gap-8 items-start">
@@ -143,21 +143,15 @@ export default function WhyWeDoIt() {
               Between 2015 and 2019, at least 100 million hectares of healthy and productive land were degraded every year, affecting food and water security globally. The loss is equivalent to twice the size of Greenland, impacting the lives of 1.3 billion people, who are estimated to be directly exposed to land degradation.
             </p>
 
-            {/* Full-width images */}
-            <div className="w-full mt-8 space-y-8">
-              <Image
-                src="/images/land-degrade-image1.png"
-                alt="Degraded land aerial view"
-                width={1920}
-                height={600}
-                className="w-full h-auto object-cover rounded"
-                priority={false}
-              />
-              
-            </div>
+           
+          </div>
+        </div>
+      </section>
 
-            {/* Full-width images */}
-            <div className="w-full mt-8 space-y-8">
+      {/* Our Mission Section */}
+      <section className="w-full bg-[#eff1f1] pb-8 md:pb-12  ">
+        {/* Full-width images */}
+        <div className="w-full  space-y-8 ">
               <Image
                 src="/images/land-degrade-image.png"
                 alt="Degraded land aerial view"
@@ -168,14 +162,6 @@ export default function WhyWeDoIt() {
               />
               
             </div>
-
-
-          </div>
-        </div>
-      </section>
-
-      {/* Our Mission Section */}
-      <section className="w-full bg-white pb-8 md:pb-12 py-16 md:py-16 bg-[#eff1f1]">
         <div className="w-full bg-[#eff1f1]">
           <ShareDegradedLandChart />
         </div>
@@ -195,10 +181,11 @@ export default function WhyWeDoIt() {
             <p><b>Regenerating wastelands through sustainable forestry</b> directly addresses the root causes of deforestation by creating <b>fertile land for agriculture</b> and producing <b>sustainable timber</b>.</p>
           </div>
         }
-        className="px-[10px] md:px-[50px] py-8 md:py-12"
+        className="px-[10px] md:px-[50px] py-8 md:py-12 bg-"
         titleClassName="text-2xl md:text-2xl lg:text-3xl font-semibold text-black mb-4 md:mb-6 font-[var(--font-montserrat)] text-center md:text-left"
+        bgColor="white"
       >
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 relative">
           <div className="w-full">
             <Image 
               src="/images/Global-forest-loss-since-ice-age.png"
@@ -208,6 +195,8 @@ export default function WhyWeDoIt() {
               className="object-contain w-full h-[250px] md:h-[500px]"
             />
           </div>
+          {/* Vertical divider */}
+          <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-gray-400 transform -translate-x-1/2"></div>
           <div className="w-full">
             <Image 
               src="/images/Forest-loss-by-driver-and-region.png"

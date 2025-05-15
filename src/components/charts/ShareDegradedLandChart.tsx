@@ -60,7 +60,7 @@ const sampleData: ChartData[] = [
 ];
 
 export default function ShareDegradedLandChart() {
-  const [activeTab, setActiveTab] = useState<TabType>('chart');
+  const [activeTab, setActiveTab] = useState<TabType>('map');
   const [chartData, setChartData] = useState<{
     labels: string[];
     datasets: {
@@ -110,7 +110,7 @@ export default function ShareDegradedLandChart() {
   }
 
   return (
-    <div className="w-full max-w-4xl mx-auto p-4">
+    <div className="w-full max-w-5xl mx-auto p-4">
       <div className="mb-4">
         <h2 className="text-xl font-semibold mb-2">{metadata.chart.title}</h2>
         {/* <p className="text-sm text-gray-600 mb-2" dangerouslySetInnerHTML={{ __html: metadata.chart.subtitle }} />
@@ -176,11 +176,11 @@ export default function ShareDegradedLandChart() {
 
       {/* Map View */}
       {activeTab === 'map' && (
-        <div className="h-[350px] bg-white flex items-center justify-center">
+        <div className="h-[600px] w-full bg-[#eff1f1] flex items-center justify-center">
           <img 
             src="/images/map.png" 
             alt="Degraded Land Map" 
-            className="max-w-full max-h-full object-cover"
+            className="max-w-full max-h-full object-contain"
           />
         </div>
       )}
